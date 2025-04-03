@@ -26,10 +26,10 @@ author:
   name             : "Soohwan Lee"
   pronouns         : # example: "she/her"  
   bio              : "soohwanlee@unist.ac.kr"
-  location         : "Ulsan, smart_quotes:"
+  location         : "Ulsan, South Korea"
   employer         : "UNIST"
   uri              : # URL
-  email            : "none@example.org" 
+  email            : # URL
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
@@ -45,7 +45,7 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : "academicpages"
+  github           : "https://github.com/Soohwan-Lee"
   kaggle           : # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
@@ -59,7 +59,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : "https://www.linkedin.com/in/soohwanlee/"
+  linkedin         : "soohwanlee"
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username
