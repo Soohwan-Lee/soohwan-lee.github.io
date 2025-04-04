@@ -1,10 +1,8 @@
 ---
-layout: single
+layout: archive
 permalink: /publications/
 title: "Publications"
 author_profile: true
-redirect_from: 
-  - /publications/
 ---
 Check out my [Google Scholar](https://scholar.google.com/citations?user=_iYMyRcAAAAJ&hl=en&oi=ao) for a full list.
 
