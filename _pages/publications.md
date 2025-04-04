@@ -39,4 +39,4 @@ C = Conference | J = Journal | S = Short paper/poster | T = Thesis | U = Under R
 [[👀Preview]](/files/groupCenteredAI.pdf)
 - **[U.3]** Seoyeong Hwang, **Soohwan Lee**, Dajung Kim, and Kyungho Lee. Augmentiary: An Exploratory Study on Facilitating Self-reflection through AI-Augmented Journaling. (Poster)
 [[👀Preview]](/files/augmentairy.pdf)
-- **[U.4]** **Soohwan Lee**, Haeeun Shin, Soobin Lee, and Kyungho Lee. Gesture2Emoji: A Design Exploration of Gesture Recognition for Non-Verbal Communication in Online Meetings. (Conference Paper)
+- **[U.4]** **Soohwan Lee**, and Kyungho Lee. Gesture2Emoji: A Design Exploration of Gesture Recognition for Non-Verbal Communication in Online Meetings. (Conference Paper)
