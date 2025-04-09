@@ -22,6 +22,14 @@ Investigating how hand gestures can be automatically translated into emojis to e
 (Focus: expressive interaction, online collaboration, non-verbal cues)
 ![Image](/files/neas.png)
 
+### Counterfunctional Music Player (Critical Design)
+An interactive music player object design that allows users to randomly play the songs that they often listen to in certain months through mid-air hand gesture input. [[💻Code]](https://github.com/Soohwan-Lee/counterfunctionalMusicPlayer) [[🎤Preview]](https://www.youtube.com/watch?v=dIzcEw182kQ) [[▶️Demo]](https://www.youtube.com/watch?v=wwqpLr2ziqo) 
+![Image](/files/counterfunctional.jpg)
+
+### InkStrings: Visualizing the Soul of Gayageum (Interactive Media Art)
+InkStrings is an interactive installation that enables users to perform the traditional Korean instrument Gayageum through mid-air hand gestures using Leap Motion. As the user plays, the subtle vibratos (nonghyun) are translated into real-time visual expressions inspired by East Asian ink wash painting, dynamically capturing the nuances of sound through varying shades and textures of ink. [[💻Code]](https://github.com/Soohwan-Lee/AirGayaguemVisualization) [[▶️Demo]](https://youtu.be/mEOxsTnaVDY)
+![Image](/files/gayageum.jpeg)
+
 ### Cognitive Workload for Hand Gesture Types in VR
 Evaluating the cognitive and physical workload imposed by different gesture types in immersive VR environments.
 (Focus: usability, workload analysis, VR interface design) [[📄Paper Preview]](/files/handPaper.pdf) [[🎨Poster]](/files/handPoster.pdf)
@@ -56,7 +64,6 @@ Supported by NRF X-Corps Plus | 03/2023–12/2023
 ### Smart Clean BioAir Home Management System
 Contributed to a smart home platform integrating air quality sensing and bio-environmental management features.
 Supported by MOTIE, Korea | 04/2020–12/2021
-![Image](/files/)
 
 ### UNIVERSE: Social Robot for Emotional Well-Being of MZ Generation
 Led design of a concept social robot targeting emotional well-being of MZ generation through affective interaction.
