@@ -7,6 +7,11 @@ author_profile: true
 
 ---
 # Research Project
+### Multi-agent Systems and Social Influence
+Investigating how multiple LLM agents establish and exercise social influence in group settings through Moscovici's Social Conversion Theory lens, examining how consistent minority voices can shift majority perspectives through persistent alternative viewpoints.
+(Focus: minority influence, persuasion dynamics, agent coalitions, power balance)
+![Image](/files/multiagents.png)
+
 ### LLM-powered Devil's Advocate
 Exploring how LLM agents with AI-mediated Communications can stimulate critical thinking by representing minority perspectives in power-imbalanced group decision-making.
 (Focus: group dynamics, AI mediation, social influence, critical discourse)

@@ -7,11 +7,28 @@ redirect_from:
   - /about.html
 ---
 
-I am a Ph.D. candidate in [Expressive Computing Lab](https://expc.unist.ac.kr/), [Design](https://design.unist.ac.kr/) at [UNIST](https://www.unist.ac.kr/), specializing in Human-Computer Interaction (HCI) and Human-centered AI. I actively integrate insights from HCI, social psychology, and design to ensure AI technologies meaningfully support diverse user groups and their collective goals. My research broadly focuses on designing AI systems that facilitate effective and inclusive group decision-making, particularly from a social psychological perspective. I explore how AI can support group dynamics by enhancing critical thinking, balancing group discussions, and mediating social influence within collaborative environments.
 
-My work critically addresses current limitations in Human-centered AI, which predominantly emphasizes interactions between individual users and single AI systems. To bridge this gap, I try to introduce concepts such as Group-centered AI and Group Experience (GX), advocating for design approaches specifically tailored to group dynamics and collective user experiences. My recent representative project involves developing an LLM-powered Devil’s Advocate agent designed to amplify minority opinions in decision-making processes, promoting more inclusive and balanced group interactions. Building on this, I am now initiating research that investigates multi-agent systems and their social influence, developing adaptive chatbot facilitators for collaborative ideation, and designing AI-driven conflict mediation tools informed by game theory.
+## About Me
+I am a Ph.D. candidate in the [Expressive Computing Lab](https://expc.unist.ac.kr/) at [Department of Design](https://design.unist.ac.kr/), [UNIST](https://www.unist.ac.kr/), specializing in Human-Computer Interaction(HCI) and Human-centered AI. My research bridges social psychology and AI technologies, with a particular focus on social influence and power dynamics in AI agent interactions.
 
-I love running, watching movies, and reading books in my free.
+## Research Focus & Contributions
+My work explores the intersection of social psychology, group dynamics, and AI technologies to address critical limitations in current Human-centered AI approaches. While much of today's AI research focuses on interactions between individual users and single AI systems, I'm expanding this perspective to include **group-level interactions** and **collective experiences**.
+Through my research, I examine:
+- **Social Psychology & Group Dynamics**: Understanding how group decision-making processes can be enhanced through AI intervention
+- **Human-centered AI**: Designing AI systems that meaningfully support collective goals and diverse user groups
+- **AI Social Influence**: Investigating how AI agents can mediate power dynamics within collaborative environments
+
+To advance these areas, I've introduced important concepts like Group-centered AI and Group Experience(GX), developing frameworks specifically tailored to collective user experiences and creating AI systems that facilitate balanced group interactions while amplifying minority perspectives.
+
+## Current Projects
+- **LLM-powered Devil's Advocate Agent**: Designed to enhance minority opinions in group decision-making processes
+- **Multi-agent Systems and Social Influence**: Examining how AI agents establish and exercise social power in group settings
+- **Adaptive Chatbot Facilitators**: Creating AI tools that support collaborative ideation processes
+- **Group Reflective Dashboard**: Developing visualization systems that promote critical thinking during group ideation through reflective prompting
+
+## Personal Interests
+In my free time, I enjoy running and exploring a diverse range of films and literature. I particularly love movies directed by Quentin Tarantino, Christopher Nolan, and Denis Villeneuve. However, some of my favorite films include Sicario, The Matrix, and The Shawshank Redemption. I also have a particular interest in reading books and articles on cross-cultural psychology, such as 'Thought of Geography'.
+
 
 <!-- News and Travle
 ------
