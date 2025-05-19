@@ -19,7 +19,7 @@ C = Conference | J = Journal | S = Short paper/poster | T = Thesis | U = Under R
 [[📄Paper]](http://dx.doi.org/10.15187/adr.2021.08.34.3.101)
 
 ### Short Papers, Posters, and Workshop Papers
-- **[S.2]** **Soohwan Lee**, Seoyeong Hwang, and Kyungho Lee. (2025). Beyond Individual UX: Defining Group Experience(GX) as a New Paradigm for Group-centered AI. *Companion Publication of the 2025 ACM Designing Interactive Systems Conference (DIS'25 Companion)*.
+- **[S.1]** **Soohwan Lee**, Seoyeong Hwang, and Kyungho Lee. (2025). Beyond Individual UX: Defining Group Experience(GX) as a New Paradigm for Group-centered AI. *Companion Publication of the 2025 ACM Designing Interactive Systems Conference (DIS'25 Companion)*.
 [[📄Paper]](https://doi.org/10.1145/3715668.3736348) [[🖼️Poster]]()
 - **[S.2]** **Soohwan Lee**, Seoyeong Hwang, Dajung Kim, and Kyungho Lee. (2025). Conversational Agents as Catalysts for Critical Thinking: Challenging Social Influence in Group Decision-making. *Extended Abstracts of the CHI Conference on Human Factors in Computing Systems (CHI EA ’25)*.
 [[📄Paper]](https://dl.acm.org/doi/10.1145/3706599.3719792) [[🖼️Poster]](/files/CHI25-Poster-FInal.pdf) [[🗣️Preview Video]](https://www.youtube.com/watch?v=qU4_Bx9sHW0)

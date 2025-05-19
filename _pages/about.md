@@ -27,7 +27,7 @@ To advance these areas, I've introduced important concepts like Group-centered A
 - **Group Reflective Dashboard**: Developing visualization systems that promote critical thinking during group ideation through reflective prompting
 
 ## Personal Interests
-In my free time, I enjoy running and exploring a diverse range of films and literature. I particularly love movies directed by Quentin Tarantino, Christopher Nolan, and Denis Villeneuve. However, some of my favorite films include Sicario, The Matrix, and The Shawshank Redemption. I also have a particular interest in reading books and articles on cross-cultural psychology, such as 'Thought of Geography'.
+In my free time, I enjoy running and exploring a diverse range of films and literature. I particularly love movies directed by Quentin Tarantino, Christopher Nolan, and Denis Villeneuve. However, some of my favorite films include 'Sicario', 'The Matrix', and Everything Everywhere All at Once'. I also have a particular interest in reading books and articles on cross-cultural psychology, such as 'Thought of Geography'.
 
 
 <!-- News and Travle
