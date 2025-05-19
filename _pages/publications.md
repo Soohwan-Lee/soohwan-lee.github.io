@@ -19,13 +19,15 @@ C = Conference | J = Journal | S = Short paper/poster | T = Thesis | U = Under R
 [[📄Paper]](http://dx.doi.org/10.15187/adr.2021.08.34.3.101)
 
 ### Short Papers, Posters, and Workshop Papers
-- **[S.1]** **Soohwan Lee**, Seoyeong Hwang, Dajung Kim, and Kyungho Lee. (2025). Conversational Agents as Catalysts for Critical Thinking: Challenging Social Influence in Group Decision-making. *Extended Abstracts of the CHI Conference on Human Factors in Computing Systems (CHI EA ’25)*.
-[[📄Paper]](https://arxiv.org/abs/2503.14263) [[🖼️Poster]]() [[🗣️Preview Video]](https://www.youtube.com/watch?v=qU4_Bx9sHW0)
-- **[S.2]** **Soohwan Lee** and Kyungho Lee. (2025). Amplifying Minority Voices: AI-Mediated Devil’s Advocate System for Inclusive Group Decision-Making. *Companion Proceedings of the 30th International Conference on Intelligent User Interfaces (IUI ’25 Companion)*.
+- **[S.2]** **Soohwan Lee**, Seoyeong Hwang, and Kyungho Lee. (2025). Beyond Individual UX: Defining Group Experience(GX) as a New Paradigm for Group-centered AI. *Companion Publication of the 2025 ACM Designing Interactive Systems Conference (DIS'25 Companion)*.
+[[📄Paper]](https://doi.org/10.1145/3715668.3736348) [[🖼️Poster]]()
+- **[S.2]** **Soohwan Lee**, Seoyeong Hwang, Dajung Kim, and Kyungho Lee. (2025). Conversational Agents as Catalysts for Critical Thinking: Challenging Social Influence in Group Decision-making. *Extended Abstracts of the CHI Conference on Human Factors in Computing Systems (CHI EA ’25)*.
+[[📄Paper]](https://dl.acm.org/doi/10.1145/3706599.3719792) [[🖼️Poster]](/files/CHI25-Poster-FInal.pdf) [[🗣️Preview Video]](https://www.youtube.com/watch?v=qU4_Bx9sHW0)
+- **[S.3]** **Soohwan Lee**, Mingyu Kim, Seoyeong Hwang, Dajung Kim, and Kyungho Lee. (2025). Amplifying Minority Voices: AI-Mediated Devil’s Advocate System for Inclusive Group Decision-Making. *Companion Proceedings of the 30th International Conference on Intelligent User Interfaces (IUI ’25 Companion)*.
 [[📄Paper]](https://doi.org/10.1145/3708557.3716334) [[🖼️Poster]](/files/IUI25-Poster-Final_A1.pdf)
-- **[S.3]** **Soohwan Lee**, Seoyeong Hwang, and Kyungho Lee. (2024). Conversational Agents as Catalysts for Critical Thinking: Challenging Design Fixation in Group Design. *DIS ’24 Workshop*.
+- **[S.4]** **Soohwan Lee**, Seoyeong Hwang, and Kyungho Lee. (2024). Conversational Agents as Catalysts for Critical Thinking: Challenging Design Fixation in Group Design. *DIS ’24 Workshop*.
 [[📄Paper]](https://arxiv.org/abs/2406.11125) [[🎙️Podcast]](https://www.youtube.com/watch?v=w5aIlpBV9Co&t=10s)
-- **[S.4]** **Soohwan Lee** and Kyungho Lee. (2023). CheerUp: A Real-time Ambient Visualization of Cheerleading Pose Similarity. *Companion Proceedings of the 28th International Conference on Intelligent User Interfaces (IUI ’23 Companion)*.
+- **[S.5]** **Soohwan Lee** and Kyungho Lee. (2023). CheerUp: A Real-time Ambient Visualization of Cheerleading Pose Similarity. *Companion Proceedings of the 28th International Conference on Intelligent User Interfaces (IUI ’23 Companion)*.
 [[📄Paper]](https://doi.org/10.1145/3581754.3584135) [[🖼️Poster]](/files/cheerUp-poster.pdf) [[💻Code]](https://github.com/Soohwan-Lee/CxD_CheerUp) [[▶️Demo]](https://www.youtube.com/watch?v=BAXvDJvt5vA)
 
 ### Thesis
@@ -33,10 +35,8 @@ C = Conference | J = Journal | S = Short paper/poster | T = Thesis | U = Under R
 [[📄Paper]](https://unist.dcollection.net/srch/srchDetail/200000604178)
 
 ### Under Review (TBA)
-- **[U.1]** **Soohwan Lee**, Seoyeong Hwang, Mingyu Kim, Dajung Kim, and Kyungho Lee. Voice for the Voiceless: An LLM-powered Devil’s Advocate for AI-mediated Communication in Power-imbalanced Groups. (Conference Paper)
+- **[U.1]** **Soohwan Lee**, Seoyeong Hwang, Mingyu Kim, Dajung Kim, and Kyungho Lee. Rethinking LLM-Powered Devil’s Advocate Strategies for Supporting Minority Voices in Power-Imbalanced Group Decision-Making. (Conference Paper)
 [[👀Preview]](/files/voiceForVoiceless.pdf)
-- **[U.2]** **Soohwan Lee**, Seoyeong Hwang, and Kyungho Lee. [Beyond Individual UX: Defining Group Experience (GX) as a New Paradigm for Group-centered AI]. (Poster)
-[[👀Preview]](/files/groupCenteredAI.pdf)
-- **[U.3]** Seoyeong Hwang, **Soohwan Lee**, Dajung Kim, and Kyungho Lee. Augmentiary: An Exploratory Study on Facilitating Self-reflection through AI-Augmented Journaling. (Poster)
+- **[U.2]** Seoyeong Hwang, **Soohwan Lee**, Dajung Kim, and Kyungho Lee. Augmentiary: An Exploratory Study on Facilitating Self-reflection through AI-Augmented Journaling. (Poster)
 [[👀Preview]](/files/augmentairy.pdf)
-- **[U.4]** **Soohwan Lee**, and Kyungho Lee. Gesture2Emoji: A Design Exploration of Gesture Recognition for Non-Verbal Communication in Online Meetings. (Conference Paper)
+- **[U.3]** **Soohwan Lee**, and Kyungho Lee. Gesture2Emoji: A Design Exploration of Gesture Recognition for Non-Verbal Communication in Online Meetings. (Conference Paper)
