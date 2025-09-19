@@ -42,4 +42,4 @@ C = Conference | J = Journal | S = Short paper/poster | T = Thesis | U = Under R
 - **[U.3]** Seoyeong Hwang, Soohyun Hwang, **Soohwan Lee**, Dajung Kim, and Kyungho Lee. Augmentiary: Exploring How LLM-Based Journaling Systems Can Support Reflective Writing and Autonomous Meaning-Making. (Conference Paper)
 [[👀Preview]](/files/augmentairy.pdf)
 - **[U.4]** **Soohwan Lee**, Soobin Lee and Kyungho Lee. Expression2Emoji: Designing Non-verbal Communication Support Tool for Group Video Meetings. (Conference Paper)
-- [[👀Preview]](/files/IASDR25_Expression2Emoji.pdf)
+[[👀Preview]](/files/IASDR25_Expression2Emoji.pdf)
