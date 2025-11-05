@@ -34,12 +34,3 @@ C = Conference | J = Journal | S = Short paper/poster | T = Thesis | U = Under R
 - **[T.1]** **Soohwan Lee**. (2022). NEAS: AI-based Interactive System to Support Non-verbal Expressions in Online Communication. *Master’s Thesis, UNIST*.
 [[📄Paper]](https://unist.dcollection.net/srch/srchDetail/200000604178)
 
-### Under Review (TBA)
-- **[U.1]** **Soohwan Lee**, Seoyeong Hwang, Mingyu Kim, Dajung Kim, and Kyungho Lee. Investigating LLM-Powered Minority Support in Power-Imbalanced Group Decision-Making: Counterargument and Mediation as Intervention Strategies. (Conference Paper)
-[[👀Preview]](/files/CSCW_revision_clear.pdf)
-- **[U.2]** **Soohwan Lee** and Kyungho Lee. Understanding Compliance and Conversion Dynamics in Multi-Agent Collectives. (Conference Paper)
-[[👀Preview]](/files/CHI26-SIMA.pdf)
-- **[U.3]** Seoyeong Hwang, Soohyun Hwang, **Soohwan Lee**, Dajung Kim, and Kyungho Lee. Augmentiary: Exploring How LLM-Based Journaling Systems Can Support Reflective Writing and Autonomous Meaning-Making. (Conference Paper)
-[[👀Preview]](/files/augmentairy.pdf)
-- **[U.4]** **Soohwan Lee**, Soobin Lee and Kyungho Lee. Expression2Emoji: Designing Non-verbal Communication Support Tool for Group Video Meetings. (Conference Paper)
-[[👀Preview]](/files/IASDR25_Expression2Emoji.pdf)
