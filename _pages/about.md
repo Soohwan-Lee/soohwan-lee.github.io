@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 
-## About Me
+<!-- ## About Me
 I am a Ph.D. candidate in the [Expressive Computing Lab](https://expc.unist.ac.kr/) at [Department of Design](https://design.unist.ac.kr/), [UNIST](https://www.unist.ac.kr/), specializing in Human-Computer Interaction(HCI) and Human-centered AI. My research bridges social psychology and AI technologies, with a particular focus on social influence and power dynamics in AI agent interactions.
 
 ## Research Focus & Contributions
@@ -24,7 +24,43 @@ To advance these areas, I've introduced important concepts like Group-centered A
 - **LLM-powered Devil's Advocate Agent**: Designed to enhance minority opinions in group decision-making processes
 - **Multi-agent Systems and Social Influence**: Examining how AI agents establish and exercise social power in group settings
 - **Adaptive Chatbot Facilitators**: Creating AI tools that support collaborative ideation processes
-- **Group Reflective Dashboard**: Developing visualization systems that promote critical thinking during group ideation through reflective prompting
+- **Group Reflective Dashboard**: Developing visualization systems that promote critical thinking during group ideation through reflective prompting -->
+
+## About Me
+
+I am a Ph.D. candidate in the Expressive Computing Lab at the Department of Design, UNIST, specializing in Human–Computer Interaction (HCI) and Human-centered AI.  
+My research investigates how AI systems reshape **group decision-making, social influence, and power dynamics**, drawing on theories from social psychology and designing interactive AI systems grounded in empirical evidence.
+Rather than focusing on isolated interactions between a single user and an AI system, my work advances a **group-level perspective**, examining how people experience, interpret, and negotiate influence when AI agents participate in collective settings.
+
+
+
+## Research Focus
+My research centers on **AI-mediated group dynamics**, with particular attention to how social influence unfolds over time and how power asymmetries shape collective outcomes. I study these phenomena through a combination of experimental studies, system design, and theory-driven analysis.
+
+Key themes in my work include:
+- **AI Social Influence in Groups**  
+  Investigating how AI agents exert normative and informative influence, and how people respond through compliance, conversion, or resistance in multi-agent settings.
+- **Group-centered AI & Group Experience (GX)**  
+  Proposing conceptual frameworks that extend Human-centered AI beyond the individual level to account for collective experience, coordination, and conflict.
+- **Minority Support and Dissenting AI Interventions**  
+  Designing LLM-powered systems that support minority perspectives through counterargument, reframing, and mediation, particularly in power-imbalanced group decision-making.
+- **Reflective Interfaces for Group Sensemaking**  
+  Exploring visualization and interaction techniques that help groups reflect on value conflicts, participation asymmetries, and influence trajectories during collaboration.
+
+
+## Current Projects
+
+- **LLM-powered Minority Support Systems**  
+  AI-mediated dissent and mediation strategies that amplify minority viewpoints and promote critical discussion in group decision-making.
+- **Multi-agent Social Influence Dynamics**  
+  Experimental investigations of how majority, minority, and diffusion patterns of AI influence shape opinions and confidence over time.
+- **Group Reflective Dashboard**  
+  A visualization-based system that surfaces latent value conflicts, influence trajectories, and participation asymmetries to support post-hoc and in-situ group reflection.
+
+
+## Research Vision
+Across these projects, my broader goal is to design **Group-centered AI systems** that do not simply optimize group outcomes, but help people **understand how those outcomes emerge**, whose values are reflected, and how influence is exercised within AI-augmented collectives.
+
 
 ## Personal Interests
 In my free time, I enjoy running and exploring a diverse range of films and literature. I particularly love movies directed by Quentin Tarantino, Christopher Nolan, and Denis Villeneuve. However, some of my favorite films include 'Sicario', 'The Matrix', and 'Everything Everywhere All at Once'. I also have a particular interest in reading books and articles on cross-cultural psychology, such as 'Thought of Geography'.
