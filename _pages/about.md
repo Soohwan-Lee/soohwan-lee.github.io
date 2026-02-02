@@ -28,8 +28,8 @@ To advance these areas, I've introduced important concepts like Group-centered A
 
 ## About Me
 
-I am a Ph.D. candidate in the Expressive Computing Lab at the Department of Design, UNIST, specializing in Human–Computer Interaction (HCI) and Human-centered AI.  
-My research investigates how AI systems reshape **group decision-making, social influence, and power dynamics**, drawing on theories from social psychology and designing interactive AI systems grounded in empirical evidence.
+I am a Ph.D. candidate in the [Expressive Computing Lab](https://expc.unist.ac.kr/) at [Department of Design](https://design.unist.ac.kr/), [UNIST](https://www.unist.ac.kr/), specializing in Human–Computer Interaction (HCI) and Human-centered AI.  
+My research investigates how AI systems reshape **group dynamics** such as group decision-making, social influence, and power dynamics, drawing on theories from social psychology and designing interactive AI systems grounded in empirical evidence.
 Rather than focusing on isolated interactions between a single user and an AI system, my work advances a **group-level perspective**, examining how people experience, interpret, and negotiate influence when AI agents participate in collective settings.
 
 
