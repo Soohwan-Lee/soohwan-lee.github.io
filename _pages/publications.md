@@ -11,11 +11,13 @@ C = Conference | J = Journal | S = Short paper/poster | T = Thesis | D = Domesti
 
 
 ### Peer-reviewed Conference Proceedings
-- **[C.1]** **Soohwan Lee**, Kyungho Lee. (2026) Understanding Compliance and Conversion Dynamics in Multi-Agent Collectives. *Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems (CHI’26)*.
+- **[C.1]** **Soohwan Lee**, Seoyeong Hwang, Minkyu Kim, Dajung Kim, and Kyungho Lee. (2026) Investigating LLM-Powered Minority Support in Power-Imbalanced Group Decision-Making: Counterargument and Mediation as Intervention Strategies. *Proceedings of the ACM on Human-Computer Interaction (CSCW’26)*.
+[[📄Paper]]()
+- **[C.2]** **Soohwan Lee**, Kyungho Lee. (2026) Understanding Compliance and Conversion Dynamics in Multi-Agent Collectives. *Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems (CHI’26)*.
 [[📄Paper]](https://doi.org/10.1145/3772318.3790385)
-- **[C.2]** **Soohwan Lee**, Seoyeong Hwang, Ian Oakley, and Kyungho Lee. (2024). Expanding the Design Space of Vision-based Interactive Systems for Group Dance Practice. *Proceedings of the 2024 ACM Designing Interactive Systems Conference (DIS ’24)*.
+- **[C.3]** **Soohwan Lee**, Seoyeong Hwang, Ian Oakley, and Kyungho Lee. (2024). Expanding the Design Space of Vision-based Interactive Systems for Group Dance Practice. *Proceedings of the 2024 ACM Designing Interactive Systems Conference (DIS ’24)*.
 [[📄Paper]](https://doi.org/10.1145/3643834.3661568) [[🗣️Presentation]](https://www.youtube.com/watch?v=QkQS_QiRz9o&t=5s) [[🎙️Podcast]](https://www.youtube.com/watch?v=zVwT_CGxQII&t=71s)
-- **[C.3]** DoYoung Lee, **Soohwan Lee**, and Ian Oakley. (2020). Nailz: Sensing Hand Input with Touch Sensitive Nails. *Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems (CHI ’20)*.
+- **[C.4]** DoYoung Lee, **Soohwan Lee**, and Ian Oakley. (2020). Nailz: Sensing Hand Input with Touch Sensitive Nails. *Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems (CHI ’20)*.
 [[📄Paper]](https://doi.org/10.1145/3313831.3376778)
 
 ### Journal Publications
