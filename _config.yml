@@ -35,7 +35,7 @@ author:
   arxiv            : # URL - Update with the correct link to your profile
   googlescholar    : "https://scholar.google.com/citations?user=_iYMyRcAAAAJ&hl=en&oi=ao"
   impactstory      : # URL
-  orcid            : # URL
+  orcid            : "https://orcid.org/0000-0001-8652-3408"
   semantic         : # URL
   pubmed           : # URL
   researchgate     : # URL
@@ -45,7 +45,7 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : "https://github.com/Soohwan-Lee"
+  github           : "Soohwan-Lee"
   kaggle           : # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
@@ -61,7 +61,7 @@ author:
   lastfm           : # Username
   linkedin         : "soohwanlee"
   mastodon         : # URL
-  medium           : # URL
+  medium           : "/@tesla9379"
   pinterest        : # Username
   soundcloud       : # Username
   steam            : # Username
