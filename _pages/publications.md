@@ -16,7 +16,7 @@ C = Conference | J = Journal | S = Short paper/poster | T = Thesis | D = Domesti
 - **[C.2]** **Soohwan Lee**, Kyungho Lee. (2026) Understanding Compliance and Conversion Dynamics in Multi-Agent Collectives. *Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems (CHI’26)*.
 [[📄Paper]](https://doi.org/10.1145/3772318.3790385)
 - **[C.3]** Seoyeong Hwang, Soohyun Hwang, **Soohwan Lee**, Dajung Kim, and Kyungho Lee. (2026). Augmentiary: Exploring How LLM-Generated Interpretive Feedback Supports Meaning-Making in Reflective Journaling. Proceedings of the 2026 ACM Designing Interactive Systems Conference (DIS ’26).
-- [[📄Paper]]()
+[[📄Paper]]()
 - **[C.4]** **Soohwan Lee**, Seoyeong Hwang, Ian Oakley, and Kyungho Lee. (2024). Expanding the Design Space of Vision-based Interactive Systems for Group Dance Practice. *Proceedings of the 2024 ACM Designing Interactive Systems Conference (DIS ’24)*.
 [[📄Paper]](https://doi.org/10.1145/3643834.3661568) [[🗣️Presentation]](https://www.youtube.com/watch?v=QkQS_QiRz9o&t=5s) [[🎙️Podcast]](https://www.youtube.com/watch?v=zVwT_CGxQII&t=71s)
 - **[C.5]** DoYoung Lee, **Soohwan Lee**, and Ian Oakley. (2020). Nailz: Sensing Hand Input with Touch Sensitive Nails. *Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems (CHI ’20)*.
