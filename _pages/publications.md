@@ -11,24 +11,24 @@ C = Conference | J = Journal | S = Short paper/poster | T = Thesis | D = Domesti
 
 
 ### Peer-reviewed Conference Proceedings
-- **[C.1]** **Soohwan Lee**, Seoyeong Hwang, Minkyu Kim, Dajung Kim, and Kyungho Lee. (2026) Investigating LLM-Powered Minority Support in Power-Imbalanced Group Decision-Making: Counterargument and Mediation as Intervention Strategies. *Proceedings of the ACM on Human-Computer Interaction (CSCW’26)*.
-[[📄Paper]]()
-- **[C.2]** **Soohwan Lee**, Kyungho Lee. (2026) Understanding Compliance and Conversion Dynamics in Multi-Agent Collectives. *Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems (CHI’26)*.
-[[📄Paper]](https://doi.org/10.1145/3772318.3790385)
-- **[C.3]** Seoyeong Hwang, Soohyun Hwang, **Soohwan Lee**, Dajung Kim, and Kyungho Lee. (2026). Augmentiary: Exploring How LLM-Generated Interpretive Feedback Supports Meaning-Making in Reflective Journaling. Proceedings of the 2026 ACM Designing Interactive Systems Conference (DIS ’26).
-[[📄Paper]]()
-- **[C.4]** **Soohwan Lee**, Seoyeong Hwang, Ian Oakley, and Kyungho Lee. (2024). Expanding the Design Space of Vision-based Interactive Systems for Group Dance Practice. *Proceedings of the 2024 ACM Designing Interactive Systems Conference (DIS ’24)*.
+- **[C.1]** **Soohwan Lee**, Kyungho Lee. (2026) Understanding Compliance and Conversion Dynamics in Multi-Agent Collectives. *Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems (CHI’26)*.
+[[📄Paper]](https://doi.org/10.1145/3772318.3790385) [[🗣️Presentation]](https://www.youtube.com/watch?v=c2_R4BPfIXw&t=253s)
+- **[C.2]** Seoyeong Hwang, Soohyun Hwang, **Soohwan Lee**, Dajung Kim, and Kyungho Lee. (2026). Augmentiary: Exploring How LLM-Generated Interpretive Feedback Supports Meaning-Making in Reflective Journaling. Proceedings of the 2026 ACM Designing Interactive Systems Conference (DIS ’26).
+[[📄Paper]](https://dl.acm.org/doi/10.1145/3800645.3812859)
+- **[C.3]** **Soohwan Lee**, Seoyeong Hwang, Ian Oakley, and Kyungho Lee. (2024). Expanding the Design Space of Vision-based Interactive Systems for Group Dance Practice. *Proceedings of the 2024 ACM Designing Interactive Systems Conference (DIS ’24)*.
 [[📄Paper]](https://doi.org/10.1145/3643834.3661568) [[🗣️Presentation]](https://www.youtube.com/watch?v=QkQS_QiRz9o&t=5s) [[🎙️Podcast]](https://www.youtube.com/watch?v=zVwT_CGxQII&t=71s)
-- **[C.5]** DoYoung Lee, **Soohwan Lee**, and Ian Oakley. (2020). Nailz: Sensing Hand Input with Touch Sensitive Nails. *Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems (CHI ’20)*.
+- **[C.4]** DoYoung Lee, **Soohwan Lee**, and Ian Oakley. (2020). Nailz: Sensing Hand Input with Touch Sensitive Nails. *Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems (CHI ’20)*.
 [[📄Paper]](https://doi.org/10.1145/3313831.3376778)
 
 ### Journal Publications
-- **[J.1]** Jang, Sangsu, **Soohwan Lee**, Temirlan Dzhoroev, Taeyoon Kim, Hyejin Oh, Nari Kim, and Young-Woo Park. (2021). Design Guidelines for Contextual Awareness and Management of Hygiene in Daily Life with Infectious Viruses. *Archives of Design Research*.
+- **[J.1]** **Soohwan Lee**, Seoyeong Hwang, Minkyu Kim, Dajung Kim, and Kyungho Lee. (2026) Investigating LLM-Powered Minority Support in Power-Imbalanced Group Decision-Making: Counterargument and Mediation as Intervention Strategies. *Proceedings of the ACM on Human-Computer Interaction (CSCW’26)*.
+[[📄Paper]](https://arxiv.org/abs/2606.31762)
+- **[J.2]** Jang, Sangsu, **Soohwan Lee**, Temirlan Dzhoroev, Taeyoon Kim, Hyejin Oh, Nari Kim, and Young-Woo Park. (2021). Design Guidelines for Contextual Awareness and Management of Hygiene in Daily Life with Infectious Viruses. *Archives of Design Research*.
 [[📄Paper]](http://dx.doi.org/10.15187/adr.2021.08.34.3.101)
 
 ### Short Papers & Posters
 - **[S.1]** **Soohwan Lee**. (2026). Understanding and Designing AI Systems that Reshape Social Dynamics in Group Decision-Making. *Companion Proceedings of the 31th International Conference on Intelligent User Interfaces (IUI ’26 Companion)*.
-[[📄Paper]](https://doi.org/10.1145/3742414.3789229) [[🖼️Poster]]()
+[[📄Paper]](https://doi.org/10.1145/3742414.3789229) [[🖼️Poster]](/files/IUI26-Poster.pdf) [[🗂️Slides]](/files/IUI26-PT.pdf)
 - **[S.2]** **Soohwan Lee**, Seoyeong Hwang, and Kyungho Lee. (2025). Beyond Individual UX: Defining Group Experience(GX) as a New Paradigm for Group-centered AI. *Companion Publication of the 2025 ACM Designing Interactive Systems Conference (DIS'25 Companion)*.
 [[📄Paper]](https://doi.org/10.1145/3715668.3736348) [[🖼️Poster]](/files/DIS25-Poster.pdf)
 - **[S.3]** **Soohwan Lee**, Seoyeong Hwang, Dajung Kim, and Kyungho Lee. (2025). Conversational Agents as Catalysts for Critical Thinking: Challenging Social Influence in Group Decision-making. *Extended Abstracts of the CHI Conference on Human Factors in Computing Systems (CHI EA ’25)*.
@@ -61,7 +61,7 @@ C = Conference | J = Journal | S = Short paper/poster | T = Thesis | D = Domesti
 [[📄Paper]](https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE10530377)
 
 ### Under Review
-- **[U.1–U.5]** Multiple manuscripts under review, including conference papers and a book chapter, focusing on:
+- **[U.1–U.3]** Multiple manuscripts under review, including conference papers and a book chapter, focusing on:
   - AI-mediated group decision-making
   - Minority influence and social power in multi-agent systems
   - Reflective writing and LLM-based journaling systems
