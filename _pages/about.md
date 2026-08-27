@@ -21,15 +21,11 @@ I am a **Ph.D. candidate** in the [Expressive Computing Lab](https://expc.unist.
 
 Most AI research studies one user talking to one system. I study what happens when **AI joins a group** — how it shifts decisions, influence, and power among people who must decide together.
 
-> **In one line:** I design and study AI systems that make group influence visible, contestable, and fair.
-
 ---
 
-## 🔬 Research Focus & Vision
+## 🔬 Research
 
-My research investigates how **AI-mediated systems reshape group dynamics and social influence beyond the individual level**. Drawing on social psychological theory, I design and empirically study interactive AI systems that intervene in group processes to improve decision quality, inclusivity, and collective intelligence.
-
-I advance the concept of **Group-Centered AI**, reframing user experience as collective and emergent rather than an aggregation of individual interactions. My goal is to build AI that does not merely optimize group outcomes, but helps people **understand how those outcomes emerge** — whose values are reflected, and how influence is exercised.
+Drawing on social psychological theory, I design and empirically study AI systems that intervene in group processes. I advance **Group-Centered AI**, treating user experience as collective and emergent rather than a sum of individual interactions — building AI that does not merely optimize group outcomes, but helps people **see how those outcomes emerge**.
 
 | Theme | What I study |
 | :--- | :--- |
@@ -42,11 +38,7 @@ I advance the concept of **Group-Centered AI**, reframing user experience as col
 
 ## ☕ Beyond Research
 
-Outside the lab I run, watch a lot of films, and read across cross-cultural psychology.
-
-- 🎬 **Directors:** Quentin Tarantino · Christopher Nolan · Denis Villeneuve
-- 🍿 **Favorites:** *Sicario* · *The Matrix* · *Everything Everywhere All at Once*
-- 📖 **Reading:** *The Geography of Thought* and other work on cross-cultural psychology
+Outside the lab I run, watch films — Tarantino, Nolan, Villeneuve; *Sicario*, *The Matrix*, *Everything Everywhere All at Once* — and read on cross-cultural psychology.
 
 ---
 
