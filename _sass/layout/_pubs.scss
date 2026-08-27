@@ -8,7 +8,7 @@
 .pub-badge {
   display: inline-block;
   padding: 0.15em 0.6em;
-  margin-right: 0.35em;
+  margin-right: 0.5em;
   border-radius: 4px;
   font-family: $sans-serif;
   font-size: 0.72em;
@@ -32,10 +32,16 @@
 
 /* Muted "type" tag shown after the badge, e.g. Full Paper / Poster */
 .pub-type {
-  font-size: 0.78em;
+  font-size: 0.8em;
   color: $gray;
   font-style: italic;
-  margin-left: 0.1em;
+  letter-spacing: 0.01em;
+}
+
+/* Put the badge row on its own line above the citation */
+.pub-meta {
+  display: block;
+  margin-bottom: 0.3em;
 }
 
 /* Year headings (the "## 2026" lines) on the publications page */
@@ -47,8 +53,12 @@
 
 /* Each publication entry */
 .pub-item {
-  margin-bottom: 1.1em;
+  margin-bottom: 1.4em;
   line-height: 1.55;
+}
+
+.pub-item p {
+  margin: 0;
 }
 
 /* ==========================================================================

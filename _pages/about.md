@@ -11,7 +11,7 @@ redirect_from:
 
 📌 &nbsp;**Seeking a research internship for Summer 2027** in human-centered AI and human-AI interaction — particularly on AI-mediated group dynamics, social influence, and multi-agent systems.
 
-Feel free to [reach out](mailto:soohwanlee@unist.ac.kr) &nbsp;·&nbsp; [CV](/files/soohwan_CV__final.pdf) &nbsp;·&nbsp; [Google Scholar](https://scholar.google.com/citations?user=_iYMyRcAAAAJ&hl=en&oi=ao)
+📧 [soohwanlee@unist.ac.kr](mailto:soohwanlee@unist.ac.kr) &nbsp;·&nbsp; [CV](/files/soohwan_CV__final.pdf) &nbsp;·&nbsp; [Google Scholar](https://scholar.google.com/citations?user=_iYMyRcAAAAJ&hl=en&oi=ao)
 
 </div>
 
