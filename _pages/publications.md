@@ -9,9 +9,10 @@ Grouped by year. See my [Google Scholar](https://scholar.google.com/citations?us
 
 <div class="pubs-page" markdown="1">
 
-<div class="pub-toggle">
-  <button type="button" class="pub-toggle__btn is-active" data-view="year">By Year</button>
-  <button type="button" class="pub-toggle__btn" data-view="type">By Type</button>
+<div class="pub-toggle" role="tablist" aria-label="Publication view">
+  <span class="pub-toggle__slider" aria-hidden="true"></span>
+  <button type="button" role="tab" class="pub-toggle__btn is-active" data-view="year" aria-selected="true">By Year</button>
+  <button type="button" role="tab" class="pub-toggle__btn" data-view="type" aria-selected="false">By Type</button>
 </div>
 
 
@@ -218,13 +219,25 @@ DoYoung Lee, **Soohwan Lee**, and Ian Oakley. Nailz: Sensing Hand Input with Tou
   });
 
   var buttons = page.querySelectorAll('.pub-toggle__btn');
+  var slider = page.querySelector('.pub-toggle__slider');
+
+  function moveSlider() {
+    var active = page.querySelector('.pub-toggle__btn.is-active');
+    if (!active || !slider) return;
+    slider.style.width = active.offsetWidth + 'px';
+    slider.style.transform = 'translateX(' + (active.offsetLeft - slider.offsetLeft) + 'px)';
+  }
+
   function show(view) {
     var byYear = view === 'year';
     yearNodes.forEach(function (el) { el.hidden = !byYear; });
     byType.hidden = byYear;
     Array.prototype.forEach.call(buttons, function (b) {
-      b.classList.toggle('is-active', b.getAttribute('data-view') === view);
+      var on = b.getAttribute('data-view') === view;
+      b.classList.toggle('is-active', on);
+      b.setAttribute('aria-selected', on ? 'true' : 'false');
     });
+    moveSlider();
     try { localStorage.setItem('pubView', view); } catch (e) {}
   }
 
@@ -235,6 +248,8 @@ DoYoung Lee, **Soohwan Lee**, and Ian Oakley. Nailz: Sensing Hand Input with Tou
   var saved = 'year';
   try { saved = localStorage.getItem('pubView') || 'year'; } catch (e) {}
   show(saved);
+  window.addEventListener('resize', moveSlider);
+  if (document.fonts && document.fonts.ready) { document.fonts.ready.then(moveSlider); }
 })();
 </script>
 

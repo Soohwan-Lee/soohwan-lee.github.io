@@ -51,6 +51,19 @@
   border-bottom: 1px solid $light-gray;
 }
 
+/* The author's own name in a citation.
+   Bold + a subtle border-bottom (al-folio's technique). A border is used
+   rather than text-decoration so it sits lower and reads as emphasis, not a
+   link — and no co-author name on this page is a link, so there is no
+   clickable-looking ambiguity. */
+.pub-item p strong,
+.pub-bytype p strong {
+  font-weight: 700;
+  color: mix(#000, $gray, 55%);
+  border-bottom: 2px solid rgba(47, 127, 147, 0.42);
+  padding-bottom: 0.5px;
+}
+
 /* Each publication entry */
 .pub-item {
   margin-bottom: 1.4em;
@@ -115,35 +128,68 @@
 
 /* ==========================================================================
    VIEW TOGGLE  (By Year / By Type)
+   Segmented control with a sliding indicator.
    ========================================================================== */
 
 .pub-toggle {
+  position: relative;
   display: inline-flex;
-  margin: 0 0 1.5em;
-  border: 1px solid $light-gray;
-  border-radius: 1.2em;
-  overflow: hidden;
+  margin: 0 0 2em;
+  padding: 0.25em;
+  border-radius: 2em;
+  background-color: mix(#fff, $light-gray, 55%);
+  line-height: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* The white pill that slides behind the active label */
+.pub-toggle__slider {
+  position: absolute;
+  top: 0.25em;
+  bottom: 0.25em;
+  left: 0.25em;
+  border-radius: 2em;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13),
+              0 1px 1px rgba(0, 0, 0, 0.06);
+  transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+              width 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .pub-toggle__btn {
-  padding: 0.35em 1.1em;
+  position: relative;
+  z-index: 1;
+  padding: 0.55em 1.35em;
   border: 0;
   margin: 0;
+  border-radius: 2em;
   font-family: $sans-serif;
-  font-size: 0.78em;
+  font-size: 0.76em;
   font-weight: 600;
-  line-height: 1.6;
-  color: $gray;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+  white-space: nowrap;
+  color: mix(#000, $gray, 15%);
   background-color: transparent;
   cursor: pointer;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+  transition: color 0.2s ease-in-out;
 
   &:hover {
-    color: var(--global-link-color);
+    color: mix(#000, $gray, 45%);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    box-shadow: 0 0 0 2px var(--global-link-color);
   }
 
   &.is-active {
-    color: #fff;
-    background-color: var(--global-link-color);
+    color: var(--global-link-color);
   }
 }
