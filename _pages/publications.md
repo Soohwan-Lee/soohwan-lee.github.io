@@ -26,8 +26,18 @@ Grouped by year. See my [Google Scholar](https://scholar.google.com/citations?us
 ## Under Review
 
 <div class="pub-item" markdown="1">
-<span class="pub-meta"><span class="pub-badge badge-review">Under Review</span></span>
-Three manuscripts are currently under review — two conference papers and a book chapter — on multi-agent social influence over time, minority influence in inclusive group decision-making, and non-verbal communication support for group video meetings.
+<span class="pub-meta"><span class="pub-badge badge-review">Under Review</span><span class="pub-type">Conference Paper</span></span>
+**Soohwan Lee**, Kyungho Lee. Reinforce, Align, or Oscillate? How People Experience and Interpret Multi-Agent Social Influence Over Time.
+</div>
+
+<div class="pub-item" markdown="1">
+<span class="pub-meta"><span class="pub-badge badge-review">Under Review</span><span class="pub-type">Book Chapter</span></span>
+**Soohwan Lee**, Seoyeong Hwang, and Kyungho Lee. Reframing Supporting Minority Influence in the Age of AI: Bridging Theory, Design, and Simulation for Inclusive Group Decision-Making.
+</div>
+
+<div class="pub-item" markdown="1">
+<span class="pub-meta"><span class="pub-badge badge-review">Under Review</span><span class="pub-type">Conference Paper</span></span>
+**Soohwan Lee**, Soobin Lee, and Kyungho Lee. Expression2Emoji: Designing Non-verbal Communication Support Tool for Group Video Meetings.
 </div>
 
 
