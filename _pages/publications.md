@@ -58,7 +58,7 @@ Grouped by year. See my [Google Scholar](https://scholar.google.com/citations?us
 
 <div class="pub-item" data-cat="journal" markdown="1">
 <span class="pub-meta"><span class="pub-badge badge-cscw">CSCW '26</span><span class="pub-type">Journal</span></span>
-**Soohwan Lee**, Seoyeong Hwang, Minkyu Kim, Dajung Kim, and Kyungho Lee. Investigating LLM-Powered Minority Support in Power-Imbalanced Group Decision-Making: Counterargument and Mediation as Intervention Strategies. *Proceedings of the ACM on Human-Computer Interaction*.
+**Soohwan Lee**, Seoyeong Hwang, Mingyu Kim, Dajung Kim, and Kyungho Lee. Investigating LLM-Powered Dissenting Minority Support in Power-Imbalanced Group Decision-Making: Counterargument and Mediation as Intervention Strategies. *Proceedings of the ACM on Human-Computer Interaction (PACM HCI)*, Vol. 10, No. 6, Article CSCW106.
 <div class="pub-links"><a class="pub-link" href="https://arxiv.org/abs/2606.31762">arXiv</a></div>
 </div>
 
@@ -87,13 +87,13 @@ Seoyeong Hwang, Soohyun Hwang, **Soohwan Lee**, Dajung Kim, and Kyungho Lee. Aug
 <div class="pub-item" data-cat="workshop" markdown="1">
 <span class="pub-meta"><span class="pub-badge badge-chi">CHI '26 Workshop</span><span class="pub-type">Workshop</span></span>
 **Soohwan Lee**, Kyungho Lee. Multi-Agent Consensus as a Cognitive Bias Trigger in Human-AI Interaction. *Bias4Trust Workshop on Understanding, Mitigating, and Leveraging Cognitive Biases to Calibrate Trust in Evolving AI Systems*.
-<div class="pub-links"><a class="pub-link" href="/files/CHI26-Bias4Trust-Workshop.pdf">PDF</a></div>
+<div class="pub-links"><a class="pub-link" href="https://arxiv.org/abs/2604.22277">arXiv</a></div>
 </div>
 
 <div class="pub-item" data-cat="workshop" markdown="1">
 <span class="pub-meta"><span class="pub-badge badge-chi">CHI '26 Workshop</span><span class="pub-type">Workshop</span></span>
 **Soohwan Lee**, Kyungho Lee. Rethinking AI-Mediated Minority Support in Power-Imbalanced Group Decision-Making: From Anonymity To Authenticity. *AI-MC Workshop on Restoring Human Authenticity in AI-Mediated Communication*.
-<div class="pub-links"><a class="pub-link" href="/files/CHI26-AIMC-Workshop.pdf">PDF</a></div>
+<div class="pub-links"><a class="pub-link" href="https://arxiv.org/abs/2604.22319">arXiv</a></div>
 </div>
 
 ## 2025
@@ -150,7 +150,7 @@ Seoyeong Hwang, Soohyun Hwang, **Soohwan Lee**, Dajung Kim, and Kyungho Lee. Aug
 
 <div class="pub-item" data-cat="journal" markdown="1">
 <span class="pub-meta"><span class="pub-badge badge-journal">ADR</span><span class="pub-type">Journal</span></span>
-Sangsu Jang, **Soohwan Lee**, Temirlan Dzhoroev, Taeyoon Kim, Hyejin Oh, Nari Kim, and Young-Woo Park. Design Guidelines for Contextual Awareness and Management of Hygiene in Daily Life with Infectious Viruses. *Archives of Design Research*.
+Sangsu Jang, **Soohwan Lee**, Temirlan Dzhoroev, Taeyoon Kim, Hyejin Oh, Nari Kim, and Young-Woo Park. Design Guidelines for Contextual Awareness and Management of Hygiene in Daily Life with Infectious Viruses. *Archives of Design Research*, Vol. 34, No. 3, pp. 101–121.
 <div class="pub-links"><a class="pub-link" href="http://dx.doi.org/10.15187/adr.2021.08.34.3.101">DOI</a></div>
 </div>
 
