@@ -208,7 +208,6 @@ DoYoung Lee, **Soohwan Lee**, and Ian Oakley. Nailz: Sensing Hand Input with Tou
   });
   var byType = page.querySelector('.pub-bytype');
 
-  // Build the "By Type" view once, cloning each entry under its category.
   ORDER.forEach(function (cat) {
     var group = items.filter(function (el) { return el.getAttribute('data-cat') === cat; });
     if (!group.length) return;
