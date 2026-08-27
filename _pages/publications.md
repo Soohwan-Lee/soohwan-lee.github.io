@@ -125,7 +125,7 @@ Seoyeong Hwang, Soohyun Hwang, **Soohwan Lee**, Dajung Kim, and Kyungho Lee. Aug
 </div>
 
 <div class="pub-item" data-cat="workshop" markdown="1">
-<span class="pub-meta"><span class="pub-badge badge-dis">DIS '24 Workshop</span><span class="pub-type">Workshop</span></span>
+<span class="pub-meta"><span class="pub-badge badge-dis">DIS '24 Workshop</span><span class="pub-type">Workshop · Oral</span></span>
 **Soohwan Lee**, Seoyeong Hwang, and Kyungho Lee. Conversational Agents as Catalysts for Critical Thinking: Challenging Design Fixation in Group Design. *Workshop on Death of the Design Researcher? Creating Knowledge Resources for Designers Using Generative AI*.
 <div class="pub-links"><a class="pub-link" href="https://arxiv.org/abs/2406.11125">arXiv</a><a class="pub-link" href="https://www.youtube.com/watch?v=w5aIlpBV9Co&t=10s">Podcast</a></div>
 </div>
