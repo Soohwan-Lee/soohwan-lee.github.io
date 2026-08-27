@@ -9,7 +9,7 @@ redirect_from:
 
 <div style="border: 3px dashed #d94f4f; border-radius: 10px; padding: 1.4em 1.6em; margin: 0 0 2em 0; background-color: rgba(217, 79, 79, 0.06);" markdown="1">
 
-<p style="font-size: 1.35em; font-weight: 700; line-height: 1.35; margin: 0 0 0.5em 0;">🔍 Seeking a Ph.D. Research Internship</p>
+<p style="font-weight: 700; margin: 0 0 0.6em 0;">🔍 Seeking a Ph.D. Research Internship</p>
 
 **I am actively looking for a research internship** in **Human-centered AI**, **Human-AI Collaboration**, and **AI-mediated group dynamics**.
 
