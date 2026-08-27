@@ -7,15 +7,9 @@ redirect_from:
   - /about.html
 ---
 
-<div style="border: 3px dashed #d94f4f; border-radius: 10px; padding: 1.2em 1.4em; margin: 0 0 2em 0; background-color: rgba(217, 79, 79, 0.06); font-size: 0.88em; line-height: 1.6;" markdown="1">
+<div style="border: 2px dashed #b8b8b8; border-radius: 8px; padding: 0.9em 1.1em; margin: 0 0 2em 0; font-size: 0.85em; line-height: 1.6;" markdown="1">
 
-<p style="font-weight: 700; margin: 0 0 0.6em 0;">🔍 Seeking a Ph.D. Research Internship</p>
-
-**I am actively looking for a research internship** in **Human-centered AI**, **Human-AI Collaboration**, and **AI-mediated group dynamics**.
-
-I bring published work at **CHI, CSCW, DIS, and IUI**, hands-on experience designing and building **LLM-powered multi-agent systems**, and mixed-methods expertise spanning controlled experiments, statistical modeling, and qualitative analysis.
-
-**📮 [soohwanlee@unist.ac.kr](mailto:soohwanlee@unist.ac.kr)** &nbsp;·&nbsp; 📄 [CV (PDF)](/files/soohwan_CV__final.pdf) &nbsp;·&nbsp; 📚 [Publications](/publications/)
+📌 &nbsp;**Seeking a research internship for Summer 2027** in human-centered AI and human-AI interaction. Feel free to [reach out](mailto:soohwanlee@unist.ac.kr) — [CV](/files/soohwan_CV__final.pdf)
 
 </div>
 
