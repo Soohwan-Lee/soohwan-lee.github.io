@@ -38,12 +38,16 @@ C = Conference | J = Journal | S = Short paper/poster | T = Thesis | D = Domesti
 - **[S.5]** **Soohwan Lee** and Kyungho Lee. (2023). CheerUp: A Real-time Ambient Visualization of Cheerleading Pose Similarity. *Companion Proceedings of the 28th International Conference on Intelligent User Interfaces (IUI ’23 Companion)*.
 [[📄Paper]](https://doi.org/10.1145/3581754.3584135) [[🖼️Poster]](/files/cheerUp-poster.pdf) [[💻Code]](https://github.com/Soohwan-Lee/CxD_CheerUp) [[▶️Demo]](https://www.youtube.com/watch?v=BAXvDJvt5vA)
 
-### Workshop Paper
-- **[W.1]** **Soohwan Lee**, Kyungho Lee. (2026). Multi-Agent Consensus as a Cognitive Bias Trigger in Human-AI Interaction. *Bias4Trust Workshop on Understanding, Mitigating, and Leveraging Cognitive Biases to Calibrate Trust in Evolving AI Systems (CHI '26 Workshop)*.
+### Workshop Papers
+- **[W.1]** **Soohwan Lee**, Kyungho Lee. (2026). Delivered but Not Heard: AI Proxy Speech in Power-Imbalanced Group Decision-Making. *Workshop on Broader Impacts of GenAI in Communication: Building Agendas for Research, Design, and Policymaking (CSCW '26 Workshop, Oral Presentation)*.
+[[📄Paper]](/publications/)
+- **[W.2]** **Soohwan Lee**, Kyungho Lee. (2026). Where Does the Disagreement Go? Group Reflexivity and AI Accounts of Team Decision-makings. *Workshop on "Nobody Did This": Contribution, Originality, and Accountability in Agent-Mediated Collaboration (CSCW '26 Workshop)*.
+[[📄Paper]](/publications/)
+- **[W.3]** **Soohwan Lee**, Kyungho Lee. (2026). Multi-Agent Consensus as a Cognitive Bias Trigger in Human-AI Interaction. *Bias4Trust Workshop on Understanding, Mitigating, and Leveraging Cognitive Biases to Calibrate Trust in Evolving AI Systems (CHI '26 Workshop)*.
 [[📄Paper]](https://soohwan-lee.github.io/files/CHI26-Bias4Trust-Workshop.pdf)
-- **[W.2]** **Soohwan Lee**, Kyungho Lee. (2026). Rethinking AI-Mediated Minority Support in Power-Imbalanced Group Decision-Making: From Anonymity To Authenticity. *AI-MC Workshop on Restoring Human Authenticity in AI-Mediated Communication (CHI '26 Workshop)*.
+- **[W.4]** **Soohwan Lee**, Kyungho Lee. (2026). Rethinking AI-Mediated Minority Support in Power-Imbalanced Group Decision-Making: From Anonymity To Authenticity. *AI-MC Workshop on Restoring Human Authenticity in AI-Mediated Communication (CHI '26 Workshop)*.
 [[📄Paper]](https://soohwan-lee.github.io/files/CHI26-AIMC-Workshop.pdf)
-- **[W.3]** **Soohwan Lee**, Seoyeong Hwang, and Kyungho Lee. (2024). Conversational Agents as Catalysts for Critical Thinking: Challenging Design Fixation in Group Design. *Workshop on Death of the Design Researcher? Creating Knowledge Resources for Designers Using Generative AI (DIS '24 Workshop)*.
+- **[W.5]** **Soohwan Lee**, Seoyeong Hwang, and Kyungho Lee. (2024). Conversational Agents as Catalysts for Critical Thinking: Challenging Design Fixation in Group Design. *Workshop on Death of the Design Researcher? Creating Knowledge Resources for Designers Using Generative AI (DIS '24 Workshop)*.
 [[📄Paper]](https://arxiv.org/abs/2406.11125) [[🎙️Podcast]](https://www.youtube.com/watch?v=w5aIlpBV9Co&t=10s)
 
 ### Thesis
