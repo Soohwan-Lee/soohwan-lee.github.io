@@ -7,66 +7,68 @@ redirect_from:
   - /about.html
 ---
 
+<div class="notice--info" markdown="1">
+### 🔍 Open to Ph.D. Research Internships
 
-<!-- ## About Me
-I am a Ph.D. candidate in the [Expressive Computing Lab](https://expc.unist.ac.kr/) at [Department of Design](https://design.unist.ac.kr/), [UNIST](https://www.unist.ac.kr/), specializing in Human-Computer Interaction(HCI) and Human-centered AI. My research bridges social psychology and AI technologies, with a particular focus on social influence and power dynamics in AI agent interactions.
+**I am actively seeking Ph.D. research internship opportunities.**
 
-## Research Focus & Contributions
-My work explores the intersection of social psychology, group dynamics, and AI technologies to address critical limitations in current Human-centered AI approaches. While much of today's AI research focuses on interactions between individual users and single AI systems, I'm expanding this perspective to include **group-level interactions** and **collective experiences**.
-Through my research, I examine:
-- **Social Psychology & Group Dynamics**: Understanding how group decision-making processes can be enhanced through AI intervention
-- **Human-centered AI**: Designing AI systems that meaningfully support collective goals and diverse user groups
-- **AI Social Influence**: Investigating how AI agents can mediate power dynamics within collaborative environments
+I am looking to collaborate on **Human-centered AI**, **AI-mediated group dynamics**, and **social influence in multi-agent systems**. I bring experience in experimental study design, LLM-powered system building, and mixed-methods HCI research.
 
-To advance these areas, I've introduced important concepts like Group-centered AI and Group Experience(GX), developing frameworks specifically tailored to collective user experiences and creating AI systems that facilitate balanced group interactions while amplifying minority perspectives.
+📮 **[soohwanlee@unist.ac.kr](mailto:soohwanlee@unist.ac.kr)** &nbsp;·&nbsp; 📄 [CV (PDF)](/files/soohwan_CV__final.pdf) &nbsp;·&nbsp; 📚 [Publications](/publications/)
+</div>
 
-## Current Projects
-- **LLM-powered Devil's Advocate Agent**: Designed to enhance minority opinions in group decision-making processes
-- **Multi-agent Systems and Social Influence**: Examining how AI agents establish and exercise social power in group settings
-- **Adaptive Chatbot Facilitators**: Creating AI tools that support collaborative ideation processes
-- **Group Reflective Dashboard**: Developing visualization systems that promote critical thinking during group ideation through reflective prompting -->
+## 👋 About Me
 
-## About Me
+I am a **Ph.D. candidate** in the [Expressive Computing Lab](https://expc.unist.ac.kr/) at the [Department of Design](https://design.unist.ac.kr/), [UNIST](https://www.unist.ac.kr/), working in **Human–Computer Interaction (HCI)** and **Human-centered AI**.
 
-I am a Ph.D. candidate in the [Expressive Computing Lab](https://expc.unist.ac.kr/) at [Department of Design](https://design.unist.ac.kr/), [UNIST](https://www.unist.ac.kr/), specializing in Human–Computer Interaction (HCI) and Human-centered AI.  
-My research investigates how AI systems reshape **group dynamics** such as group decision-making, social influence, and power dynamics, drawing on theories from social psychology and designing interactive AI systems grounded in empirical evidence.
-Rather than focusing on isolated interactions between a single user and an AI system, my work advances a **group-level perspective**, examining how people experience, interpret, and negotiate influence when AI agents participate in collective settings.
+Most AI research studies one user talking to one system. I study what happens when **AI joins a group** — how it shifts decisions, influence, and power among people who must decide together.
 
+> **In one line:** I design and study AI systems that make group influence visible, contestable, and fair.
 
+---
 
-## Research Focus
-My research centers on **AI-mediated group dynamics**, with particular attention to how social influence unfolds over time and how power asymmetries shape collective outcomes. I study these phenomena through a combination of experimental studies, system design, and theory-driven analysis.
+## 🔬 Research Focus
 
-Key themes in my work include:
-- **AI Social Influence in Groups**  
-  Investigating how AI agents exert normative and informative influence, and how people respond through compliance, conversion, or resistance in multi-agent settings.
-- **Group-centered AI & Group Experience (GX)**  
-  Proposing conceptual frameworks that extend Human-centered AI beyond the individual level to account for collective experience, coordination, and conflict.
-- **Minority Support and Dissenting AI Interventions**  
-  Designing LLM-powered systems that support minority perspectives through counterargument, reframing, and mediation, particularly in power-imbalanced group decision-making.
-- **Reflective Interfaces for Group Sensemaking**  
-  Exploring visualization and interaction techniques that help groups reflect on value conflicts, participation asymmetries, and influence trajectories during collaboration.
+My work sits at the intersection of **social psychology** and **interactive AI systems**, combining controlled experiments, system design, and theory-driven analysis.
 
+| Theme | What I study |
+| :--- | :--- |
+| **AI Social Influence** | How AI agents exert normative and informative influence — and when people comply, convert, or resist |
+| **Group-centered AI & GX** | Frameworks that extend Human-centered AI beyond the individual to **Group Experience** |
+| **Minority Support** | LLM-powered dissent and mediation that protect minority views in power-imbalanced groups |
+| **Reflective Interfaces** | Visualizations that surface value conflicts, participation gaps, and influence trajectories |
 
-## Current Projects
+---
 
-- **LLM-powered Minority Support Systems**  
-  AI-mediated dissent and mediation strategies that amplify minority viewpoints and promote critical discussion in group decision-making.
-- **Multi-agent Social Influence Dynamics**  
-  Experimental investigations of how majority, minority, and diffusion patterns of AI influence shape opinions and confidence over time.
-- **Group Reflective Dashboard**  
-  A visualization-based system that surfaces latent value conflicts, influence trajectories, and participation asymmetries to support post-hoc and in-situ group reflection.
+## 🚀 Current Projects
 
+**🗣️ LLM-powered Minority Support Systems**  
+AI-mediated dissent and mediation strategies that amplify minority viewpoints and promote critical discussion in group decision-making.
 
-## Research Vision
-Across these projects, my broader goal is to design **Group-centered AI systems** that do not simply optimize group outcomes, but help people **understand how those outcomes emerge**, whose values are reflected, and how influence is exercised within AI-augmented collectives.
+**🤖 Multi-agent Social Influence Dynamics**  
+Experiments on how majority, minority, and diffusion patterns of AI influence shape opinions and confidence over time.
 
+**📊 Group Reflective Dashboard**  
+A visualization system that surfaces latent value conflicts, influence trajectories, and participation asymmetries for in-situ and post-hoc group reflection.
 
-## Personal Interests
-In my free time, I enjoy running and exploring a diverse range of films and literature. I particularly love movies directed by Quentin Tarantino, Christopher Nolan, and Denis Villeneuve. However, some of my favorite films include 'Sicario', 'The Matrix', and 'Everything Everywhere All at Once'. I also have a particular interest in reading books and articles on cross-cultural psychology, such as 'Thought of Geography'.
+---
 
+## 🎯 Research Vision
 
-<!-- News and Travle
-------
-The main configuration file for the site is in the base directory in [_config.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_config.yml), which defines the content in the sidebars and other site-wide features. You will need to replace the default variables with ones about yourself and your site's github repository. The configuration file for the top menu is in [_data/navigation.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_data/navigation.yml). For example, if you don't have a portfolio or blog posts, you can remove those items from that navigation.yml file to remove them from the header.  -->
+<div class="notice--primary" markdown="1">
+I want to build **Group-centered AI** that does not merely optimize group outcomes, but helps people **understand how those outcomes emerge** — whose values are reflected, and how influence is exercised within AI-augmented collectives.
+</div>
 
+---
+
+## ☕ Beyond Research
+
+Outside the lab I run, watch a lot of films, and read across cross-cultural psychology.
+
+- 🎬 **Directors:** Quentin Tarantino · Christopher Nolan · Denis Villeneuve
+- 🍿 **Favorites:** *Sicario* · *The Matrix* · *Everything Everywhere All at Once*
+- 📖 **Reading:** *The Geography of Thought* and other work on cross-cultural psychology
+
+---
+
+<sub>An earlier, longer version of this page is kept in the [archive](/about-archive/).</sub>
