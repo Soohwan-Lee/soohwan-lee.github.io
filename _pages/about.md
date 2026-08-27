@@ -44,24 +44,6 @@ I advance the concept of **Group-Centered AI**, reframing user experience as col
 
 ---
 
-## 📌 Selected Work
-
-- **Understanding Compliance and Conversion Dynamics in Multi-Agent Collectives** — *CHI 2026*
-- **Investigating LLM-Powered Minority Support in Power-Imbalanced Group Decision-Making** — *CSCW 2026*
-- **Beyond Individual UX: Defining Group Experience (GX) for Group-centered AI** — *DIS 2025*
-- **Amplifying Minority Voices: AI-Mediated Devil's Advocate System** — *IUI 2025*
-
-<sub>Supported by an **NRF Grant for Doctoral Research** (PI, 2026–2028). Full list on [Publications](/publications/) and [Google Scholar](https://scholar.google.com/citations?user=_iYMyRcAAAAJ&hl=en&oi=ao).</sub>
-
----
-
-## 🛠️ Skills
-
-**Research** — Experimental design · Mixed-methods · Statistical modeling · Behavioral analysis · Qualitative research  
-**Code & Systems** — Python · R · TypeScript/JavaScript · Node.js · LLM APIs · Git · Fast prototyping
-
----
-
 ## ☕ Beyond Research
 
 Outside the lab I run, watch a lot of films, and read across cross-cultural psychology.
