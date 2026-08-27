@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-<div style="border: 3px dashed #d94f4f; border-radius: 10px; padding: 1.4em 1.6em; margin: 0 0 2em 0; background-color: rgba(217, 79, 79, 0.06);" markdown="1">
+<div style="border: 3px dashed #d94f4f; border-radius: 10px; padding: 1.2em 1.4em; margin: 0 0 2em 0; background-color: rgba(217, 79, 79, 0.06); font-size: 0.88em; line-height: 1.6;" markdown="1">
 
 <p style="font-weight: 700; margin: 0 0 0.6em 0;">🔍 Seeking a Ph.D. Research Internship</p>
 
