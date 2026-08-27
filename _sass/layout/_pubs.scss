@@ -1,0 +1,104 @@
+/* ==========================================================================
+   PUBLICATION BADGES
+   Venue badges used on the Publications page.
+   Usage in markdown:  <span class="pub-badge badge-chi">CHI '26</span>
+   To add a new venue, copy a .badge-* block below and change the color.
+   ========================================================================== */
+
+.pub-badge {
+  display: inline-block;
+  padding: 0.15em 0.6em;
+  margin-right: 0.35em;
+  border-radius: 4px;
+  font-family: $sans-serif;
+  font-size: 0.72em;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.6;
+  vertical-align: 0.12em;
+  white-space: nowrap;
+  color: #fff;
+  background-color: #7a8288; /* fallback / unknown venue */
+}
+
+.badge-chi     { background-color: #c0392b; }
+.badge-cscw    { background-color: #8e44ad; }
+.badge-dis     { background-color: #2980b9; }
+.badge-iui     { background-color: #16a085; }
+.badge-journal { background-color: #d35400; }
+.badge-thesis  { background-color: #34495e; }
+.badge-domestic{ background-color: #7f8c8d; }
+.badge-review  { background-color: #95a5a6; }
+
+/* Muted "type" tag shown after the badge, e.g. Full Paper / Poster */
+.pub-type {
+  font-size: 0.78em;
+  color: $gray;
+  font-style: italic;
+  margin-left: 0.1em;
+}
+
+/* Year headings (the "## 2026" lines) on the publications page */
+.pubs-page h2 {
+  margin-top: 2em;
+  padding-bottom: 0.2em;
+  border-bottom: 1px solid $light-gray;
+}
+
+/* Each publication entry */
+.pub-item {
+  margin-bottom: 1.1em;
+  line-height: 1.55;
+}
+
+/* ==========================================================================
+   PUBLICATION RESOURCE LINKS  (PDF / DOI / Slides / Poster / Video / Code)
+   Usage:  <a class="pub-link" href="...">PDF</a>
+   To add one, copy a single <a> line and change the URL and the label.
+   ========================================================================== */
+
+.pub-links {
+  margin: 0.4em 0 0;
+  line-height: 2.1;
+}
+
+.pub-link,
+.pub-link:visited {
+  display: inline-block;
+  padding: 0.18em 0.7em;
+  margin: 0 0.3em 0.25em 0;
+  border: 1px solid $light-gray;
+  border-radius: 0.85em;
+  font-family: $sans-serif;
+  font-size: 0.72em;
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  color: $gray;
+  background-color: transparent;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.15s ease-in-out,
+              background-color 0.15s ease-in-out,
+              border-color 0.15s ease-in-out;
+}
+
+.pub-link:hover,
+.pub-link:focus {
+  color: #fff;
+  background-color: var(--global-link-color);
+  border-color: var(--global-link-color);
+  text-decoration: none;
+}
+
+/* Award / honorable-mention variant */
+.pub-link--award,
+.pub-link--award:visited {
+  border-color: #b71c1c;
+  color: #b71c1c;
+}
+.pub-link--award:hover {
+  background-color: #b71c1c;
+  border-color: #b71c1c;
+  color: #fff;
+}

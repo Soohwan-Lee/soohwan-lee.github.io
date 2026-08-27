@@ -7,9 +7,11 @@ redirect_from:
   - /about.html
 ---
 
-<div style="border: 2px dashed #b8b8b8; border-radius: 8px; padding: 0.9em 1.1em; margin: 0 0 2em 0; font-size: 0.85em; line-height: 1.6;" markdown="1">
+<div style="border: 2px dashed #d94f4f; border-radius: 8px; padding: 1em 1.2em; margin: 0 0 2em 0; background-color: rgba(217, 79, 79, 0.07); font-size: 0.85em; line-height: 1.65;" markdown="1">
 
-📌 &nbsp;**Seeking a research internship for Summer 2027** in human-centered AI and human-AI interaction. Feel free to [reach out](mailto:soohwanlee@unist.ac.kr) — [CV](/files/soohwan_CV__final.pdf)
+📌 &nbsp;**Seeking a research internship for Summer 2027** in human-centered AI and human-AI interaction — particularly on AI-mediated group dynamics, social influence, and multi-agent systems.
+
+Feel free to [reach out](mailto:soohwanlee@unist.ac.kr) &nbsp;·&nbsp; [CV](/files/soohwan_CV__final.pdf) &nbsp;·&nbsp; [Google Scholar](https://scholar.google.com/citations?user=_iYMyRcAAAAJ&hl=en&oi=ao)
 
 </div>
 

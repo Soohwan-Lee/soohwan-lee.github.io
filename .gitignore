@@ -16,3 +16,4 @@ package-lock.json
 vendor/
 Gemfile.local
 Gemfile.local.lock
+.playwright-mcp/
