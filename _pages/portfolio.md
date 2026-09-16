@@ -23,6 +23,12 @@ Selected research and industry projects. Publications for each are listed on the
      Badges:  same as Publications page — badge-chi / badge-cscw / badge-dis /
               badge-iui / badge-journal / badge-thesis / badge-domestic / badge-review
      Links:   <a class="pub-link" href="URL">Code</a>
+     Research cards need two attributes for the Latest / By Theme toggle:
+       <article class="proj-card" data-theme="minority" data-year="2026">
+       Themes (see THEMES in the script at the bottom of this file):
+         influence / minority / gx / reflective / nonverbal / gesture
+       "Latest" sorts by data-year (newest first; ties keep file order).
+
      Related papers, grouped by type (one row per type, one pill per paper):
        <dl class="proj-papers">
        <dt>Full Paper</dt><dd><a class="proj-paper proj-paper--chi" href="DOI" title="Full title">CHI '26</a></dd>
@@ -32,11 +38,18 @@ Selected research and industry projects. Publications for each are listed on the
        Pill colors: proj-paper--chi / --cscw / --dis / --iui / --journal / --thesis / --domestic / --review
      =================================================================== -->
 
-## Research Projects
+<div class="proj-section-head">
+<h2 id="research-projects">Research Projects</h2>
+<div class="pub-toggle proj-toggle" role="tablist" aria-label="Project view">
+<span class="pub-toggle__slider" aria-hidden="true"></span>
+<button type="button" role="tab" class="pub-toggle__btn is-active" data-view="latest" aria-selected="true">Latest</button>
+<button type="button" role="tab" class="pub-toggle__btn" data-view="theme" aria-selected="false">By Theme</button>
+</div>
+</div>
 
-<div class="proj-grid">
+<div class="proj-grid" id="research-grid">
 
-<article class="proj-card">
+<article class="proj-card" data-theme="minority" data-year="2026">
 <div class="proj-card__thumb"><img src="/files/AI-mediated-Negotiation.png" alt="AI-mediated negotiation with proxy agents"></div>
 <div class="proj-card__body">
 <div class="proj-card__meta"><span class="pub-badge badge-review">Under Review</span><span class="proj-tag">AI-mediated Negotiation</span></div>
@@ -48,7 +61,7 @@ Selected research and industry projects. Publications for each are listed on the
 </div>
 </article>
 
-<article class="proj-card">
+<article class="proj-card" data-theme="influence" data-year="2026">
 <a class="proj-card__thumb" href="https://doi.org/10.1145/3772318.3790385"><img src="/files/multiagents.png" alt="Multi-agent social influence"></a>
 <div class="proj-card__body">
 <div class="proj-card__meta"><span class="pub-badge badge-chi">CHI '26</span><span class="proj-tag">Multi-agent · Social Influence</span></div>
@@ -62,7 +75,7 @@ Selected research and industry projects. Publications for each are listed on the
 </div>
 </article>
 
-<article class="proj-card">
+<article class="proj-card" data-theme="minority" data-year="2026">
 <a class="proj-card__thumb" href="https://arxiv.org/abs/2606.31762"><img src="/files/devil.png" alt="LLM-powered devil's advocate"></a>
 <div class="proj-card__body">
 <div class="proj-card__meta"><span class="pub-badge badge-cscw">CSCW '26</span><span class="proj-tag">Group Decision-Making</span></div>
@@ -78,7 +91,7 @@ Selected research and industry projects. Publications for each are listed on the
 </div>
 </article>
 
-<article class="proj-card">
+<article class="proj-card" data-theme="reflective" data-year="2026">
 <a class="proj-card__thumb" href="https://dl.acm.org/doi/10.1145/3800645.3812859"><img src="/files/augmentairy.png" alt="Augmentiary reflective journaling interface"></a>
 <div class="proj-card__body">
 <div class="proj-card__meta"><span class="pub-badge badge-dis">DIS '26</span><span class="proj-tag">Reflective Journaling</span></div>
@@ -90,7 +103,7 @@ Selected research and industry projects. Publications for each are listed on the
 </div>
 </article>
 
-<article class="proj-card">
+<article class="proj-card" data-theme="gx" data-year="2025">
 <a class="proj-card__thumb" href="https://doi.org/10.1145/3715668.3736348"><img src="/files/gx.png" alt="Group Experience (GX) for group-centered AI"></a>
 <div class="proj-card__body">
 <div class="proj-card__meta"><span class="pub-badge badge-dis">DIS '25 Companion</span><span class="proj-tag">Group-Centered AI</span></div>
@@ -103,7 +116,7 @@ Selected research and industry projects. Publications for each are listed on the
 </div>
 </article>
 
-<article class="proj-card">
+<article class="proj-card" data-theme="nonverbal" data-year="2024">
 <a class="proj-card__thumb" href="https://doi.org/10.1145/3643834.3661568"><img src="/files/groupDance.png" alt="Vision-based group dance support"></a>
 <div class="proj-card__body">
 <div class="proj-card__meta"><span class="pub-badge badge-dis">DIS '24</span><span class="proj-tag">Embodied Interaction</span></div>
@@ -117,7 +130,7 @@ Selected research and industry projects. Publications for each are listed on the
 </div>
 </article>
 
-<article class="proj-card">
+<article class="proj-card" data-theme="nonverbal" data-year="2022">
 <a class="proj-card__thumb" href="https://unist.dcollection.net/srch/srchDetail/200000604178"><img src="/files/neas.png" alt="Gesture-to-emoji system"></a>
 <div class="proj-card__body">
 <div class="proj-card__meta"><span class="pub-badge badge-thesis">Thesis</span><span class="proj-tag">Non-verbal Communication</span></div>
@@ -131,7 +144,7 @@ Selected research and industry projects. Publications for each are listed on the
 </div>
 </article>
 
-<article class="proj-card">
+<article class="proj-card" data-theme="gesture" data-year="2021">
 <a class="proj-card__thumb is-cover" href="https://www.youtube.com/watch?v=wwqpLr2ziqo"><img src="/files/counterfunctional.jpg" alt="Counterfunctional music player"></a>
 <div class="proj-card__body">
 <div class="proj-card__meta"><span class="pub-badge badge-domestic">HCI Korea '21</span><span class="proj-tag">Critical Design</span></div>
@@ -144,7 +157,7 @@ Selected research and industry projects. Publications for each are listed on the
 </div>
 </article>
 
-<article class="proj-card">
+<article class="proj-card" data-theme="gesture" data-year="2021">
 <a class="proj-card__thumb is-cover" href="https://youtu.be/mEOxsTnaVDY"><img src="/files/gayageum.jpeg" alt="InkStrings gayageum visualization"></a>
 <div class="proj-card__body">
 <div class="proj-card__meta"><span class="pub-badge badge-domestic">KSDS '21</span><span class="proj-tag">Interactive Media Art</span></div>
@@ -157,7 +170,7 @@ Selected research and industry projects. Publications for each are listed on the
 </div>
 </article>
 
-<article class="proj-card">
+<article class="proj-card" data-theme="gesture" data-year="2020">
 <a class="proj-card__thumb" href="/files/handPaper.pdf"><img src="/files/hand.PNG" alt="Hand gesture workload in VR"></a>
 <div class="proj-card__body">
 <div class="proj-card__meta"><span class="proj-tag">VR Interaction</span></div>
@@ -167,7 +180,7 @@ Selected research and industry projects. Publications for each are listed on the
 </div>
 </article>
 
-<article class="proj-card">
+<article class="proj-card" data-theme="gesture" data-year="2020">
 <a class="proj-card__thumb" href="https://doi.org/10.1145/3313831.3376778"><img src="/files/nailz.png" alt="Nailz touch-sensitive nails"></a>
 <div class="proj-card__body">
 <div class="proj-card__meta"><span class="pub-badge badge-chi">CHI '20</span><span class="proj-tag">Wearable Input</span></div>
@@ -180,6 +193,8 @@ Selected research and industry projects. Publications for each are listed on the
 </article>
 
 </div>
+
+<div class="proj-bytheme" id="research-bytheme" hidden></div>
 
 ## Industry Projects
 
@@ -248,5 +263,106 @@ Selected research and industry projects. Publications for each are listed on the
 </article>
 
 </div>
+
+
+<script>
+(function () {
+  var page = document.querySelector('.proj-page');
+  if (!page) return;
+
+  /* Theme groups shown in "By Theme" view, in this order. */
+  var THEMES = [
+    { key: 'influence',  title: 'AI Social Influence',
+      desc: 'How AI agents exert normative and informational influence in groups' },
+    { key: 'minority',   title: 'Minority Support in Power-Imbalanced Groups',
+      desc: 'AI-mediated counterargument, mediation, and proxies that protect minority views' },
+    { key: 'gx',         title: 'Group-centered AI & GX',
+      desc: 'Extending human-centered AI beyond the individual to Group Experience' },
+    { key: 'reflective', title: 'Reflective Interfaces',
+      desc: 'LLM feedback and visualizations that support reflection and meaning-making' },
+    { key: 'nonverbal',  title: 'Group Coordination & Non-verbal Communication',
+      desc: 'Vision-based systems that support synchrony and expression in groups' },
+    { key: 'gesture',    title: 'Gesture & Novel Input',
+      desc: 'Mid-air gestures, wearable sensing, and critical / media-art explorations' }
+  ];
+
+  var grid = document.getElementById('research-grid');
+  var byTheme = document.getElementById('research-bytheme');
+  if (!grid || !byTheme) return;
+
+  var cards = Array.prototype.slice.call(grid.querySelectorAll('.proj-card'));
+  var fileOrder = cards.slice();
+
+  function yearOf(el) { return parseInt(el.getAttribute('data-year') || '0', 10); }
+
+  /* Build the theme sections once; cards are moved between views, not cloned. */
+  var themeGrids = {};
+  THEMES.forEach(function (t) {
+    var members = fileOrder.filter(function (c) { return c.getAttribute('data-theme') === t.key; });
+    if (!members.length) return;
+    var section = document.createElement('section');
+    section.className = 'proj-theme';
+    var head = document.createElement('div');
+    head.className = 'proj-theme__head';
+    head.innerHTML = '<h3 class="proj-theme__title">' + t.title +
+      ' <span class="proj-theme__count">' + members.length + '</span></h3>' +
+      (t.desc ? '<p class="proj-theme__desc">' + t.desc + '</p>' : '');
+    var g = document.createElement('div');
+    g.className = 'proj-grid';
+    section.appendChild(head);
+    section.appendChild(g);
+    byTheme.appendChild(section);
+    themeGrids[t.key] = g;
+  });
+
+  function showLatest() {
+    fileOrder.slice().sort(function (a, b) { return yearOf(b) - yearOf(a); })
+      .forEach(function (c) { grid.appendChild(c); });
+    grid.hidden = false;
+    byTheme.hidden = true;
+  }
+
+  function showByTheme() {
+    fileOrder.forEach(function (c) {
+      var g = themeGrids[c.getAttribute('data-theme')];
+      if (g) g.appendChild(c); else grid.appendChild(c);
+    });
+    grid.hidden = true;
+    byTheme.hidden = false;
+  }
+
+  var toggle = page.querySelector('.proj-toggle');
+  var buttons = toggle.querySelectorAll('.pub-toggle__btn');
+  var slider = toggle.querySelector('.pub-toggle__slider');
+
+  function moveSlider() {
+    var active = toggle.querySelector('.pub-toggle__btn.is-active');
+    if (!active || !slider) return;
+    slider.style.width = active.offsetWidth + 'px';
+    slider.style.transform = 'translateX(' + (active.offsetLeft - slider.offsetLeft) + 'px)';
+  }
+
+  function show(view) {
+    if (view === 'theme') showByTheme(); else showLatest();
+    Array.prototype.forEach.call(buttons, function (b) {
+      var on = b.getAttribute('data-view') === view;
+      b.classList.toggle('is-active', on);
+      b.setAttribute('aria-selected', on ? 'true' : 'false');
+    });
+    moveSlider();
+    try { localStorage.setItem('projView', view); } catch (e) {}
+  }
+
+  Array.prototype.forEach.call(buttons, function (b) {
+    b.addEventListener('click', function () { show(b.getAttribute('data-view')); });
+  });
+
+  var saved = 'latest';
+  try { saved = localStorage.getItem('projView') || 'latest'; } catch (e) {}
+  show(saved);
+  window.addEventListener('resize', moveSlider);
+  if (document.fonts && document.fonts.ready) { document.fonts.ready.then(moveSlider); }
+})();
+</script>
 
 </div>

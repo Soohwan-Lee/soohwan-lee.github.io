@@ -44,6 +44,76 @@
   margin-top: 1em;
 }
 
+/* Section heading row with the Latest / By Theme toggle on the right */
+.proj-section-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 0.5em 1em;
+  margin-top: 1em;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid $light-gray;
+}
+
+.proj-page .proj-section-head h2 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.proj-page .proj-toggle {
+  margin: 0 0 0.1em;
+}
+
+/* Theme sections in the "By Theme" view */
+.proj-theme {
+  margin-top: 1.6em;
+}
+
+.proj-theme + .proj-theme {
+  margin-top: 0.4em;
+}
+
+.proj-theme__head {
+  margin-bottom: 0.2em;
+}
+
+.proj-page .proj-theme__title {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin: 0;
+  font-family: $sans-serif;
+  font-size: 1.05em;
+  font-weight: 700;
+  color: var(--global-text-color, #{mix(#000, $gray, 60%)});
+}
+
+.proj-theme__count {
+  display: inline-block;
+  min-width: 1.6em;
+  padding: 0 0.45em;
+  border-radius: 1em;
+  font-size: 0.68em;
+  font-weight: 700;
+  line-height: 1.7;
+  text-align: center;
+  color: mix(#000, $gray, 25%);
+  background-color: mix(#fff, $light-gray, 60%);
+}
+
+.proj-page .proj-theme__desc {
+  margin: 0.15em 0 0;
+  font-size: 0.82em;
+  color: $gray;
+}
+
+.proj-theme .proj-grid {
+  margin-top: 0.9em;
+  margin-bottom: 1.6em;
+}
+
 /* The archive layout underlines every link; pills look cleaner without it */
 .proj-page a.proj-paper,
 .proj-page a.pub-link,
