@@ -44,7 +44,6 @@ Selected research and industry projects. Publications for each are listed on the
 <p class="proj-card__desc">How multiple LLM agents establish and exercise social influence in groups, seen through Moscovici's Social Conversion Theory: can a consistent minority voice shift the majority?</p>
 <dl class="proj-papers">
 <dt>Full Paper</dt><dd><a class="proj-paper proj-paper--chi" href="https://doi.org/10.1145/3772318.3790385" title="Understanding Compliance and Conversion Dynamics in Multi-Agent Collectives (CHI '26)">CHI '26</a></dd>
-<dt>Poster · DC</dt><dd><a class="proj-paper proj-paper--iui" href="https://doi.org/10.1145/3742414.3789229" title="Understanding and Designing AI Systems that Reshape Social Dynamics in Group Decision-Making (IUI '26 Doctoral Consortium)">IUI '26 DC</a><a class="proj-paper proj-paper--dis" href="https://doi.org/10.1145/3715668.3736348" title="Beyond Individual UX: Defining Group Experience (GX) as a New Paradigm for Group-centered AI (DIS '25 Poster)">DIS '25</a></dd>
 <dt>Workshop</dt><dd><a class="proj-paper proj-paper--chi" href="https://arxiv.org/abs/2604.22277" title="Multi-Agent Consensus as a Cognitive Bias Trigger in Human-AI Interaction (CHI '26 Bias4Trust Workshop)">CHI '26</a><span class="proj-paper proj-paper--cscw" title="Where Does the Disagreement Go? Group Reflexivity and AI Accounts of Team Decision-makings (CSCW '26 Workshop)">CSCW '26</span></dd>
 <dt>Under Review</dt><dd><span class="proj-paper proj-paper--review" title="Reinforce, Align, or Oscillate? How People Experience and Interpret Multi-Agent Social Influence Over Time">Conference</span></dd>
 </dl>
@@ -65,6 +64,19 @@ Selected research and industry projects. Publications for each are listed on the
 <dt>Under Review</dt><dd><span class="proj-paper proj-paper--review" title="Reframing Supporting Minority Influence in the Age of AI: Bridging Theory, Design, and Simulation for Inclusive Group Decision-Making">Book Chapter</span></dd>
 </dl>
 <div class="proj-card__links"><a class="pub-link" href="/files/CHI25-Poster-FInal.pdf">Poster</a><a class="pub-link" href="https://www.youtube.com/watch?v=qU4_Bx9sHW0">Video</a></div>
+</div>
+</article>
+
+<article class="proj-card">
+<a class="proj-card__thumb proj-card__thumb--empty" href="https://doi.org/10.1145/3715668.3736348"><i class="fa fa-users" aria-hidden="true"></i></a>
+<div class="proj-card__body">
+<div class="proj-card__meta"><span class="pub-badge badge-dis">DIS '25</span><span class="proj-tag">Group-Centered AI</span></div>
+<h3 class="proj-card__title"><a href="https://doi.org/10.1145/3715668.3736348">Group Experience (GX) for Group-Centered AI</a></h3>
+<p class="proj-card__desc">Defining Group Experience (GX) as a new paradigm for group-centered AI: treating user experience as collective and emergent rather than a sum of individual interactions.</p>
+<dl class="proj-papers">
+<dt>Poster</dt><dd><a class="proj-paper proj-paper--dis" href="https://doi.org/10.1145/3715668.3736348" title="Beyond Individual UX: Defining Group Experience (GX) as a New Paradigm for Group-centered AI (DIS '25 Poster)">DIS '25</a></dd>
+</dl>
+<div class="proj-card__links"><a class="pub-link" href="/files/DIS25-Poster.pdf">Poster</a></div>
 </div>
 </article>
 
