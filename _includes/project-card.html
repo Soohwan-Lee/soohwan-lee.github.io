@@ -1,0 +1,59 @@
+{%- comment -%}
+  One project card. Data comes from _data/projects.yml (see the field list there).
+  Usage:  {% include project-card.html card=item grouped=true %}
+          grouped=true adds the data-* attributes used by the research view toggle.
+{%- endcomment -%}
+{%- assign c = include.card -%}
+{%- assign thumb_class = "proj-card__thumb" -%}
+{%- if c.cover %}{% assign thumb_class = thumb_class | append: " is-cover" %}{% endif -%}
+{%- unless c.image %}{% assign thumb_class = thumb_class | append: " proj-card__thumb--empty" %}{% endunless -%}
+<article class="proj-card"{% if include.grouped %} data-year="{{ c.year }}"{% for v in site.data.projects.views %} data-{{ v.key }}="{{ c[v.key] }}"{% endfor %}{% endif %}>
+{%- if c.link %}<a class="{{ thumb_class }}" href="{{ c.link }}">{% else %}<div class="{{ thumb_class }}">{% endif -%}
+{%- if c.image -%}
+<img src="{{ c.image }}" alt="{{ c.title | escape }}">
+{%- else -%}
+<i class="fa fa-{{ c.icon | default: 'image' }}" aria-hidden="true"></i>
+{%- endif -%}
+{%- if c.link %}</a>{% else %}</div>{% endif %}
+<div class="proj-card__body">
+{%- if c.badge or c.tags %}
+<div class="proj-card__meta">
+{%- if c.badge %}<span class="pub-badge{% if c.badge.style %} badge-{{ c.badge.style }}{% endif %}">{{ c.badge.label | escape }}</span>{% endif -%}
+{%- for t in c.tags %}<span class="proj-tag">{{ t | escape }}</span>{% endfor -%}
+</div>
+{%- endif %}
+<h3 class="proj-card__title">{% if c.link %}<a href="{{ c.link }}">{{ c.title | escape }}</a>{% else %}{{ c.title | escape }}{% endif %}</h3>
+{%- if c.desc %}
+<p class="proj-card__desc">{{ c.desc | strip | escape }}</p>
+{%- endif %}
+{%- if c.note %}
+<p class="proj-card__note">{{ c.note | escape }}</p>
+{%- endif %}
+{%- if c.papers %}
+<dl class="proj-papers">
+{%- for row in c.papers %}
+<dt>{{ row.type | escape }}</dt><dd>
+{%- for p in row.items -%}
+{%- if p.url -%}
+<a class="proj-paper{% if p.style %} proj-paper--{{ p.style }}{% endif %}" href="{{ p.url }}"{% if p.title %} title="{{ p.title | escape }}"{% endif %}>{{ p.venue | escape }}</a>
+{%- else -%}
+<span class="proj-paper{% if p.style %} proj-paper--{{ p.style }}{% endif %}"{% if p.title %} title="{{ p.title | escape }}"{% endif %}>{{ p.venue | escape }}</span>
+{%- endif -%}
+{%- endfor -%}
+</dd>
+{%- endfor %}
+</dl>
+{%- endif %}
+{%- if c.links %}
+<div class="proj-card__links">
+{%- for l in c.links -%}
+{%- if l.award -%}
+<span class="pub-link pub-link--award">{{ l.label | escape }}</span>
+{%- elsif l.url -%}
+<a class="pub-link" href="{{ l.url }}">{{ l.label | escape }}</a>
+{%- endif -%}
+{%- endfor -%}
+</div>
+{%- endif %}
+</div>
+</article>

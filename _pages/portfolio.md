@@ -7,364 +7,140 @@ author_profile: true
 
 Selected research and industry projects. Publications for each are listed on the [Publications](/publications/) page.
 
-<div class="proj-page" markdown="1">
+<!-- All project content lives in _data/projects.yml (instructions at the top of
+     that file). Each card is rendered by _includes/project-card.html. -->
 
-<!-- ===================================================================
-     HOW TO ADD A PROJECT
-     1. Copy one whole <article class="proj-card"> ... </article> block.
-     2. Paste it inside the right <div class="proj-grid">.
-     3. Change the image (put a png/jpg in /files/), badge, tag, title,
-        description, and links.
-
-     Thumbnail:  <a class="proj-card__thumb" href="LINK"><img src="/files/x.png" alt=""></a>
-       - No link?  use <div class="proj-card__thumb"> instead of <a>.
-       - Photo that should fill the box?  add class "is-cover".
-       - No image yet?  <div class="proj-card__thumb proj-card__thumb--empty"><i class="fa fa-image"></i></div>
-     Badges:  same as Publications page — badge-chi / badge-cscw / badge-dis /
-              badge-iui / badge-journal / badge-thesis / badge-domestic / badge-review
-     Links:   <a class="pub-link" href="URL">Code</a>
-     Research cards carry four attributes for the view toggle
-     (Latest / Theme / Modality / Contribution):
-       <article class="proj-card" data-theme="gcai" data-modality="llm"
-                data-contrib="empirical" data-year="2026">
-       theme    : gcai / embodied / collab
-       modality : llm / body / hand / theory
-       contrib  : empirical / system / theory / design
-     Group titles, order and descriptions live in VIEWS in the script at
-     the bottom of this file. "Latest" sorts by data-year (newest first;
-     ties keep file order).
-
-     Related papers, grouped by type (one row per type, one pill per paper):
-       <dl class="proj-papers">
-       <dt>Full Paper</dt><dd><a class="proj-paper proj-paper--chi" href="DOI" title="Full title">CHI '26</a></dd>
-       <dt>Under Review</dt><dd><span class="proj-paper proj-paper--review" title="Full title">Conference</span></dd>
-       </dl>
-       Row labels used: Full Paper / Journal / Poster · DC / Poster · LBW / Workshop / Thesis / Domestic / Under Review
-       Pill colors: proj-paper--chi / --cscw / --dis / --iui / --journal / --thesis / --domestic / --review
-     =================================================================== -->
+<div class="proj-page">
 
 <div class="proj-section-head">
 <h2 id="research-projects">Research Projects</h2>
 <div class="pub-toggle proj-toggle" role="tablist" aria-label="Project view">
 <span class="pub-toggle__slider" aria-hidden="true"></span>
 <button type="button" role="tab" class="pub-toggle__btn is-active" data-view="latest" aria-selected="true">Latest</button>
-<button type="button" role="tab" class="pub-toggle__btn" data-view="theme" aria-selected="false">Theme</button>
-<button type="button" role="tab" class="pub-toggle__btn" data-view="modality" aria-selected="false">Modality</button>
-<button type="button" role="tab" class="pub-toggle__btn" data-view="contrib" aria-selected="false">Contribution</button>
+{%- for v in site.data.projects.views %}
+<button type="button" role="tab" class="pub-toggle__btn" data-view="{{ v.key }}" aria-selected="false">{{ v.label }}</button>
+{%- endfor %}
 </div>
 </div>
 
 <div class="proj-grid" id="research-grid">
-
-<article class="proj-card" data-theme="gcai" data-modality="llm" data-contrib="empirical" data-year="2026">
-<div class="proj-card__thumb"><img src="/files/AI-mediated-Negotiation.png" alt="AI-mediated negotiation with proxy agents"></div>
-<div class="proj-card__body">
-<div class="proj-card__meta"><span class="pub-badge badge-review">Under Review</span><span class="proj-tag">AI-mediated Negotiation</span></div>
-<h3 class="proj-card__title">AI Proxy Agents for Negotiation under Power Imbalance</h3>
-<p class="proj-card__desc">Comparing direct negotiation with user-specified and AI-supplemented proxy agents that negotiate on behalf of a leader and a member, to see whether AI-mediated reasons rebalance power asymmetry.</p>
-<dl class="proj-papers">
-<dt>Under Review</dt><dd><span class="proj-paper proj-paper--review" title="AI-mediated negotiation with proxy agents in power-imbalanced groups">Conference</span></dd>
-</dl>
-</div>
-</article>
-
-<article class="proj-card" data-theme="gcai" data-modality="llm" data-contrib="empirical" data-year="2026">
-<a class="proj-card__thumb" href="https://doi.org/10.1145/3772318.3790385"><img src="/files/multiagent-influence.png" alt="Multi-agent social influence"></a>
-<div class="proj-card__body">
-<div class="proj-card__meta"><span class="pub-badge badge-chi">CHI '26</span><span class="proj-tag">Multi-agent · Social Influence</span></div>
-<h3 class="proj-card__title"><a href="https://doi.org/10.1145/3772318.3790385">Multi-agent Systems and Social Influence</a></h3>
-<p class="proj-card__desc">How multiple LLM agents establish and exercise social influence in groups, seen through Moscovici's Social Conversion Theory: can a consistent minority voice shift the majority?</p>
-<dl class="proj-papers">
-<dt>Full Paper</dt><dd><a class="proj-paper proj-paper--chi" href="https://doi.org/10.1145/3772318.3790385" title="Understanding Compliance and Conversion Dynamics in Multi-Agent Collectives (CHI '26)">CHI '26</a></dd>
-<dt>Workshop</dt><dd><a class="proj-paper proj-paper--chi" href="https://arxiv.org/abs/2604.22277" title="Multi-Agent Consensus as a Cognitive Bias Trigger in Human-AI Interaction (CHI '26 Bias4Trust Workshop)">CHI '26</a></dd>
-</dl>
-<div class="proj-card__links"><a class="pub-link" href="https://www.youtube.com/watch?v=c2_R4BPfIXw&t=253s">Talk</a></div>
-</div>
-</article>
-
-<article class="proj-card" data-theme="gcai" data-modality="llm" data-contrib="system" data-year="2026">
-<a class="proj-card__thumb" href="https://arxiv.org/abs/2606.31762"><img src="/files/devil.png" alt="LLM-powered devil's advocate"></a>
-<div class="proj-card__body">
-<div class="proj-card__meta"><span class="pub-badge badge-cscw">CSCW '26</span><span class="proj-tag">Group Decision-Making</span></div>
-<h3 class="proj-card__title"><a href="https://arxiv.org/abs/2606.31762">LLM-powered Devil's Advocate</a></h3>
-<p class="proj-card__desc">LLM agents with AI-mediated communication that represent minority perspectives to stimulate critical thinking in power-imbalanced group decision-making.</p>
-<dl class="proj-papers">
-<dt>Journal</dt><dd><a class="proj-paper proj-paper--cscw" href="https://arxiv.org/abs/2606.31762" title="Investigating LLM-Powered Dissenting Minority Support in Power-Imbalanced Group Decision-Making: Counterargument and Mediation as Intervention Strategies (PACM HCI, CSCW '26)">CSCW '26</a></dd>
-<dt>Poster · LBW</dt><dd><a class="proj-paper proj-paper--chi" href="https://dl.acm.org/doi/10.1145/3706599.3719792" title="Conversational Agents as Catalysts for Critical Thinking: Challenging Social Influence in Group Decision-making (CHI '25 Late-Breaking Work)">CHI '25</a><a class="proj-paper proj-paper--iui" href="https://doi.org/10.1145/3708557.3716334" title="Amplifying Minority Voices: AI-Mediated Devil's Advocate System for Inclusive Group Decision-Making (IUI '25 Poster)">IUI '25</a></dd>
-<dt>Workshop</dt><dd><a class="proj-paper proj-paper--dis" href="https://arxiv.org/abs/2406.11125" title="Conversational Agents as Catalysts for Critical Thinking: Challenging Design Fixation in Group Design (DIS '24 Workshop)">DIS '24</a><a class="proj-paper proj-paper--chi" href="https://arxiv.org/abs/2604.22319" title="Rethinking AI-Mediated Minority Support in Power-Imbalanced Group Decision-Making: From Anonymity To Authenticity (CHI '26 AI-MC Workshop)">CHI '26</a><span class="proj-paper proj-paper--cscw" title="Delivered but Not Heard: AI Proxy Speech in Power-Imbalanced Group Decision-Making (CSCW '26 Workshop)">CSCW '26</span></dd>
-<dt>Under Review</dt><dd><span class="proj-paper proj-paper--review" title="Reframing Supporting Minority Influence in the Age of AI: Bridging Theory, Design, and Simulation for Inclusive Group Decision-Making">Book Chapter</span></dd>
-</dl>
-<div class="proj-card__links"><a class="pub-link" href="/files/CHI25-Poster-FInal.pdf">Poster</a><a class="pub-link" href="https://www.youtube.com/watch?v=qU4_Bx9sHW0">Video</a></div>
-</div>
-</article>
-
-<article class="proj-card" data-theme="collab" data-modality="llm" data-contrib="system" data-year="2026">
-<a class="proj-card__thumb" href="https://dl.acm.org/doi/10.1145/3800645.3812859"><img src="/files/augmentairy.png" alt="Augmentiary reflective journaling interface"></a>
-<div class="proj-card__body">
-<div class="proj-card__meta"><span class="pub-badge badge-dis">DIS '26</span><span class="proj-tag">Reflective Journaling</span></div>
-<h3 class="proj-card__title"><a href="https://dl.acm.org/doi/10.1145/3800645.3812859">Augmentiary: LLM Feedback for Reflective Journaling</a></h3>
-<p class="proj-card__desc">A journaling tool where writers select a passage and receive LLM-generated interpretive feedback (dot-connecting to past experiences, perspective-expanding) to support meaning-making, then rewrite it in their own words.</p>
-<dl class="proj-papers">
-<dt>Full Paper</dt><dd><a class="proj-paper proj-paper--dis" href="https://dl.acm.org/doi/10.1145/3800645.3812859" title="Augmentiary: Exploring How LLM-Generated Interpretive Feedback Supports Meaning-Making in Reflective Journaling (DIS '26)">DIS '26</a></dd>
-</dl>
-</div>
-</article>
-
-<article class="proj-card" data-theme="gcai" data-modality="theory" data-contrib="theory" data-year="2025">
-<a class="proj-card__thumb" href="https://doi.org/10.1145/3715668.3736348"><img src="/files/gx.png" alt="Group Experience (GX) for group-centered AI"></a>
-<div class="proj-card__body">
-<div class="proj-card__meta"><span class="pub-badge badge-dis">DIS '25 Companion</span><span class="proj-tag">Group-Centered AI</span></div>
-<h3 class="proj-card__title"><a href="https://doi.org/10.1145/3715668.3736348">Group Experience (GX) for Group-Centered AI</a></h3>
-<p class="proj-card__desc">Defining Group Experience (GX) as a new paradigm for group-centered AI: treating user experience as collective and emergent rather than a sum of individual interactions.</p>
-<dl class="proj-papers">
-<dt>Poster</dt><dd><a class="proj-paper proj-paper--dis" href="https://doi.org/10.1145/3715668.3736348" title="Beyond Individual UX: Defining Group Experience (GX) as a New Paradigm for Group-centered AI (DIS '25 Companion, Poster)">DIS '25 Companion</a></dd>
-</dl>
-<div class="proj-card__links"><a class="pub-link" href="https://doi.org/10.1145/3715668.3736348">DOI</a><a class="pub-link" href="/files/DIS25-Poster.pdf">Poster</a></div>
-</div>
-</article>
-
-<article class="proj-card" data-theme="embodied" data-modality="body" data-contrib="system" data-year="2024">
-<a class="proj-card__thumb" href="https://doi.org/10.1145/3643834.3661568"><img src="/files/groupDance.png" alt="Vision-based group dance support"></a>
-<div class="proj-card__body">
-<div class="proj-card__meta"><span class="pub-badge badge-dis">DIS '24</span><span class="proj-tag">Embodied Interaction</span></div>
-<h3 class="proj-card__title"><a href="https://doi.org/10.1145/3643834.3661568">Vision-based Interactive System for Group Dance</a></h3>
-<p class="proj-card__desc">Design space of a real-time feedback system using a single RGB camera to support synchronization in group dance practice.</p>
-<dl class="proj-papers">
-<dt>Full Paper</dt><dd><a class="proj-paper proj-paper--dis" href="https://doi.org/10.1145/3643834.3661568" title="Expanding the Design Space of Vision-based Interactive Systems for Group Dance Practice (DIS '24)">DIS '24</a></dd>
-<dt>Poster</dt><dd><a class="proj-paper proj-paper--iui" href="https://doi.org/10.1145/3581754.3584135" title="CheerUp: A Real-time Ambient Visualization of Cheerleading Pose Similarity (IUI '23 Poster)">IUI '23</a></dd>
-</dl>
-<div class="proj-card__links"><a class="pub-link" href="https://www.youtube.com/watch?v=QkQS_QiRz9o&t=5s">Talk</a><a class="pub-link" href="https://www.youtube.com/watch?v=zVwT_CGxQII&t=71s">Podcast</a><a class="pub-link" href="https://github.com/Soohwan-Lee/CxD_CheerUp">CheerUp Code</a><a class="pub-link" href="https://www.youtube.com/watch?v=BAXvDJvt5vA">CheerUp Demo</a></div>
-</div>
-</article>
-
-<article class="proj-card" data-theme="embodied" data-modality="hand" data-contrib="system" data-year="2022">
-<a class="proj-card__thumb" href="https://unist.dcollection.net/srch/srchDetail/200000604178"><img src="/files/neas.png" alt="Gesture-to-emoji system"></a>
-<div class="proj-card__body">
-<div class="proj-card__meta"><span class="pub-badge badge-thesis">Thesis</span><span class="proj-tag">Non-verbal Communication</span></div>
-<h3 class="proj-card__title"><a href="https://unist.dcollection.net/srch/srchDetail/200000604178">Gesture-to-Emoji in Online Meetings</a></h3>
-<p class="proj-card__desc">Automatically translating hand gestures into emojis to enrich non-verbal communication in remote video meetings.</p>
-<dl class="proj-papers">
-<dt>Thesis</dt><dd><a class="proj-paper proj-paper--thesis" href="https://unist.dcollection.net/srch/srchDetail/200000604178" title="NEAS: AI-based Interactive System to Support Non-verbal Expressions in Online Communication (Master's Thesis, UNIST)">Master's</a></dd>
-<dt>Domestic</dt><dd><a class="proj-paper proj-paper--domestic" href="https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE10968137" title="NEAS: AI-based Interactive System to Support Non-verbal Expressions in Online Communication (KSDS 2021 Fall)">KSDS '21</a></dd>
-<dt>Under Review</dt><dd><span class="proj-paper proj-paper--review" title="Expression2Emoji: Designing Non-verbal Communication Support Tool for Group Video Meetings">Conference</span></dd>
-</dl>
-</div>
-</article>
-
-<article class="proj-card" data-theme="embodied" data-modality="hand" data-contrib="design" data-year="2021">
-<a class="proj-card__thumb is-cover" href="https://www.youtube.com/watch?v=wwqpLr2ziqo"><img src="/files/counterfunctional.jpg" alt="Counterfunctional music player"></a>
-<div class="proj-card__body">
-<div class="proj-card__meta"><span class="pub-badge badge-domestic">HCI Korea '21</span><span class="proj-tag">Critical Design</span></div>
-<h3 class="proj-card__title"><a href="https://www.youtube.com/watch?v=wwqpLr2ziqo">Counterfunctional Music Player</a></h3>
-<p class="proj-card__desc">A music player object that randomly plays the songs you listened to most in a given month, controlled by mid-air hand gestures.</p>
-<dl class="proj-papers">
-<dt>Domestic</dt><dd><a class="proj-paper proj-paper--domestic" href="https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE10530377" title="Counterfunctional Music Player with Mid-air Hand Gesture (HCI Korea 2021)">HCI Korea '21</a><span class="pub-link pub-link--award">Creative Award</span></dd>
-</dl>
-<div class="proj-card__links"><a class="pub-link" href="https://github.com/Soohwan-Lee/counterfunctionalMusicPlayer">Code</a><a class="pub-link" href="https://www.youtube.com/watch?v=dIzcEw182kQ">Preview</a><a class="pub-link" href="https://www.youtube.com/watch?v=wwqpLr2ziqo">Demo</a></div>
-</div>
-</article>
-
-<article class="proj-card" data-theme="embodied" data-modality="hand" data-contrib="design" data-year="2021">
-<a class="proj-card__thumb is-cover" href="https://youtu.be/mEOxsTnaVDY"><img src="/files/gayageum.jpeg" alt="InkStrings gayageum visualization"></a>
-<div class="proj-card__body">
-<div class="proj-card__meta"><span class="pub-badge badge-domestic">KSDS '21</span><span class="proj-tag">Interactive Media Art</span></div>
-<h3 class="proj-card__title"><a href="https://youtu.be/mEOxsTnaVDY">InkStrings: Visualizing the Soul of Gayageum</a></h3>
-<p class="proj-card__desc">Play the Korean gayageum with mid-air gestures via Leap Motion; its vibratos (nonghyun) become real-time ink-wash visuals.</p>
-<dl class="proj-papers">
-<dt>Domestic</dt><dd><a class="proj-paper proj-paper--domestic" href="https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE10588863" title="An Interactive Visualization of Gayageum's Expression and Mid-Air Gesture Recognition (KSDS 2021 Spring)">KSDS '21</a></dd>
-</dl>
-<div class="proj-card__links"><a class="pub-link" href="https://github.com/Soohwan-Lee/AirGayaguemVisualization">Code</a><a class="pub-link" href="https://youtu.be/mEOxsTnaVDY">Demo</a></div>
-</div>
-</article>
-
-<article class="proj-card" data-theme="embodied" data-modality="hand" data-contrib="empirical" data-year="2020">
-<a class="proj-card__thumb" href="/files/handPaper.pdf"><img src="/files/hand.PNG" alt="Hand gesture workload in VR"></a>
-<div class="proj-card__body">
-<div class="proj-card__meta"><span class="proj-tag">VR Interaction</span></div>
-<h3 class="proj-card__title"><a href="/files/handPaper.pdf">Cognitive Workload of Hand Gesture Types in VR</a></h3>
-<p class="proj-card__desc">Evaluating the cognitive and physical workload imposed by different gesture types in immersive VR environments.</p>
-<div class="proj-card__links"><a class="pub-link" href="/files/handPaper.pdf">Paper</a><a class="pub-link" href="/files/handPoster.pdf">Poster</a></div>
-</div>
-</article>
-
-<article class="proj-card" data-theme="embodied" data-modality="hand" data-contrib="system" data-year="2020">
-<a class="proj-card__thumb" href="https://doi.org/10.1145/3313831.3376778"><img src="/files/nailz.png" alt="Nailz touch-sensitive nails"></a>
-<div class="proj-card__body">
-<div class="proj-card__meta"><span class="pub-badge badge-chi">CHI '20</span><span class="proj-tag">Wearable Input</span></div>
-<h3 class="proj-card__title"><a href="https://doi.org/10.1145/3313831.3376778">Nailz: Nail Input Sensing</a></h3>
-<p class="proj-card__desc">Touch-sensitive artificial nails that enable subtle, always-available hand input for mobile and wearable contexts.</p>
-<dl class="proj-papers">
-<dt>Full Paper</dt><dd><a class="proj-paper proj-paper--chi" href="https://doi.org/10.1145/3313831.3376778" title="Nailz: Sensing Hand Input with Touch Sensitive Nails (CHI '20)">CHI '20</a></dd>
-</dl>
-</div>
-</article>
-
+{%- for item in site.data.projects.research %}
+{% include project-card.html card=item grouped=true %}
+{%- endfor %}
 </div>
 
 <div class="proj-grouped" id="research-grouped" hidden></div>
 
-## Industry Projects
+<h2 id="industry-projects">Industry Projects</h2>
 
 <div class="proj-grid">
-
-<article class="proj-card">
-<div class="proj-card__thumb is-cover"><img src="/files/lemmy.png" alt="Silver life care service robot"></div>
-<div class="proj-card__body">
-<div class="proj-card__meta"><span class="proj-tag">Human-Robot Interaction</span><span class="proj-tag">LLM Agent</span></div>
-<h3 class="proj-card__title">Intelligent Product-Service System for Personalized Silver Life Care</h3>
-<p class="proj-card__desc">Commercialization and design of intelligent service systems for the full lifecycle of elderly care. Focused on voice-based human-robot interaction and agent capabilities via tool-calling and memory-augmented LLMs.</p>
-<p class="proj-card__note">Supported by MOTIE, Korea · 2022 – Present</p>
+{%- for item in site.data.projects.industry %}
+{% include project-card.html card=item %}
+{%- endfor %}
 </div>
-</article>
-
-<article class="proj-card">
-<a class="proj-card__thumb is-cover" href="https://www.youtube.com/watch?v=MeMjjTlP74M"><img src="/files/sensorModule.png" alt="Upper body sensor module"></a>
-<div class="proj-card__body">
-<div class="proj-card__meta"><span class="proj-tag">Sensing</span><span class="proj-tag">Visualization</span></div>
-<h3 class="proj-card__title"><a href="https://www.youtube.com/watch?v=MeMjjTlP74M">Sensor Modules for Upper Body Angle &amp; Angular Velocity</a></h3>
-<p class="proj-card__desc">Sensor modules and physical mountings for biomechanical monitoring of upper body posture, with real-time visualization for intuitive feedback.</p>
-<p class="proj-card__note">With LG Electronics · 2024</p>
-<div class="proj-card__links"><a class="pub-link" href="https://github.com/Soohwan-Lee/angleVis_UNIST">Code</a><a class="pub-link" href="https://www.youtube.com/watch?v=MeMjjTlP74M">Demo</a></div>
-</div>
-</article>
-
-<article class="proj-card">
-<div class="proj-card__thumb proj-card__thumb--empty"><i class="fa fa-microphone" aria-hidden="true"></i></div>
-<div class="proj-card__body">
-<div class="proj-card__meta"><span class="proj-tag">Speech Recognition</span><span class="proj-tag">Project Manager</span></div>
-<h3 class="proj-card__title">End-to-End Speech Recognition for Active Seniors</h3>
-<p class="proj-card__desc">A Korean speech recognition model optimized for elderly users, built on KoSpeech and deployed on-device. Coordinated timelines, evaluation protocols, and integration planning.</p>
-<p class="proj-card__note">Supported by NRF X-Corps Plus · 2023</p>
-</div>
-</article>
-
-<article class="proj-card">
-<a class="proj-card__thumb" href="/files/AICP_Poster.pdf"><img src="/files/universe.png" alt="UNIVERSE social robot"></a>
-<div class="proj-card__body">
-<div class="proj-card__meta"><span class="proj-tag">Social Robot</span><span class="proj-tag">Affective Interaction</span></div>
-<h3 class="proj-card__title"><a href="/files/AICP_Poster.pdf">UNIVERSE: Social Robot for Emotional Well-Being</a></h3>
-<p class="proj-card__desc">Concept social robot for the emotional well-being of Gen MZ. Built voice-driven interaction modules in Python linked to facial expression control.</p>
-<p class="proj-card__note">UNIST AI Challenger Program · 2021</p>
-<div class="proj-card__links"><a class="pub-link" href="/files/AICP_Poster.pdf">Poster</a></div>
-</div>
-</article>
-
-<article class="proj-card">
-<div class="proj-card__thumb"><img src="/files/washtower.png" alt="Washer/dryer UX concept"></div>
-<div class="proj-card__body">
-<div class="proj-card__meta"><span class="proj-tag">UX/UI Concept</span><span class="proj-tag">Design Workshop</span></div>
-<h3 class="proj-card__title">Washer/Dryer UX Concept for Gen MZ</h3>
-<p class="proj-card__desc">Next-generation washer/dryer experience tailored to Gen MZ lifestyles, grounded in contextual inquiries and design workshops.</p>
-<p class="proj-card__note">With LG Electronics · 2021</p>
-</div>
-</article>
-
-<article class="proj-card">
-<div class="proj-card__thumb proj-card__thumb--empty"><i class="fa fa-wind" aria-hidden="true"></i></div>
-<div class="proj-card__body">
-<div class="proj-card__meta"><span class="proj-tag">Smart Home</span><span class="proj-tag">Air Quality</span></div>
-<h3 class="proj-card__title">Smart Clean BioAir Home Management System</h3>
-<p class="proj-card__desc">A smart home platform integrating air quality sensing with bio-environmental management features.</p>
-<p class="proj-card__note">Supported by MOTIE, Korea · 2020 – 2021</p>
-</div>
-</article>
-
-</div>
-
 
 <script>
 (function () {
   var page = document.querySelector('.proj-page');
   if (!page) return;
 
-  /* Grouped views. Each view reads one data-* attribute from the cards and
-     shows the groups below, in this order. Empty groups are skipped. */
-  var VIEWS = {
-    theme: { attr: 'data-theme', groups: [
-      { key: 'gcai', title: 'Group-Centered AI',
-        desc: 'Ph.D. research line: how AI reshapes social influence, minority voices, and group experience in collective decision-making' },
-      { key: 'embodied', title: 'Embodied & Gestural Interaction',
-        desc: 'Vision-based feedback, mid-air gestures, and wearable sensing for expressive and coordinated interaction' },
-      { key: 'collab', title: 'Collaborative Projects',
-        desc: 'Lab projects I contributed to as a co-author' }
-    ]},
-    modality: { attr: 'data-modality', groups: [
-      { key: 'llm', title: 'LLM Agents & Conversational AI',
-        desc: 'Multi-agent systems, AI proxies, and LLM-generated feedback in group settings' },
-      { key: 'body', title: 'Body Movement',
-        desc: 'Camera-based pose estimation for group synchrony and performance feedback' },
-      { key: 'hand', title: 'Hand Gesture & Touch',
-        desc: 'Mid-air gestures, hand tracking, and on-body touch input' },
-      { key: 'theory', title: 'Theory & Frameworks',
-        desc: 'Conceptual work without a specific input modality' }
-    ]},
-    contrib: { attr: 'data-contrib', groups: [
-      { key: 'empirical', title: 'Empirical Studies',
-        desc: 'Controlled experiments and user studies on how people respond to AI and interfaces' },
-      { key: 'system', title: 'Systems & Artifacts',
-        desc: 'Novel interactive systems and sensing prototypes, usually with an evaluation' },
-      { key: 'theory', title: 'Theory & Frameworks',
-        desc: 'Concepts and frameworks that reframe how we design AI for groups' },
-      { key: 'design', title: 'Critical Design & Media Art',
-        desc: 'Provocative objects and installations that explore interaction through making' }
-    ]}
-  };
+  /* Grouped views come from _data/projects.yml -> views.
+     Each view reads the card attribute data-<key> and shows its groups in
+     order. Cards whose value matches no group go to an "Other" section. */
+  var VIEWS = {{ site.data.projects.views | jsonify }};
 
   var grid = document.getElementById('research-grid');
   var grouped = document.getElementById('research-grouped');
-  if (!grid || !grouped) return;
+  var toggle = page.querySelector('.proj-toggle');
+  if (!grid || !grouped || !toggle) return;
 
   var fileOrder = Array.prototype.slice.call(grid.querySelectorAll('.proj-card'));
-  function yearOf(el) { return parseInt(el.getAttribute('data-year') || '0', 10); }
+
+  /* Sort key for "Latest": data-year, or the previous card's year when a
+     card has none, so cards without a year stay where they are in the file. */
+  var sortYear = [];
+  var carry = 9999;
+  fileOrder.forEach(function (c, i) {
+    var y = parseInt(c.getAttribute('data-year'), 10);
+    if (!isNaN(y)) carry = y;
+    sortYear[i] = carry;
+    c.setAttribute('data-index', i);
+  });
+
+  function section(title, desc, count) {
+    var s = document.createElement('section');
+    s.className = 'proj-theme';
+    var head = document.createElement('div');
+    head.className = 'proj-theme__head';
+    var h = document.createElement('h3');
+    h.className = 'proj-theme__title';
+    h.textContent = title + ' ';
+    var n = document.createElement('span');
+    n.className = 'proj-theme__count';
+    n.textContent = count;
+    h.appendChild(n);
+    head.appendChild(h);
+    if (desc) {
+      var p = document.createElement('p');
+      p.className = 'proj-theme__desc';
+      p.textContent = desc;
+      head.appendChild(p);
+    }
+    var g = document.createElement('div');
+    g.className = 'proj-grid';
+    s.appendChild(head);
+    s.appendChild(g);
+    return { el: s, grid: g };
+  }
 
   /* Build each view's sections once (lazily); cards are moved, not cloned. */
   var built = {};
-  function buildView(name) {
-    var view = VIEWS[name];
+  function buildView(view) {
+    var attr = 'data-' + view.key;
     var wrap = document.createElement('div');
     wrap.className = 'proj-view';
     var grids = {};
-    view.groups.forEach(function (g) {
-      var members = fileOrder.filter(function (c) { return c.getAttribute(view.attr) === g.key; });
+    var groups = (view.groups || []).slice();
+    groups.push({ key: '__other__', title: 'Other' });
+    var known = {};
+    groups.forEach(function (g) { known[g.key] = true; });
+
+    groups.forEach(function (g) {
+      var members = fileOrder.filter(function (c) {
+        var val = c.getAttribute(attr) || '';
+        return g.key === '__other__' ? !known[val] : val === g.key;
+      });
       if (!members.length) return;
-      var section = document.createElement('section');
-      section.className = 'proj-theme';
-      var head = document.createElement('div');
-      head.className = 'proj-theme__head';
-      head.innerHTML = '<h3 class="proj-theme__title">' + g.title +
-        ' <span class="proj-theme__count">' + members.length + '</span></h3>' +
-        (g.desc ? '<p class="proj-theme__desc">' + g.desc + '</p>' : '');
-      var gr = document.createElement('div');
-      gr.className = 'proj-grid';
-      section.appendChild(head);
-      section.appendChild(gr);
-      wrap.appendChild(section);
-      grids[g.key] = gr;
+      var s = section(g.title, g.desc, members.length);
+      wrap.appendChild(s.el);
+      grids[g.key] = s.grid;
     });
     grouped.appendChild(wrap);
-    built[name] = { wrap: wrap, grids: grids, attr: view.attr };
-    return built[name];
+    built[view.key] = { wrap: wrap, grids: grids, attr: attr };
+    return built[view.key];
   }
 
   function showLatest() {
-    fileOrder.slice().sort(function (a, b) { return yearOf(b) - yearOf(a); })
-      .forEach(function (c) { grid.appendChild(c); });
+    fileOrder.slice().sort(function (a, b) {
+      var ia = +a.getAttribute('data-index'), ib = +b.getAttribute('data-index');
+      return (sortYear[ib] - sortYear[ia]) || (ia - ib);
+    }).forEach(function (c) { grid.appendChild(c); });
     grid.hidden = false;
     grouped.hidden = true;
   }
 
-  function showGrouped(name) {
-    var v = built[name] || buildView(name);
-    Object.keys(built).forEach(function (k) { built[k].wrap.hidden = (k !== name); });
+  function showGrouped(view) {
+    var v = built[view.key] || buildView(view);
+    Object.keys(built).forEach(function (k) { built[k].wrap.hidden = (k !== view.key); });
     fileOrder.forEach(function (c) {
-      var g = v.grids[c.getAttribute(v.attr)];
-      if (g) g.appendChild(c); else grid.appendChild(c);
+      var val = c.getAttribute(v.attr) || '';
+      var g = v.grids[val] || v.grids['__other__'];
+      if (g) g.appendChild(c);
     });
     grid.hidden = true;
     grouped.hidden = false;
   }
 
-  var toggle = page.querySelector('.proj-toggle');
   var buttons = toggle.querySelectorAll('.pub-toggle__btn');
   var slider = toggle.querySelector('.pub-toggle__slider');
 
@@ -375,16 +151,22 @@ Selected research and industry projects. Publications for each are listed on the
     slider.style.transform = 'translateX(' + (active.offsetLeft - slider.offsetLeft) + 'px)';
   }
 
-  function show(view) {
-    if (view !== 'latest' && !VIEWS[view]) view = 'latest';
-    if (view === 'latest') showLatest(); else showGrouped(view);
+  function findView(key) {
+    for (var i = 0; i < VIEWS.length; i++) if (VIEWS[i].key === key) return VIEWS[i];
+    return null;
+  }
+
+  function show(key) {
+    var view = findView(key);
+    if (!view) key = 'latest';
+    if (view) showGrouped(view); else showLatest();
     Array.prototype.forEach.call(buttons, function (b) {
-      var on = b.getAttribute('data-view') === view;
+      var on = b.getAttribute('data-view') === key;
       b.classList.toggle('is-active', on);
       b.setAttribute('aria-selected', on ? 'true' : 'false');
     });
     moveSlider();
-    try { localStorage.setItem('projView', view); } catch (e) {}
+    try { localStorage.setItem('projView', key); } catch (e) {}
   }
 
   Array.prototype.forEach.call(buttons, function (b) {

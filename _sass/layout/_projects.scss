@@ -123,6 +123,13 @@
 
 /* ---- Grid ------------------------------------------------------------- */
 
+/* display:grid/flex would otherwise override the hidden attribute */
+.proj-grid[hidden],
+.proj-grouped[hidden],
+.proj-view[hidden] {
+  display: none;
+}
+
 .proj-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));

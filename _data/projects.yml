@@ -1,0 +1,359 @@
+# =====================================================================
+#  PROJECTS PAGE DATA
+#  Rendered by _pages/portfolio.md using _includes/project-card.html.
+#  Edit this file only; no HTML needed.
+#
+#  HOW TO ADD A PROJECT
+#    1. Put a png/jpg in /files/.
+#    2. Copy one entry under "research:" (or "industry:") and edit it.
+#    3. New entries can go anywhere in the list; "Latest" sorts research
+#       cards by "year" (newest first, ties keep this file's order).
+#
+#  CARD FIELDS  (only "title" is required)
+#    title     : card title
+#    image     : /files/xxx.png            (omit -> icon placeholder)
+#    icon      : font-awesome name for the placeholder, e.g. "microphone"
+#    cover     : true = crop photo to fill the box (default: show whole image)
+#    link      : URL for the image and title (DOI, arXiv, video, pdf ...)
+#    badge     : { label: "CHI '26", style: chi }
+#                styles: chi cscw dis iui journal thesis domestic review
+#    tags      : ["short topic", "another"]
+#    desc      : one or two sentences (shown on hover / inline on touch)
+#    note      : small gray line, e.g. funding & period (industry cards)
+#    papers    : rows of related papers, grouped by type
+#                - type: "Full Paper"
+#                  items:
+#                    - { venue: "CHI '26", style: chi, title: "Full title", url: "https://doi.org/..." }
+#                  (omit "url" for papers under review; the pill is then not clickable)
+#    links     : [{ label: Talk, url: "https://..." }, { label: "Creative Award", award: true }]
+#
+#  RESEARCH-ONLY FIELDS (drive the Latest / Theme / Modality toggle)
+#    year      : 2026
+#    theme     : one "key" from views -> theme  (gcai / embodied / collab)
+#    modality  : one "key" from views -> modality (llm / body / hand / theory)
+#    A card whose value matches no group is shown under "Other", never hidden.
+#
+#  VIEWS
+#    Each entry below becomes a toggle button. "key" is also the card field
+#    it reads. Add a new grouping by adding a view here and giving every
+#    research card that field.
+# =====================================================================
+
+views:
+  - key: theme
+    label: Theme
+    groups:
+      - key: gcai
+        title: Group-Centered AI
+        desc: "Ph.D. research line: how AI reshapes social influence, minority voices, and group experience in collective decision-making"
+      - key: embodied
+        title: Embodied & Gestural Interaction
+        desc: Vision-based feedback, mid-air gestures, and wearable sensing for expressive and coordinated interaction
+      - key: collab
+        title: Collaborative Projects
+        desc: Lab projects I contributed to as a co-author
+
+  - key: modality
+    label: Modality
+    groups:
+      - key: llm
+        title: LLM Agents & Conversational AI
+        desc: Multi-agent systems, AI proxies, and LLM-generated feedback in group settings
+      - key: body
+        title: Body Movement
+        desc: Camera-based pose estimation for group synchrony and performance feedback
+      - key: hand
+        title: Hand Gesture & Touch
+        desc: Mid-air gestures, hand tracking, and on-body touch input
+      - key: theory
+        title: Theory & Frameworks
+        desc: Conceptual work without a specific input modality
+
+# ---------------------------------------------------------------------
+research:
+
+  - title: AI Proxy Agents for Negotiation under Power Imbalance
+    image: /files/AI-mediated-Negotiation.png
+    year: 2026
+    theme: gcai
+    modality: llm
+    badge: { label: Under Review, style: review }
+    tags: [AI-mediated Negotiation]
+    desc: >-
+      Comparing direct negotiation with user-specified and AI-supplemented proxy agents
+      that negotiate on behalf of a leader and a member, to see whether AI-mediated
+      reasons rebalance power asymmetry.
+    papers:
+      - type: Under Review
+        items:
+          - { venue: Conference, style: review, title: AI-mediated negotiation with proxy agents in power-imbalanced groups }
+
+  - title: Multi-agent Systems and Social Influence
+    image: /files/multiagent-influence.png
+    link: https://doi.org/10.1145/3772318.3790385
+    year: 2026
+    theme: gcai
+    modality: llm
+    badge: { label: "CHI '26", style: chi }
+    tags: [Multi-agent · Social Influence]
+    desc: >-
+      How multiple LLM agents establish and exercise social influence in groups, seen
+      through Moscovici's Social Conversion Theory: can a consistent minority voice
+      shift the majority?
+    papers:
+      - type: Full Paper
+        items:
+          - { venue: "CHI '26", style: chi, title: "Understanding Compliance and Conversion Dynamics in Multi-Agent Collectives (CHI '26)", url: "https://doi.org/10.1145/3772318.3790385" }
+      - type: Workshop
+        items:
+          - { venue: "CHI '26", style: chi, title: "Multi-Agent Consensus as a Cognitive Bias Trigger in Human-AI Interaction (CHI '26 Bias4Trust Workshop)", url: "https://arxiv.org/abs/2604.22277" }
+    links:
+      - { label: Talk, url: "https://www.youtube.com/watch?v=c2_R4BPfIXw&t=253s" }
+
+  - title: LLM-powered Devil's Advocate
+    image: /files/devil.png
+    link: https://arxiv.org/abs/2606.31762
+    year: 2026
+    theme: gcai
+    modality: llm
+    badge: { label: "CSCW '26", style: cscw }
+    tags: [Group Decision-Making]
+    desc: >-
+      LLM agents with AI-mediated communication that represent minority perspectives
+      to stimulate critical thinking in power-imbalanced group decision-making.
+    papers:
+      - type: Journal
+        items:
+          - { venue: "CSCW '26", style: cscw, title: "Investigating LLM-Powered Dissenting Minority Support in Power-Imbalanced Group Decision-Making: Counterargument and Mediation as Intervention Strategies (PACM HCI, CSCW '26)", url: "https://arxiv.org/abs/2606.31762" }
+      - type: Poster · LBW
+        items:
+          - { venue: "CHI '25", style: chi, title: "Conversational Agents as Catalysts for Critical Thinking: Challenging Social Influence in Group Decision-making (CHI '25 Late-Breaking Work)", url: "https://dl.acm.org/doi/10.1145/3706599.3719792" }
+          - { venue: "IUI '25", style: iui, title: "Amplifying Minority Voices: AI-Mediated Devil's Advocate System for Inclusive Group Decision-Making (IUI '25 Poster)", url: "https://doi.org/10.1145/3708557.3716334" }
+      - type: Workshop
+        items:
+          - { venue: "DIS '24", style: dis, title: "Conversational Agents as Catalysts for Critical Thinking: Challenging Design Fixation in Group Design (DIS '24 Workshop)", url: "https://arxiv.org/abs/2406.11125" }
+          - { venue: "CHI '26", style: chi, title: "Rethinking AI-Mediated Minority Support in Power-Imbalanced Group Decision-Making: From Anonymity To Authenticity (CHI '26 AI-MC Workshop)", url: "https://arxiv.org/abs/2604.22319" }
+          - { venue: "CSCW '26", style: cscw, title: "Delivered but Not Heard: AI Proxy Speech in Power-Imbalanced Group Decision-Making (CSCW '26 Workshop)" }
+      - type: Under Review
+        items:
+          - { venue: Book Chapter, style: review, title: "Reframing Supporting Minority Influence in the Age of AI: Bridging Theory, Design, and Simulation for Inclusive Group Decision-Making" }
+    links:
+      - { label: Poster, url: /files/CHI25-Poster-FInal.pdf }
+      - { label: Video, url: "https://www.youtube.com/watch?v=qU4_Bx9sHW0" }
+
+  - title: "Augmentiary: LLM Feedback for Reflective Journaling"
+    image: /files/augmentairy.png
+    link: https://dl.acm.org/doi/10.1145/3800645.3812859
+    year: 2026
+    theme: collab
+    modality: llm
+    badge: { label: "DIS '26", style: dis }
+    tags: [Reflective Journaling]
+    desc: >-
+      A journaling tool where writers select a passage and receive LLM-generated
+      interpretive feedback (dot-connecting to past experiences, perspective-expanding)
+      to support meaning-making, then rewrite it in their own words.
+    papers:
+      - type: Full Paper
+        items:
+          - { venue: "DIS '26", style: dis, title: "Augmentiary: Exploring How LLM-Generated Interpretive Feedback Supports Meaning-Making in Reflective Journaling (DIS '26)", url: "https://dl.acm.org/doi/10.1145/3800645.3812859" }
+
+  - title: Group Experience (GX) for Group-Centered AI
+    image: /files/gx.png
+    link: https://doi.org/10.1145/3715668.3736348
+    year: 2025
+    theme: gcai
+    modality: theory
+    badge: { label: "DIS '25 Companion", style: dis }
+    tags: [Group-Centered AI]
+    desc: >-
+      Defining Group Experience (GX) as a new paradigm for group-centered AI: treating
+      user experience as collective and emergent rather than a sum of individual
+      interactions.
+    papers:
+      - type: Poster
+        items:
+          - { venue: "DIS '25 Companion", style: dis, title: "Beyond Individual UX: Defining Group Experience (GX) as a New Paradigm for Group-centered AI (DIS '25 Companion, Poster)", url: "https://doi.org/10.1145/3715668.3736348" }
+    links:
+      - { label: DOI, url: "https://doi.org/10.1145/3715668.3736348" }
+      - { label: Poster, url: /files/DIS25-Poster.pdf }
+
+  - title: Vision-based Interactive System for Group Dance
+    image: /files/groupDance.png
+    link: https://doi.org/10.1145/3643834.3661568
+    year: 2024
+    theme: embodied
+    modality: body
+    badge: { label: "DIS '24", style: dis }
+    tags: [Embodied Interaction]
+    desc: >-
+      Design space of a real-time feedback system using a single RGB camera to support
+      synchronization in group dance practice.
+    papers:
+      - type: Full Paper
+        items:
+          - { venue: "DIS '24", style: dis, title: "Expanding the Design Space of Vision-based Interactive Systems for Group Dance Practice (DIS '24)", url: "https://doi.org/10.1145/3643834.3661568" }
+      - type: Poster
+        items:
+          - { venue: "IUI '23", style: iui, title: "CheerUp: A Real-time Ambient Visualization of Cheerleading Pose Similarity (IUI '23 Poster)", url: "https://doi.org/10.1145/3581754.3584135" }
+    links:
+      - { label: Talk, url: "https://www.youtube.com/watch?v=QkQS_QiRz9o&t=5s" }
+      - { label: Podcast, url: "https://www.youtube.com/watch?v=zVwT_CGxQII&t=71s" }
+      - { label: CheerUp Code, url: "https://github.com/Soohwan-Lee/CxD_CheerUp" }
+      - { label: CheerUp Demo, url: "https://www.youtube.com/watch?v=BAXvDJvt5vA" }
+
+  - title: Gesture-to-Emoji in Online Meetings
+    image: /files/neas.png
+    link: https://unist.dcollection.net/srch/srchDetail/200000604178
+    year: 2022
+    theme: embodied
+    modality: hand
+    badge: { label: Thesis, style: thesis }
+    tags: [Non-verbal Communication]
+    desc: >-
+      Automatically translating hand gestures into emojis to enrich non-verbal
+      communication in remote video meetings.
+    papers:
+      - type: Thesis
+        items:
+          - { venue: Master's, style: thesis, title: "NEAS: AI-based Interactive System to Support Non-verbal Expressions in Online Communication (Master's Thesis, UNIST)", url: "https://unist.dcollection.net/srch/srchDetail/200000604178" }
+      - type: Domestic
+        items:
+          - { venue: "KSDS '21", style: domestic, title: "NEAS: AI-based Interactive System to Support Non-verbal Expressions in Online Communication (KSDS 2021 Fall)", url: "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE10968137" }
+      - type: Under Review
+        items:
+          - { venue: Conference, style: review, title: "Expression2Emoji: Designing Non-verbal Communication Support Tool for Group Video Meetings" }
+
+  - title: Counterfunctional Music Player
+    image: /files/counterfunctional.jpg
+    cover: true
+    link: https://www.youtube.com/watch?v=wwqpLr2ziqo
+    year: 2021
+    theme: embodied
+    modality: hand
+    badge: { label: "HCI Korea '21", style: domestic }
+    tags: [Critical Design]
+    desc: >-
+      A music player object that randomly plays the songs you listened to most in a
+      given month, controlled by mid-air hand gestures.
+    papers:
+      - type: Domestic
+        items:
+          - { venue: "HCI Korea '21", style: domestic, title: "Counterfunctional Music Player with Mid-air Hand Gesture (HCI Korea 2021)", url: "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE10530377" }
+    links:
+      - { label: Creative Award, award: true }
+      - { label: Code, url: "https://github.com/Soohwan-Lee/counterfunctionalMusicPlayer" }
+      - { label: Preview, url: "https://www.youtube.com/watch?v=dIzcEw182kQ" }
+      - { label: Demo, url: "https://www.youtube.com/watch?v=wwqpLr2ziqo" }
+
+  - title: "InkStrings: Visualizing the Soul of Gayageum"
+    image: /files/gayageum.jpeg
+    cover: true
+    link: https://youtu.be/mEOxsTnaVDY
+    year: 2021
+    theme: embodied
+    modality: hand
+    badge: { label: "KSDS '21", style: domestic }
+    tags: [Interactive Media Art]
+    desc: >-
+      Play the Korean gayageum with mid-air gestures via Leap Motion; its vibratos
+      (nonghyun) become real-time ink-wash visuals.
+    papers:
+      - type: Domestic
+        items:
+          - { venue: "KSDS '21", style: domestic, title: "An Interactive Visualization of Gayageum's Expression and Mid-Air Gesture Recognition (KSDS 2021 Spring)", url: "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE10588863" }
+    links:
+      - { label: Code, url: "https://github.com/Soohwan-Lee/AirGayaguemVisualization" }
+      - { label: Demo, url: "https://youtu.be/mEOxsTnaVDY" }
+
+  - title: Cognitive Workload of Hand Gesture Types in VR
+    image: /files/hand.PNG
+    link: /files/handPaper.pdf
+    year: 2020
+    theme: embodied
+    modality: hand
+    tags: [VR Interaction]
+    desc: >-
+      Evaluating the cognitive and physical workload imposed by different gesture types
+      in immersive VR environments.
+    links:
+      - { label: Paper, url: /files/handPaper.pdf }
+      - { label: Poster, url: /files/handPoster.pdf }
+
+  - title: "Nailz: Nail Input Sensing"
+    image: /files/nailz.png
+    link: https://doi.org/10.1145/3313831.3376778
+    year: 2020
+    theme: embodied
+    modality: hand
+    badge: { label: "CHI '20", style: chi }
+    tags: [Wearable Input]
+    desc: >-
+      Touch-sensitive artificial nails that enable subtle, always-available hand input
+      for mobile and wearable contexts.
+    papers:
+      - type: Full Paper
+        items:
+          - { venue: "CHI '20", style: chi, title: "Nailz: Sensing Hand Input with Touch Sensitive Nails (CHI '20)", url: "https://doi.org/10.1145/3313831.3376778" }
+
+# ---------------------------------------------------------------------
+industry:
+
+  - title: Intelligent Product-Service System for Personalized Silver Life Care
+    image: /files/lemmy.png
+    cover: true
+    tags: [Human-Robot Interaction, LLM Agent]
+    desc: >-
+      Commercialization and design of intelligent service systems for the full lifecycle
+      of elderly care. Focused on voice-based human-robot interaction and agent
+      capabilities via tool-calling and memory-augmented LLMs.
+    note: Supported by MOTIE, Korea · 2022 – Present
+
+  - title: Sensor Modules for Upper Body Angle & Angular Velocity
+    image: /files/sensorModule.png
+    cover: true
+    link: https://www.youtube.com/watch?v=MeMjjTlP74M
+    tags: [Sensing, Visualization]
+    desc: >-
+      Sensor modules and physical mountings for biomechanical monitoring of upper body
+      posture, with real-time visualization for intuitive feedback.
+    note: With LG Electronics · 2024
+    links:
+      - { label: Code, url: "https://github.com/Soohwan-Lee/angleVis_UNIST" }
+      - { label: Demo, url: "https://www.youtube.com/watch?v=MeMjjTlP74M" }
+
+  - title: End-to-End Speech Recognition for Active Seniors
+    icon: microphone
+    tags: [Speech Recognition, Project Manager]
+    desc: >-
+      A Korean speech recognition model optimized for elderly users, built on KoSpeech
+      and deployed on-device. Coordinated timelines, evaluation protocols, and
+      integration planning.
+    note: Supported by NRF X-Corps Plus · 2023
+
+  - title: "UNIVERSE: Social Robot for Emotional Well-Being"
+    image: /files/universe.png
+    link: /files/AICP_Poster.pdf
+    tags: [Social Robot, Affective Interaction]
+    desc: >-
+      Concept social robot for the emotional well-being of Gen MZ. Built voice-driven
+      interaction modules in Python linked to facial expression control.
+    note: UNIST AI Challenger Program · 2021
+    links:
+      - { label: Poster, url: /files/AICP_Poster.pdf }
+
+  - title: Washer/Dryer UX Concept for Gen MZ
+    image: /files/washtower.png
+    tags: [UX/UI Concept, Design Workshop]
+    desc: >-
+      Next-generation washer/dryer experience tailored to Gen MZ lifestyles, grounded in
+      contextual inquiries and design workshops.
+    note: With LG Electronics · 2021
+
+  - title: Smart Clean BioAir Home Management System
+    icon: wind
+    tags: [Smart Home, Air Quality]
+    desc: >-
+      A smart home platform integrating air quality sensing with bio-environmental
+      management features.
+    note: Supported by MOTIE, Korea · 2020 – 2021
