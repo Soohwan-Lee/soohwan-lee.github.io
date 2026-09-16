@@ -29,7 +29,7 @@
 #
 #  RESEARCH-ONLY FIELDS (drive the Latest / Theme / Modality toggle)
 #    year      : 2026
-#    theme     : one "key" from views -> theme  (gcai / embodied / collab)
+#    theme     : one "key" from views -> theme  (gcai / embodied / reflection)
 #    modality  : one "key" from views -> modality (llm / body / hand / theory)
 #    A card whose value matches no group is shown under "Other", never hidden.
 #
@@ -49,9 +49,9 @@ views:
       - key: embodied
         title: Embodied & Gestural Interaction
         desc: Vision-based feedback, mid-air gestures, and wearable sensing for expressive and coordinated interaction
-      - key: collab
-        title: Collaborative Projects
-        desc: Lab projects I contributed to as a co-author
+      - key: reflection
+        title: AI-Augmented Reflection
+        desc: LLM-generated interpretive feedback that supports reflection and meaning-making in everyday writing
 
   - key: modality
     label: Modality
@@ -145,7 +145,7 @@ research:
     image: /files/augmentairy.png
     link: https://dl.acm.org/doi/10.1145/3800645.3812859
     year: 2026
-    theme: collab
+    theme: reflection
     modality: llm
     badge: { label: "DIS '26", style: dis }
     tags: [Reflective Journaling]
