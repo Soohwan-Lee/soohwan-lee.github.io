@@ -56,8 +56,7 @@ Selected research and industry projects. Publications for each are listed on the
 <p class="proj-card__desc">How multiple LLM agents establish and exercise social influence in groups, seen through Moscovici's Social Conversion Theory: can a consistent minority voice shift the majority?</p>
 <dl class="proj-papers">
 <dt>Full Paper</dt><dd><a class="proj-paper proj-paper--chi" href="https://doi.org/10.1145/3772318.3790385" title="Understanding Compliance and Conversion Dynamics in Multi-Agent Collectives (CHI '26)">CHI '26</a></dd>
-<dt>Workshop</dt><dd><a class="proj-paper proj-paper--chi" href="https://arxiv.org/abs/2604.22277" title="Multi-Agent Consensus as a Cognitive Bias Trigger in Human-AI Interaction (CHI '26 Bias4Trust Workshop)">CHI '26</a><span class="proj-paper proj-paper--cscw" title="Where Does the Disagreement Go? Group Reflexivity and AI Accounts of Team Decision-makings (CSCW '26 Workshop)">CSCW '26</span></dd>
-<dt>Under Review</dt><dd><span class="proj-paper proj-paper--review" title="Reinforce, Align, or Oscillate? How People Experience and Interpret Multi-Agent Social Influence Over Time">Conference</span></dd>
+<dt>Workshop</dt><dd><a class="proj-paper proj-paper--chi" href="https://arxiv.org/abs/2604.22277" title="Multi-Agent Consensus as a Cognitive Bias Trigger in Human-AI Interaction (CHI '26 Bias4Trust Workshop)">CHI '26</a></dd>
 </dl>
 <div class="proj-card__links"><a class="pub-link" href="https://www.youtube.com/watch?v=c2_R4BPfIXw&t=253s">Talk</a></div>
 </div>
