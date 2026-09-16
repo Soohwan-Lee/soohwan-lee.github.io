@@ -1,0 +1,223 @@
+/* ==========================================================================
+   PROJECT GALLERY
+   Card grid used on the Projects page (_pages/portfolio.md).
+
+   Markup for one card:
+
+   <article class="proj-card">
+     <a class="proj-card__thumb" href="LINK"><img src="/files/x.png" alt=""></a>
+     <div class="proj-card__body">
+       <div class="proj-card__meta">
+         <span class="pub-badge badge-chi">CHI '26</span>
+         <span class="proj-tag">Multi-agent</span>
+       </div>
+       <h3 class="proj-card__title">Title</h3>
+       <p class="proj-card__desc">One or two sentences.</p>
+       <div class="proj-card__links"><a class="pub-link" href="...">Code</a></div>
+     </div>
+   </article>
+
+   - Thumbnail images are shown whole ("contain") on a light background so
+     wide figures are not cropped. Add class "is-cover" to the thumb wrapper
+     for photo-like images that look better filling the box.
+   - Tiles are compact (image / badges / title / links). The description is
+     revealed as an overlay on the image when hovering; on touch devices it
+     is shown inline under the title instead.
+   - Badges (.pub-badge / .badge-*) and link pills (.pub-link) are shared with
+     the Publications page (see layout/_pubs.scss).
+   ========================================================================== */
+
+.proj-page {
+  font-size: 0.92em;
+}
+
+/* Section headings ("## Research Projects") */
+.proj-page h2 {
+  margin-top: 2em;
+  padding-bottom: 0.2em;
+  border-bottom: 1px solid $light-gray;
+}
+
+.proj-page h2:first-of-type {
+  margin-top: 1em;
+}
+
+/* ---- Grid ------------------------------------------------------------- */
+
+.proj-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1em;
+  margin: 1.2em 0 2.4em;
+}
+
+@media (max-width: 480px) {
+  .proj-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75em;
+  }
+}
+
+/* ---- Card ------------------------------------------------------------- */
+
+.proj-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  border: 1px solid var(--global-border-color, #{$light-gray});
+  border-radius: 8px;
+  background-color: var(--global-bg-color, #fff);
+  overflow: hidden;
+  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.proj-card:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Thumbnail: fixed 16:10 box */
+.proj-card__thumb {
+  display: block;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background-color: mix(#fff, $light-gray, 78%);
+  border-bottom: 1px solid var(--global-border-color, #{$light-gray});
+  text-decoration: none;
+}
+
+.proj-card__thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.25s ease-in-out;
+}
+
+.proj-card__thumb.is-cover img {
+  object-fit: cover;
+}
+
+.proj-card:hover .proj-card__thumb img {
+  transform: scale(1.04);
+}
+
+/* Fallback when a project has no image yet: a muted icon in the box */
+.proj-card__thumb--empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: mix(#fff, $gray, 35%);
+  font-size: 2.2em;
+}
+
+/* Body */
+.proj-card__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  padding: 0.75em 0.85em 0.85em;
+}
+
+.proj-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.3em 0.35em;
+  margin-bottom: 0.5em;
+  line-height: 1;
+}
+
+.proj-card__meta .pub-badge {
+  margin-right: 0;
+  vertical-align: baseline;
+}
+
+/* Short topic tag, e.g. "Multi-agent · Social Influence" */
+.proj-tag {
+  display: inline-block;
+  padding: 0.15em 0.6em;
+  border-radius: 4px;
+  font-family: $sans-serif;
+  font-size: 0.72em;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.6;
+  color: mix(#000, $gray, 25%);
+  background-color: mix(#fff, $light-gray, 60%);
+}
+
+.proj-card__title {
+  margin: 0 0 0.35em;
+  font-family: $sans-serif;
+  font-size: 0.94em;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--global-text-color, #{mix(#000, $gray, 60%)});
+}
+
+.proj-card__title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.proj-card__title a:hover {
+  color: var(--global-link-color);
+}
+
+.proj-card__desc {
+  margin: 0;
+  font-size: 0.82em;
+  line-height: 1.5;
+  color: mix(#000, $gray, 35%);
+}
+
+/* On devices with a real pointer, the description becomes a hover overlay
+   that covers the thumbnail (same 16:10 box), keeping the tiles compact. */
+@media (hover: hover) and (pointer: fine) {
+  .proj-card__desc {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    aspect-ratio: 16 / 10;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0.9em 1em;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    background-color: rgba(20, 24, 28, 0.82);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease-in-out;
+    z-index: 2;
+  }
+
+  .proj-card:hover .proj-card__desc,
+  .proj-card:focus-within .proj-card__desc {
+    opacity: 1;
+  }
+}
+
+/* Small muted line for funding / partner / period */
+.proj-card__note {
+  margin: 0.4em 0 0;
+  font-size: 0.76em;
+  line-height: 1.5;
+  color: $gray;
+}
+
+.proj-card__links {
+  margin-top: auto;
+  padding-top: 0.6em;
+  line-height: 2.1;
+}
+
+.proj-card__links .pub-link {
+  margin-bottom: 0;
+}
