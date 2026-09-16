@@ -20,9 +20,11 @@
    - Thumbnail images are shown whole ("contain") on a light background so
      wide figures are not cropped. Add class "is-cover" to the thumb wrapper
      for photo-like images that look better filling the box.
-   - Tiles are compact (image / badges / title / links). The description is
-     revealed as an overlay on the image when hovering; on touch devices it
-     is shown inline under the title instead.
+   - Tiles are compact (image / badges / title / papers / links). The
+     description is revealed as an overlay on the image when hovering; on
+     touch devices it is shown inline under the title instead.
+   - Related papers go in a <dl class="proj-papers"> with one <dt> label per
+     type (Full Paper, Poster, Workshop, ...) and venue pills in the <dd>.
    - Badges (.pub-badge / .badge-*) and link pills (.pub-link) are shared with
      the Publications page (see layout/_pubs.scss).
    ========================================================================== */
@@ -42,19 +44,32 @@
   margin-top: 1em;
 }
 
+/* The archive layout underlines every link; pills look cleaner without it */
+.proj-page a.proj-paper,
+.proj-page a.pub-link,
+.proj-page a.proj-card__thumb {
+  text-decoration: none;
+}
+
 /* ---- Grid ------------------------------------------------------------- */
 
 .proj-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1em;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25em;
   margin: 1.2em 0 2.4em;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1023px) {
   .proj-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.75em;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .proj-grid {
+    grid-template-columns: 1fr;
+    gap: 1em;
   }
 }
 
@@ -119,7 +134,7 @@
   display: flex;
   flex-direction: column;
   flex: 1 1 auto;
-  padding: 0.75em 0.85em 0.85em;
+  padding: 0.85em 1em 1em;
 }
 
 .proj-card__meta {
@@ -153,7 +168,7 @@
 .proj-card__title {
   margin: 0 0 0.35em;
   font-family: $sans-serif;
-  font-size: 0.94em;
+  font-size: 1em;
   font-weight: 700;
   line-height: 1.35;
   color: var(--global-text-color, #{mix(#000, $gray, 60%)});
@@ -223,23 +238,50 @@
 }
 
 /* ---- Related papers ------------------------------------------------- */
-/* One pill per paper, colored by venue. <a> when it has a link, <span>
-   otherwise (e.g. under review). The full title goes in the title="" tooltip. */
+/* <dl class="proj-papers"> : one <dt> label per paper type, venue pills in
+   the <dd>. <a> when the paper has a link, <span> otherwise. The full title
+   goes in the title="" tooltip. */
 
-.proj-card__papers {
-  margin-top: auto;
-  padding-top: 0.6em;
-  line-height: 2.1;
+.proj-papers {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  column-gap: 0.8em;
+  row-gap: 0.45em;
+  align-items: start;
+  margin: auto 0 0;
+  padding-top: 0.8em;
+  border-top: 1px solid var(--global-border-color, #{mix(#fff, $light-gray, 45%)});
 }
 
-/* When both rows are present, the resource links sit right under the papers */
-.proj-card__papers + .proj-card__links {
+.proj-page .proj-papers dt {
+  margin: 0;
+  padding-top: 0.25em;
+  font-family: $sans-serif;
+  font-size: 0.66em;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  line-height: 1.6;
+  color: $gray;
+  white-space: nowrap;
+}
+
+.proj-page .proj-papers dd {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3em;
+  min-width: 0;
+}
+
+.proj-papers .pub-link {
+  margin: 0;
+}
+
+/* Resource links (Talk / Code / Demo) sit right under the papers block */
+.proj-papers + .proj-card__links {
   margin-top: 0;
-  padding-top: 0.15em;
-}
-
-.proj-card__papers .pub-link {
-  margin-bottom: 0;
+  padding-top: 0.55em;
 }
 
 .proj-paper,
@@ -247,7 +289,7 @@
   --venue: #{$gray};
   display: inline-block;
   padding: 0.18em 0.7em;
-  margin: 0 0.3em 0 0;
+  margin: 0;
   border: 1px solid var(--venue);
   border-radius: 0.85em;
   font-family: $sans-serif;
