@@ -43,7 +43,6 @@ Selected research and industry projects. Publications for each are listed on the
 <h3 class="proj-card__title">AI Proxy Agents for Negotiation under Power Imbalance</h3>
 <p class="proj-card__desc">Comparing direct negotiation with user-specified and AI-supplemented proxy agents that negotiate on behalf of a leader and a member, to see whether AI-mediated reasons rebalance power asymmetry.</p>
 <dl class="proj-papers">
-<dt>Workshop</dt><dd><span class="proj-paper proj-paper--cscw" title="Delivered but Not Heard: AI Proxy Speech in Power-Imbalanced Group Decision-Making (CSCW '26 Workshop)">CSCW '26</span></dd>
 <dt>Under Review</dt><dd><span class="proj-paper proj-paper--review" title="AI-mediated negotiation with proxy agents in power-imbalanced groups">Conference</span></dd>
 </dl>
 </div>
@@ -73,7 +72,7 @@ Selected research and industry projects. Publications for each are listed on the
 <dl class="proj-papers">
 <dt>Journal</dt><dd><a class="proj-paper proj-paper--cscw" href="https://arxiv.org/abs/2606.31762" title="Investigating LLM-Powered Dissenting Minority Support in Power-Imbalanced Group Decision-Making: Counterargument and Mediation as Intervention Strategies (PACM HCI, CSCW '26)">CSCW '26</a></dd>
 <dt>Poster · LBW</dt><dd><a class="proj-paper proj-paper--chi" href="https://dl.acm.org/doi/10.1145/3706599.3719792" title="Conversational Agents as Catalysts for Critical Thinking: Challenging Social Influence in Group Decision-making (CHI '25 Late-Breaking Work)">CHI '25</a><a class="proj-paper proj-paper--iui" href="https://doi.org/10.1145/3708557.3716334" title="Amplifying Minority Voices: AI-Mediated Devil's Advocate System for Inclusive Group Decision-Making (IUI '25 Poster)">IUI '25</a></dd>
-<dt>Workshop</dt><dd><a class="proj-paper proj-paper--dis" href="https://arxiv.org/abs/2406.11125" title="Conversational Agents as Catalysts for Critical Thinking: Challenging Design Fixation in Group Design (DIS '24 Workshop)">DIS '24</a><a class="proj-paper proj-paper--chi" href="https://arxiv.org/abs/2604.22319" title="Rethinking AI-Mediated Minority Support in Power-Imbalanced Group Decision-Making: From Anonymity To Authenticity (CHI '26 AI-MC Workshop)">CHI '26</a></dd>
+<dt>Workshop</dt><dd><a class="proj-paper proj-paper--dis" href="https://arxiv.org/abs/2406.11125" title="Conversational Agents as Catalysts for Critical Thinking: Challenging Design Fixation in Group Design (DIS '24 Workshop)">DIS '24</a><a class="proj-paper proj-paper--chi" href="https://arxiv.org/abs/2604.22319" title="Rethinking AI-Mediated Minority Support in Power-Imbalanced Group Decision-Making: From Anonymity To Authenticity (CHI '26 AI-MC Workshop)">CHI '26</a><span class="proj-paper proj-paper--cscw" title="Delivered but Not Heard: AI Proxy Speech in Power-Imbalanced Group Decision-Making (CSCW '26 Workshop)">CSCW '26</span></dd>
 <dt>Under Review</dt><dd><span class="proj-paper proj-paper--review" title="Reframing Supporting Minority Influence in the Age of AI: Bridging Theory, Design, and Simulation for Inclusive Group Decision-Making">Book Chapter</span></dd>
 </dl>
 <div class="proj-card__links"><a class="pub-link" href="/files/CHI25-Poster-FInal.pdf">Poster</a><a class="pub-link" href="https://www.youtube.com/watch?v=qU4_Bx9sHW0">Video</a></div>
