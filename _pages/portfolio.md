@@ -23,11 +23,16 @@ Selected research and industry projects. Publications for each are listed on the
      Badges:  same as Publications page — badge-chi / badge-cscw / badge-dis /
               badge-iui / badge-journal / badge-thesis / badge-domestic / badge-review
      Links:   <a class="pub-link" href="URL">Code</a>
-     Research cards need two attributes for the Latest / By Theme toggle:
-       <article class="proj-card" data-theme="minority" data-year="2026">
-       Themes (see THEMES in the script at the bottom of this file):
-         influence / minority / gx / reflective / nonverbal / gesture
-       "Latest" sorts by data-year (newest first; ties keep file order).
+     Research cards carry four attributes for the view toggle
+     (Latest / Theme / Modality / Contribution):
+       <article class="proj-card" data-theme="gcai" data-modality="llm"
+                data-contrib="empirical" data-year="2026">
+       theme    : gcai / embodied / collab
+       modality : llm / body / hand / theory
+       contrib  : empirical / system / theory / design
+     Group titles, order and descriptions live in VIEWS in the script at
+     the bottom of this file. "Latest" sorts by data-year (newest first;
+     ties keep file order).
 
      Related papers, grouped by type (one row per type, one pill per paper):
        <dl class="proj-papers">
@@ -43,13 +48,15 @@ Selected research and industry projects. Publications for each are listed on the
 <div class="pub-toggle proj-toggle" role="tablist" aria-label="Project view">
 <span class="pub-toggle__slider" aria-hidden="true"></span>
 <button type="button" role="tab" class="pub-toggle__btn is-active" data-view="latest" aria-selected="true">Latest</button>
-<button type="button" role="tab" class="pub-toggle__btn" data-view="theme" aria-selected="false">By Theme</button>
+<button type="button" role="tab" class="pub-toggle__btn" data-view="theme" aria-selected="false">Theme</button>
+<button type="button" role="tab" class="pub-toggle__btn" data-view="modality" aria-selected="false">Modality</button>
+<button type="button" role="tab" class="pub-toggle__btn" data-view="contrib" aria-selected="false">Contribution</button>
 </div>
 </div>
 
 <div class="proj-grid" id="research-grid">
 
-<article class="proj-card" data-theme="minority" data-year="2026">
+<article class="proj-card" data-theme="gcai" data-modality="llm" data-contrib="empirical" data-year="2026">
 <div class="proj-card__thumb"><img src="/files/AI-mediated-Negotiation.png" alt="AI-mediated negotiation with proxy agents"></div>
 <div class="proj-card__body">
 <div class="proj-card__meta"><span class="pub-badge badge-review">Under Review</span><span class="proj-tag">AI-mediated Negotiation</span></div>
@@ -61,7 +68,7 @@ Selected research and industry projects. Publications for each are listed on the
 </div>
 </article>
 
-<article class="proj-card" data-theme="influence" data-year="2026">
+<article class="proj-card" data-theme="gcai" data-modality="llm" data-contrib="empirical" data-year="2026">
 <a class="proj-card__thumb" href="https://doi.org/10.1145/3772318.3790385"><img src="/files/multiagent-influence.png" alt="Multi-agent social influence"></a>
 <div class="proj-card__body">
 <div class="proj-card__meta"><span class="pub-badge badge-chi">CHI '26</span><span class="proj-tag">Multi-agent · Social Influence</span></div>
@@ -75,7 +82,7 @@ Selected research and industry projects. Publications for each are listed on the
 </div>
 </article>
 
-<article class="proj-card" data-theme="minority" data-year="2026">
+<article class="proj-card" data-theme="gcai" data-modality="llm" data-contrib="system" data-year="2026">
 <a class="proj-card__thumb" href="https://arxiv.org/abs/2606.31762"><img src="/files/devil.png" alt="LLM-powered devil's advocate"></a>
 <div class="proj-card__body">
 <div class="proj-card__meta"><span class="pub-badge badge-cscw">CSCW '26</span><span class="proj-tag">Group Decision-Making</span></div>
@@ -91,7 +98,7 @@ Selected research and industry projects. Publications for each are listed on the
 </div>
 </article>
 
-<article class="proj-card" data-theme="reflective" data-year="2026">
+<article class="proj-card" data-theme="collab" data-modality="llm" data-contrib="system" data-year="2026">
 <a class="proj-card__thumb" href="https://dl.acm.org/doi/10.1145/3800645.3812859"><img src="/files/augmentairy.png" alt="Augmentiary reflective journaling interface"></a>
 <div class="proj-card__body">
 <div class="proj-card__meta"><span class="pub-badge badge-dis">DIS '26</span><span class="proj-tag">Reflective Journaling</span></div>
@@ -103,7 +110,7 @@ Selected research and industry projects. Publications for each are listed on the
 </div>
 </article>
 
-<article class="proj-card" data-theme="gx" data-year="2025">
+<article class="proj-card" data-theme="gcai" data-modality="theory" data-contrib="theory" data-year="2025">
 <a class="proj-card__thumb" href="https://doi.org/10.1145/3715668.3736348"><img src="/files/gx.png" alt="Group Experience (GX) for group-centered AI"></a>
 <div class="proj-card__body">
 <div class="proj-card__meta"><span class="pub-badge badge-dis">DIS '25 Companion</span><span class="proj-tag">Group-Centered AI</span></div>
@@ -116,7 +123,7 @@ Selected research and industry projects. Publications for each are listed on the
 </div>
 </article>
 
-<article class="proj-card" data-theme="nonverbal" data-year="2024">
+<article class="proj-card" data-theme="embodied" data-modality="body" data-contrib="system" data-year="2024">
 <a class="proj-card__thumb" href="https://doi.org/10.1145/3643834.3661568"><img src="/files/groupDance.png" alt="Vision-based group dance support"></a>
 <div class="proj-card__body">
 <div class="proj-card__meta"><span class="pub-badge badge-dis">DIS '24</span><span class="proj-tag">Embodied Interaction</span></div>
@@ -130,7 +137,7 @@ Selected research and industry projects. Publications for each are listed on the
 </div>
 </article>
 
-<article class="proj-card" data-theme="nonverbal" data-year="2022">
+<article class="proj-card" data-theme="embodied" data-modality="hand" data-contrib="system" data-year="2022">
 <a class="proj-card__thumb" href="https://unist.dcollection.net/srch/srchDetail/200000604178"><img src="/files/neas.png" alt="Gesture-to-emoji system"></a>
 <div class="proj-card__body">
 <div class="proj-card__meta"><span class="pub-badge badge-thesis">Thesis</span><span class="proj-tag">Non-verbal Communication</span></div>
@@ -144,7 +151,7 @@ Selected research and industry projects. Publications for each are listed on the
 </div>
 </article>
 
-<article class="proj-card" data-theme="gesture" data-year="2021">
+<article class="proj-card" data-theme="embodied" data-modality="hand" data-contrib="design" data-year="2021">
 <a class="proj-card__thumb is-cover" href="https://www.youtube.com/watch?v=wwqpLr2ziqo"><img src="/files/counterfunctional.jpg" alt="Counterfunctional music player"></a>
 <div class="proj-card__body">
 <div class="proj-card__meta"><span class="pub-badge badge-domestic">HCI Korea '21</span><span class="proj-tag">Critical Design</span></div>
@@ -157,7 +164,7 @@ Selected research and industry projects. Publications for each are listed on the
 </div>
 </article>
 
-<article class="proj-card" data-theme="gesture" data-year="2021">
+<article class="proj-card" data-theme="embodied" data-modality="hand" data-contrib="design" data-year="2021">
 <a class="proj-card__thumb is-cover" href="https://youtu.be/mEOxsTnaVDY"><img src="/files/gayageum.jpeg" alt="InkStrings gayageum visualization"></a>
 <div class="proj-card__body">
 <div class="proj-card__meta"><span class="pub-badge badge-domestic">KSDS '21</span><span class="proj-tag">Interactive Media Art</span></div>
@@ -170,7 +177,7 @@ Selected research and industry projects. Publications for each are listed on the
 </div>
 </article>
 
-<article class="proj-card" data-theme="gesture" data-year="2020">
+<article class="proj-card" data-theme="embodied" data-modality="hand" data-contrib="empirical" data-year="2020">
 <a class="proj-card__thumb" href="/files/handPaper.pdf"><img src="/files/hand.PNG" alt="Hand gesture workload in VR"></a>
 <div class="proj-card__body">
 <div class="proj-card__meta"><span class="proj-tag">VR Interaction</span></div>
@@ -180,7 +187,7 @@ Selected research and industry projects. Publications for each are listed on the
 </div>
 </article>
 
-<article class="proj-card" data-theme="gesture" data-year="2020">
+<article class="proj-card" data-theme="embodied" data-modality="hand" data-contrib="system" data-year="2020">
 <a class="proj-card__thumb" href="https://doi.org/10.1145/3313831.3376778"><img src="/files/nailz.png" alt="Nailz touch-sensitive nails"></a>
 <div class="proj-card__body">
 <div class="proj-card__meta"><span class="pub-badge badge-chi">CHI '20</span><span class="proj-tag">Wearable Input</span></div>
@@ -194,7 +201,7 @@ Selected research and industry projects. Publications for each are listed on the
 
 </div>
 
-<div class="proj-bytheme" id="research-bytheme" hidden></div>
+<div class="proj-grouped" id="research-grouped" hidden></div>
 
 ## Industry Projects
 
@@ -270,65 +277,91 @@ Selected research and industry projects. Publications for each are listed on the
   var page = document.querySelector('.proj-page');
   if (!page) return;
 
-  /* Theme groups shown in "By Theme" view, in this order. */
-  var THEMES = [
-    { key: 'influence',  title: 'AI Social Influence',
-      desc: 'How AI agents exert normative and informational influence in groups' },
-    { key: 'minority',   title: 'Minority Support in Power-Imbalanced Groups',
-      desc: 'AI-mediated counterargument, mediation, and proxies that protect minority views' },
-    { key: 'gx',         title: 'Group-centered AI & GX',
-      desc: 'Extending human-centered AI beyond the individual to Group Experience' },
-    { key: 'reflective', title: 'Reflective Interfaces',
-      desc: 'LLM feedback and visualizations that support reflection and meaning-making' },
-    { key: 'nonverbal',  title: 'Group Coordination & Non-verbal Communication',
-      desc: 'Vision-based systems that support synchrony and expression in groups' },
-    { key: 'gesture',    title: 'Gesture & Novel Input',
-      desc: 'Mid-air gestures, wearable sensing, and critical / media-art explorations' }
-  ];
+  /* Grouped views. Each view reads one data-* attribute from the cards and
+     shows the groups below, in this order. Empty groups are skipped. */
+  var VIEWS = {
+    theme: { attr: 'data-theme', groups: [
+      { key: 'gcai', title: 'Group-Centered AI',
+        desc: 'Ph.D. research line: how AI reshapes social influence, minority voices, and group experience in collective decision-making' },
+      { key: 'embodied', title: 'Embodied & Gestural Interaction',
+        desc: 'Vision-based feedback, mid-air gestures, and wearable sensing for expressive and coordinated interaction' },
+      { key: 'collab', title: 'Collaborative Projects',
+        desc: 'Lab projects I contributed to as a co-author' }
+    ]},
+    modality: { attr: 'data-modality', groups: [
+      { key: 'llm', title: 'LLM Agents & Conversational AI',
+        desc: 'Multi-agent systems, AI proxies, and LLM-generated feedback in group settings' },
+      { key: 'body', title: 'Body Movement',
+        desc: 'Camera-based pose estimation for group synchrony and performance feedback' },
+      { key: 'hand', title: 'Hand Gesture & Touch',
+        desc: 'Mid-air gestures, hand tracking, and on-body touch input' },
+      { key: 'theory', title: 'Theory & Frameworks',
+        desc: 'Conceptual work without a specific input modality' }
+    ]},
+    contrib: { attr: 'data-contrib', groups: [
+      { key: 'empirical', title: 'Empirical Studies',
+        desc: 'Controlled experiments and user studies on how people respond to AI and interfaces' },
+      { key: 'system', title: 'Systems & Artifacts',
+        desc: 'Novel interactive systems and sensing prototypes, usually with an evaluation' },
+      { key: 'theory', title: 'Theory & Frameworks',
+        desc: 'Concepts and frameworks that reframe how we design AI for groups' },
+      { key: 'design', title: 'Critical Design & Media Art',
+        desc: 'Provocative objects and installations that explore interaction through making' }
+    ]}
+  };
 
   var grid = document.getElementById('research-grid');
-  var byTheme = document.getElementById('research-bytheme');
-  if (!grid || !byTheme) return;
+  var grouped = document.getElementById('research-grouped');
+  if (!grid || !grouped) return;
 
-  var cards = Array.prototype.slice.call(grid.querySelectorAll('.proj-card'));
-  var fileOrder = cards.slice();
-
+  var fileOrder = Array.prototype.slice.call(grid.querySelectorAll('.proj-card'));
   function yearOf(el) { return parseInt(el.getAttribute('data-year') || '0', 10); }
 
-  /* Build the theme sections once; cards are moved between views, not cloned. */
-  var themeGrids = {};
-  THEMES.forEach(function (t) {
-    var members = fileOrder.filter(function (c) { return c.getAttribute('data-theme') === t.key; });
-    if (!members.length) return;
-    var section = document.createElement('section');
-    section.className = 'proj-theme';
-    var head = document.createElement('div');
-    head.className = 'proj-theme__head';
-    head.innerHTML = '<h3 class="proj-theme__title">' + t.title +
-      ' <span class="proj-theme__count">' + members.length + '</span></h3>' +
-      (t.desc ? '<p class="proj-theme__desc">' + t.desc + '</p>' : '');
-    var g = document.createElement('div');
-    g.className = 'proj-grid';
-    section.appendChild(head);
-    section.appendChild(g);
-    byTheme.appendChild(section);
-    themeGrids[t.key] = g;
-  });
+  /* Build each view's sections once (lazily); cards are moved, not cloned. */
+  var built = {};
+  function buildView(name) {
+    var view = VIEWS[name];
+    var wrap = document.createElement('div');
+    wrap.className = 'proj-view';
+    var grids = {};
+    view.groups.forEach(function (g) {
+      var members = fileOrder.filter(function (c) { return c.getAttribute(view.attr) === g.key; });
+      if (!members.length) return;
+      var section = document.createElement('section');
+      section.className = 'proj-theme';
+      var head = document.createElement('div');
+      head.className = 'proj-theme__head';
+      head.innerHTML = '<h3 class="proj-theme__title">' + g.title +
+        ' <span class="proj-theme__count">' + members.length + '</span></h3>' +
+        (g.desc ? '<p class="proj-theme__desc">' + g.desc + '</p>' : '');
+      var gr = document.createElement('div');
+      gr.className = 'proj-grid';
+      section.appendChild(head);
+      section.appendChild(gr);
+      wrap.appendChild(section);
+      grids[g.key] = gr;
+    });
+    grouped.appendChild(wrap);
+    built[name] = { wrap: wrap, grids: grids, attr: view.attr };
+    return built[name];
+  }
 
   function showLatest() {
     fileOrder.slice().sort(function (a, b) { return yearOf(b) - yearOf(a); })
       .forEach(function (c) { grid.appendChild(c); });
     grid.hidden = false;
-    byTheme.hidden = true;
+    grouped.hidden = true;
   }
 
-  function showByTheme() {
+  function showGrouped(name) {
+    var v = built[name] || buildView(name);
+    Object.keys(built).forEach(function (k) { built[k].wrap.hidden = (k !== name); });
     fileOrder.forEach(function (c) {
-      var g = themeGrids[c.getAttribute('data-theme')];
+      var g = v.grids[c.getAttribute(v.attr)];
       if (g) g.appendChild(c); else grid.appendChild(c);
     });
     grid.hidden = true;
-    byTheme.hidden = false;
+    grouped.hidden = false;
   }
 
   var toggle = page.querySelector('.proj-toggle');
@@ -343,7 +376,8 @@ Selected research and industry projects. Publications for each are listed on the
   }
 
   function show(view) {
-    if (view === 'theme') showByTheme(); else showLatest();
+    if (view !== 'latest' && !VIEWS[view]) view = 'latest';
+    if (view === 'latest') showLatest(); else showGrouped(view);
     Array.prototype.forEach.call(buttons, function (b) {
       var on = b.getAttribute('data-view') === view;
       b.classList.toggle('is-active', on);
