@@ -37,6 +37,19 @@ Selected research and industry projects. Publications for each are listed on the
 <div class="proj-grid">
 
 <article class="proj-card">
+<div class="proj-card__thumb"><img src="/files/AI-mediated-Negotiation.png" alt="AI-mediated negotiation with proxy agents"></div>
+<div class="proj-card__body">
+<div class="proj-card__meta"><span class="pub-badge badge-review">Under Review</span><span class="proj-tag">AI-mediated Negotiation</span></div>
+<h3 class="proj-card__title">AI Proxy Agents for Negotiation under Power Imbalance</h3>
+<p class="proj-card__desc">Comparing direct negotiation with user-specified and AI-supplemented proxy agents that negotiate on behalf of a leader and a member, to see whether AI-mediated reasons rebalance power asymmetry.</p>
+<dl class="proj-papers">
+<dt>Workshop</dt><dd><span class="proj-paper proj-paper--cscw" title="Delivered but Not Heard: AI Proxy Speech in Power-Imbalanced Group Decision-Making (CSCW '26 Workshop)">CSCW '26</span></dd>
+<dt>Under Review</dt><dd><span class="proj-paper proj-paper--review" title="AI-mediated negotiation with proxy agents in power-imbalanced groups">Conference</span></dd>
+</dl>
+</div>
+</article>
+
+<article class="proj-card">
 <a class="proj-card__thumb" href="https://doi.org/10.1145/3772318.3790385"><img src="/files/multiagents.png" alt="Multi-agent social influence"></a>
 <div class="proj-card__body">
 <div class="proj-card__meta"><span class="pub-badge badge-chi">CHI '26</span><span class="proj-tag">Multi-agent · Social Influence</span></div>
@@ -60,7 +73,7 @@ Selected research and industry projects. Publications for each are listed on the
 <dl class="proj-papers">
 <dt>Journal</dt><dd><a class="proj-paper proj-paper--cscw" href="https://arxiv.org/abs/2606.31762" title="Investigating LLM-Powered Dissenting Minority Support in Power-Imbalanced Group Decision-Making: Counterargument and Mediation as Intervention Strategies (PACM HCI, CSCW '26)">CSCW '26</a></dd>
 <dt>Poster · LBW</dt><dd><a class="proj-paper proj-paper--chi" href="https://dl.acm.org/doi/10.1145/3706599.3719792" title="Conversational Agents as Catalysts for Critical Thinking: Challenging Social Influence in Group Decision-making (CHI '25 Late-Breaking Work)">CHI '25</a><a class="proj-paper proj-paper--iui" href="https://doi.org/10.1145/3708557.3716334" title="Amplifying Minority Voices: AI-Mediated Devil's Advocate System for Inclusive Group Decision-Making (IUI '25 Poster)">IUI '25</a></dd>
-<dt>Workshop</dt><dd><a class="proj-paper proj-paper--dis" href="https://arxiv.org/abs/2406.11125" title="Conversational Agents as Catalysts for Critical Thinking: Challenging Design Fixation in Group Design (DIS '24 Workshop)">DIS '24</a><a class="proj-paper proj-paper--chi" href="https://arxiv.org/abs/2604.22319" title="Rethinking AI-Mediated Minority Support in Power-Imbalanced Group Decision-Making: From Anonymity To Authenticity (CHI '26 AI-MC Workshop)">CHI '26</a><span class="proj-paper proj-paper--cscw" title="Delivered but Not Heard: AI Proxy Speech in Power-Imbalanced Group Decision-Making (CSCW '26 Workshop)">CSCW '26</span></dd>
+<dt>Workshop</dt><dd><a class="proj-paper proj-paper--dis" href="https://arxiv.org/abs/2406.11125" title="Conversational Agents as Catalysts for Critical Thinking: Challenging Design Fixation in Group Design (DIS '24 Workshop)">DIS '24</a><a class="proj-paper proj-paper--chi" href="https://arxiv.org/abs/2604.22319" title="Rethinking AI-Mediated Minority Support in Power-Imbalanced Group Decision-Making: From Anonymity To Authenticity (CHI '26 AI-MC Workshop)">CHI '26</a></dd>
 <dt>Under Review</dt><dd><span class="proj-paper proj-paper--review" title="Reframing Supporting Minority Influence in the Age of AI: Bridging Theory, Design, and Simulation for Inclusive Group Decision-Making">Book Chapter</span></dd>
 </dl>
 <div class="proj-card__links"><a class="pub-link" href="/files/CHI25-Poster-FInal.pdf">Poster</a><a class="pub-link" href="https://www.youtube.com/watch?v=qU4_Bx9sHW0">Video</a></div>
@@ -68,7 +81,19 @@ Selected research and industry projects. Publications for each are listed on the
 </article>
 
 <article class="proj-card">
-<a class="proj-card__thumb proj-card__thumb--empty" href="https://doi.org/10.1145/3715668.3736348"><i class="fa fa-users" aria-hidden="true"></i></a>
+<a class="proj-card__thumb" href="https://dl.acm.org/doi/10.1145/3800645.3812859"><img src="/files/augmentairy.png" alt="Augmentiary reflective journaling interface"></a>
+<div class="proj-card__body">
+<div class="proj-card__meta"><span class="pub-badge badge-dis">DIS '26</span><span class="proj-tag">Reflective Journaling</span></div>
+<h3 class="proj-card__title"><a href="https://dl.acm.org/doi/10.1145/3800645.3812859">Augmentiary: LLM Feedback for Reflective Journaling</a></h3>
+<p class="proj-card__desc">A journaling tool where writers select a passage and receive LLM-generated interpretive feedback (dot-connecting to past experiences, perspective-expanding) to support meaning-making, then rewrite it in their own words.</p>
+<dl class="proj-papers">
+<dt>Full Paper</dt><dd><a class="proj-paper proj-paper--dis" href="https://dl.acm.org/doi/10.1145/3800645.3812859" title="Augmentiary: Exploring How LLM-Generated Interpretive Feedback Supports Meaning-Making in Reflective Journaling (DIS '26)">DIS '26</a></dd>
+</dl>
+</div>
+</article>
+
+<article class="proj-card">
+<a class="proj-card__thumb" href="https://doi.org/10.1145/3715668.3736348"><img src="/files/gx.png" alt="Group Experience (GX) for group-centered AI"></a>
 <div class="proj-card__body">
 <div class="proj-card__meta"><span class="pub-badge badge-dis">DIS '25</span><span class="proj-tag">Group-Centered AI</span></div>
 <h3 class="proj-card__title"><a href="https://doi.org/10.1145/3715668.3736348">Group Experience (GX) for Group-Centered AI</a></h3>
