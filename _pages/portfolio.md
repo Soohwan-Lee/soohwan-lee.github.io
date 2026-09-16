@@ -62,7 +62,7 @@ Selected research and industry projects. Publications for each are listed on the
 </article>
 
 <article class="proj-card" data-theme="influence" data-year="2026">
-<a class="proj-card__thumb" href="https://doi.org/10.1145/3772318.3790385"><img src="/files/multiagents.png" alt="Multi-agent social influence"></a>
+<a class="proj-card__thumb" href="https://doi.org/10.1145/3772318.3790385"><img src="/files/multiagent-influence.png" alt="Multi-agent social influence"></a>
 <div class="proj-card__body">
 <div class="proj-card__meta"><span class="pub-badge badge-chi">CHI '26</span><span class="proj-tag">Multi-agent · Social Influence</span></div>
 <h3 class="proj-card__title"><a href="https://doi.org/10.1145/3772318.3790385">Multi-agent Systems and Social Influence</a></h3>
