@@ -23,6 +23,12 @@ Selected research and industry projects. Publications for each are listed on the
      Badges:  same as Publications page — badge-chi / badge-cscw / badge-dis /
               badge-iui / badge-journal / badge-thesis / badge-domestic / badge-review
      Links:   <a class="pub-link" href="URL">Code</a>
+     Related papers (one pill per paper, colored by venue):
+       <div class="proj-card__papers">
+         <a class="proj-paper proj-paper--chi" href="DOI" title="Full paper title">CHI '26 Paper</a>
+         <span class="proj-paper proj-paper--review" title="...">Under Review</span>   (no link yet)
+       </div>
+       Venue colors: proj-paper--chi / --cscw / --dis / --iui / --journal / --thesis / --domestic / --review
      =================================================================== -->
 
 ## Research Projects
@@ -35,7 +41,15 @@ Selected research and industry projects. Publications for each are listed on the
 <div class="proj-card__meta"><span class="pub-badge badge-chi">CHI '26</span><span class="proj-tag">Multi-agent · Social Influence</span></div>
 <h3 class="proj-card__title"><a href="https://doi.org/10.1145/3772318.3790385">Multi-agent Systems and Social Influence</a></h3>
 <p class="proj-card__desc">How multiple LLM agents establish and exercise social influence in groups, seen through Moscovici's Social Conversion Theory: can a consistent minority voice shift the majority?</p>
-<div class="proj-card__links"><a class="pub-link" href="https://doi.org/10.1145/3772318.3790385">DOI</a><a class="pub-link" href="https://www.youtube.com/watch?v=c2_R4BPfIXw&t=253s">Talk</a></div>
+<div class="proj-card__papers">
+<a class="proj-paper proj-paper--chi" href="https://doi.org/10.1145/3772318.3790385" title="Understanding Compliance and Conversion Dynamics in Multi-Agent Collectives (CHI '26)">CHI '26 Paper</a>
+<a class="proj-paper proj-paper--iui" href="https://doi.org/10.1145/3742414.3789229" title="Understanding and Designing AI Systems that Reshape Social Dynamics in Group Decision-Making (IUI '26 Doctoral Consortium)">IUI '26 DC</a>
+<a class="proj-paper proj-paper--dis" href="https://doi.org/10.1145/3715668.3736348" title="Beyond Individual UX: Defining Group Experience (GX) as a New Paradigm for Group-centered AI (DIS '25 Poster)">DIS '25 Poster</a>
+<a class="proj-paper proj-paper--chi" href="https://arxiv.org/abs/2604.22277" title="Multi-Agent Consensus as a Cognitive Bias Trigger in Human-AI Interaction (CHI '26 Bias4Trust Workshop)">CHI '26 WS</a>
+<span class="proj-paper proj-paper--cscw" title="Where Does the Disagreement Go? Group Reflexivity and AI Accounts of Team Decision-makings (CSCW '26 Workshop)">CSCW '26 WS</span>
+<span class="proj-paper proj-paper--review" title="Reinforce, Align, or Oscillate? How People Experience and Interpret Multi-Agent Social Influence Over Time">Under Review</span>
+</div>
+<div class="proj-card__links"><a class="pub-link" href="https://www.youtube.com/watch?v=c2_R4BPfIXw&t=253s">Talk</a></div>
 </div>
 </article>
 
@@ -45,7 +59,16 @@ Selected research and industry projects. Publications for each are listed on the
 <div class="proj-card__meta"><span class="pub-badge badge-cscw">CSCW '26</span><span class="proj-tag">Group Decision-Making</span></div>
 <h3 class="proj-card__title"><a href="https://arxiv.org/abs/2606.31762">LLM-powered Devil's Advocate</a></h3>
 <p class="proj-card__desc">LLM agents with AI-mediated communication that represent minority perspectives to stimulate critical thinking in power-imbalanced group decision-making.</p>
-<div class="proj-card__links"><a class="pub-link" href="https://arxiv.org/abs/2606.31762">arXiv</a><a class="pub-link" href="https://doi.org/10.1145/3708557.3716334">IUI '25 Poster</a></div>
+<div class="proj-card__papers">
+<a class="proj-paper proj-paper--cscw" href="https://arxiv.org/abs/2606.31762" title="Investigating LLM-Powered Dissenting Minority Support in Power-Imbalanced Group Decision-Making: Counterargument and Mediation as Intervention Strategies (PACM HCI, CSCW '26)">CSCW '26 Journal</a>
+<a class="proj-paper proj-paper--chi" href="https://dl.acm.org/doi/10.1145/3706599.3719792" title="Conversational Agents as Catalysts for Critical Thinking: Challenging Social Influence in Group Decision-making (CHI '25 Late-Breaking Work)">CHI '25 LBW</a>
+<a class="proj-paper proj-paper--iui" href="https://doi.org/10.1145/3708557.3716334" title="Amplifying Minority Voices: AI-Mediated Devil's Advocate System for Inclusive Group Decision-Making (IUI '25 Poster)">IUI '25 Poster</a>
+<a class="proj-paper proj-paper--dis" href="https://arxiv.org/abs/2406.11125" title="Conversational Agents as Catalysts for Critical Thinking: Challenging Design Fixation in Group Design (DIS '24 Workshop)">DIS '24 WS</a>
+<a class="proj-paper proj-paper--chi" href="https://arxiv.org/abs/2604.22319" title="Rethinking AI-Mediated Minority Support in Power-Imbalanced Group Decision-Making: From Anonymity To Authenticity (CHI '26 AI-MC Workshop)">CHI '26 WS</a>
+<span class="proj-paper proj-paper--cscw" title="Delivered but Not Heard: AI Proxy Speech in Power-Imbalanced Group Decision-Making (CSCW '26 Workshop)">CSCW '26 WS</span>
+<span class="proj-paper proj-paper--review" title="Reframing Supporting Minority Influence in the Age of AI: Bridging Theory, Design, and Simulation for Inclusive Group Decision-Making (Book Chapter)">Book Chapter (Under Review)</span>
+</div>
+<div class="proj-card__links"><a class="pub-link" href="/files/CHI25-Poster-FInal.pdf">Poster</a><a class="pub-link" href="https://www.youtube.com/watch?v=qU4_Bx9sHW0">Video</a></div>
 </div>
 </article>
 
@@ -55,7 +78,11 @@ Selected research and industry projects. Publications for each are listed on the
 <div class="proj-card__meta"><span class="pub-badge badge-dis">DIS '24</span><span class="proj-tag">Embodied Interaction</span></div>
 <h3 class="proj-card__title"><a href="https://doi.org/10.1145/3643834.3661568">Vision-based Interactive System for Group Dance</a></h3>
 <p class="proj-card__desc">Design space of a real-time feedback system using a single RGB camera to support synchronization in group dance practice.</p>
-<div class="proj-card__links"><a class="pub-link" href="https://doi.org/10.1145/3643834.3661568">DOI</a><a class="pub-link" href="https://www.youtube.com/watch?v=QkQS_QiRz9o&t=5s">Talk</a></div>
+<div class="proj-card__papers">
+<a class="proj-paper proj-paper--dis" href="https://doi.org/10.1145/3643834.3661568" title="Expanding the Design Space of Vision-based Interactive Systems for Group Dance Practice (DIS '24)">DIS '24 Paper</a>
+<a class="proj-paper proj-paper--iui" href="https://doi.org/10.1145/3581754.3584135" title="CheerUp: A Real-time Ambient Visualization of Cheerleading Pose Similarity (IUI '23 Poster)">IUI '23 Poster</a>
+</div>
+<div class="proj-card__links"><a class="pub-link" href="https://www.youtube.com/watch?v=QkQS_QiRz9o&t=5s">Talk</a><a class="pub-link" href="https://www.youtube.com/watch?v=zVwT_CGxQII&t=71s">Podcast</a><a class="pub-link" href="https://github.com/Soohwan-Lee/CxD_CheerUp">CheerUp Code</a><a class="pub-link" href="https://www.youtube.com/watch?v=BAXvDJvt5vA">CheerUp Demo</a></div>
 </div>
 </article>
 
@@ -65,7 +92,11 @@ Selected research and industry projects. Publications for each are listed on the
 <div class="proj-card__meta"><span class="pub-badge badge-thesis">Thesis</span><span class="proj-tag">Non-verbal Communication</span></div>
 <h3 class="proj-card__title"><a href="https://unist.dcollection.net/srch/srchDetail/200000604178">Gesture-to-Emoji in Online Meetings</a></h3>
 <p class="proj-card__desc">Automatically translating hand gestures into emojis to enrich non-verbal communication in remote video meetings.</p>
-<div class="proj-card__links"><a class="pub-link" href="https://unist.dcollection.net/srch/srchDetail/200000604178">Thesis</a></div>
+<div class="proj-card__papers">
+<a class="proj-paper proj-paper--thesis" href="https://unist.dcollection.net/srch/srchDetail/200000604178" title="NEAS: AI-based Interactive System to Support Non-verbal Expressions in Online Communication (Master's Thesis, UNIST)">Master's Thesis</a>
+<a class="proj-paper proj-paper--domestic" href="https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE10968137" title="NEAS: AI-based Interactive System to Support Non-verbal Expressions in Online Communication (KSDS 2021 Fall)">KSDS '21</a>
+<span class="proj-paper proj-paper--review" title="Expression2Emoji: Designing Non-verbal Communication Support Tool for Group Video Meetings">Under Review</span>
+</div>
 </div>
 </article>
 
@@ -75,7 +106,11 @@ Selected research and industry projects. Publications for each are listed on the
 <div class="proj-card__meta"><span class="pub-badge badge-domestic">HCI Korea '21</span><span class="proj-tag">Critical Design</span></div>
 <h3 class="proj-card__title"><a href="https://www.youtube.com/watch?v=wwqpLr2ziqo">Counterfunctional Music Player</a></h3>
 <p class="proj-card__desc">A music player object that randomly plays the songs you listened to most in a given month, controlled by mid-air hand gestures.</p>
-<div class="proj-card__links"><a class="pub-link" href="https://github.com/Soohwan-Lee/counterfunctionalMusicPlayer">Code</a><a class="pub-link" href="https://www.youtube.com/watch?v=dIzcEw182kQ">Preview</a><a class="pub-link" href="https://www.youtube.com/watch?v=wwqpLr2ziqo">Demo</a><span class="pub-link pub-link--award">Creative Award</span></div>
+<div class="proj-card__papers">
+<a class="proj-paper proj-paper--domestic" href="https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE10530377" title="Counterfunctional Music Player with Mid-air Hand Gesture (HCI Korea 2021)">HCI Korea '21</a>
+<span class="pub-link pub-link--award">Creative Award</span>
+</div>
+<div class="proj-card__links"><a class="pub-link" href="https://github.com/Soohwan-Lee/counterfunctionalMusicPlayer">Code</a><a class="pub-link" href="https://www.youtube.com/watch?v=dIzcEw182kQ">Preview</a><a class="pub-link" href="https://www.youtube.com/watch?v=wwqpLr2ziqo">Demo</a></div>
 </div>
 </article>
 
@@ -85,6 +120,9 @@ Selected research and industry projects. Publications for each are listed on the
 <div class="proj-card__meta"><span class="pub-badge badge-domestic">KSDS '21</span><span class="proj-tag">Interactive Media Art</span></div>
 <h3 class="proj-card__title"><a href="https://youtu.be/mEOxsTnaVDY">InkStrings: Visualizing the Soul of Gayageum</a></h3>
 <p class="proj-card__desc">Play the Korean gayageum with mid-air gestures via Leap Motion; its vibratos (nonghyun) become real-time ink-wash visuals.</p>
+<div class="proj-card__papers">
+<a class="proj-paper proj-paper--domestic" href="https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE10588863" title="An Interactive Visualization of Gayageum's Expression and Mid-Air Gesture Recognition (KSDS 2021 Spring)">KSDS '21</a>
+</div>
 <div class="proj-card__links"><a class="pub-link" href="https://github.com/Soohwan-Lee/AirGayaguemVisualization">Code</a><a class="pub-link" href="https://youtu.be/mEOxsTnaVDY">Demo</a></div>
 </div>
 </article>
@@ -105,7 +143,9 @@ Selected research and industry projects. Publications for each are listed on the
 <div class="proj-card__meta"><span class="pub-badge badge-chi">CHI '20</span><span class="proj-tag">Wearable Input</span></div>
 <h3 class="proj-card__title"><a href="https://doi.org/10.1145/3313831.3376778">Nailz: Nail Input Sensing</a></h3>
 <p class="proj-card__desc">Touch-sensitive artificial nails that enable subtle, always-available hand input for mobile and wearable contexts.</p>
-<div class="proj-card__links"><a class="pub-link" href="https://doi.org/10.1145/3313831.3376778">DOI</a></div>
+<div class="proj-card__papers">
+<a class="proj-paper proj-paper--chi" href="https://doi.org/10.1145/3313831.3376778" title="Nailz: Sensing Hand Input with Touch Sensitive Nails (CHI '20)">CHI '20 Paper</a>
+</div>
 </div>
 </article>
 
