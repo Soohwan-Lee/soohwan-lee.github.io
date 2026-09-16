@@ -95,13 +95,13 @@ Selected research and industry projects. Publications for each are listed on the
 <article class="proj-card">
 <a class="proj-card__thumb" href="https://doi.org/10.1145/3715668.3736348"><img src="/files/gx.png" alt="Group Experience (GX) for group-centered AI"></a>
 <div class="proj-card__body">
-<div class="proj-card__meta"><span class="pub-badge badge-dis">DIS '25</span><span class="proj-tag">Group-Centered AI</span></div>
+<div class="proj-card__meta"><span class="pub-badge badge-dis">DIS '25 Companion</span><span class="proj-tag">Group-Centered AI</span></div>
 <h3 class="proj-card__title"><a href="https://doi.org/10.1145/3715668.3736348">Group Experience (GX) for Group-Centered AI</a></h3>
 <p class="proj-card__desc">Defining Group Experience (GX) as a new paradigm for group-centered AI: treating user experience as collective and emergent rather than a sum of individual interactions.</p>
 <dl class="proj-papers">
-<dt>Poster</dt><dd><a class="proj-paper proj-paper--dis" href="https://doi.org/10.1145/3715668.3736348" title="Beyond Individual UX: Defining Group Experience (GX) as a New Paradigm for Group-centered AI (DIS '25 Poster)">DIS '25</a></dd>
+<dt>Poster</dt><dd><a class="proj-paper proj-paper--dis" href="https://doi.org/10.1145/3715668.3736348" title="Beyond Individual UX: Defining Group Experience (GX) as a New Paradigm for Group-centered AI (DIS '25 Companion, Poster)">DIS '25 Companion</a></dd>
 </dl>
-<div class="proj-card__links"><a class="pub-link" href="/files/DIS25-Poster.pdf">Poster</a></div>
+<div class="proj-card__links"><a class="pub-link" href="https://doi.org/10.1145/3715668.3736348">DOI</a><a class="pub-link" href="/files/DIS25-Poster.pdf">Poster</a></div>
 </div>
 </article>
 
