@@ -5,7 +5,7 @@ title: "Projects"
 author_profile: true
 ---
 
-Selected research and industry projects. Publications for each are listed on the [Publications](/publications/) page.
+Two kinds of work: research I set the question for, and commissioned R&D I contribute to. Where a grant supports either one, it is credited on the card.
 
 <!-- All project content lives in _data/projects.yml (instructions at the top of
      that file). Each card is rendered by _includes/project-card.html. -->
@@ -23,6 +23,8 @@ Selected research and industry projects. Publications for each are listed on the
 </div>
 </div>
 
+<p class="proj-section-desc">Work I drive myself, from research question to study design to a running system. Group by <strong>Theme</strong> or <strong>Modality</strong> to see how the lines connect &mdash; a project can sit in more than one. Papers are listed on the <a href="/publications/">Publications</a> page.</p>
+
 <div class="proj-grid" id="research-grid">
 {%- for item in site.data.projects.research %}
 {% include project-card.html card=item grouped=true %}
@@ -31,10 +33,12 @@ Selected research and industry projects. Publications for each are listed on the
 
 <div class="proj-grouped" id="research-grouped" hidden></div>
 
-<h2 id="industry-projects">Industry Projects</h2>
+<h2 id="funded-projects">Funded Projects</h2>
+
+<p class="proj-section-desc">Industry- and government-commissioned R&amp;D, newest first, with my own role in each.</p>
 
 <div class="proj-grid">
-{%- for item in site.data.projects.industry %}
+{%- for item in site.data.projects.funded %}
 {% include project-card.html card=item %}
 {%- endfor %}
 </div>
@@ -45,8 +49,11 @@ Selected research and industry projects. Publications for each are listed on the
   if (!page) return;
 
   /* Grouped views come from _data/projects.yml -> views.
-     Each view reads the card attribute data-<key> and shows its groups in
-     order. Cards whose value matches no group go to an "Other" section. */
+     Each view reads the card attribute data-<key>, which holds one or more
+     space-separated group keys, and shows its groups in order. A card listed
+     in several groups is cloned into each; a card matching none goes to an
+     "Other" section. The cards in #research-grid are never moved, so the
+     "Latest" list stays intact. */
   var VIEWS = {{ site.data.projects.views | jsonify }};
 
   var grid = document.getElementById('research-grid');
@@ -66,6 +73,10 @@ Selected research and industry projects. Publications for each are listed on the
     sortYear[i] = carry;
     c.setAttribute('data-index', i);
   });
+
+  function valuesOf(card, attr) {
+    return (card.getAttribute(attr) || '').split(/\s+/).filter(Boolean);
+  }
 
   function section(title, desc, count) {
     var s = document.createElement('section');
@@ -93,31 +104,37 @@ Selected research and industry projects. Publications for each are listed on the
     return { el: s, grid: g };
   }
 
-  /* Build each view's sections once (lazily); cards are moved, not cloned. */
+  /* Build each view's sections once (lazily), from clones of the cards. */
   var built = {};
   function buildView(view) {
     var attr = 'data-' + view.key;
     var wrap = document.createElement('div');
     wrap.className = 'proj-view';
-    var grids = {};
     var groups = (view.groups || []).slice();
-    groups.push({ key: '__other__', title: 'Other' });
     var known = {};
     groups.forEach(function (g) { known[g.key] = true; });
+    groups.push({ key: '__other__', title: 'Other' });
 
     groups.forEach(function (g) {
       var members = fileOrder.filter(function (c) {
-        var val = c.getAttribute(attr) || '';
-        return g.key === '__other__' ? !known[val] : val === g.key;
+        var vals = valuesOf(c, attr);
+        if (g.key === '__other__') {
+          return !vals.some(function (v) { return known[v]; });
+        }
+        return vals.indexOf(g.key) !== -1;
       });
       if (!members.length) return;
       var s = section(g.title, g.desc, members.length);
+      members.forEach(function (c) { s.grid.appendChild(c.cloneNode(true)); });
       wrap.appendChild(s.el);
-      grids[g.key] = s.grid;
     });
     grouped.appendChild(wrap);
-    built[view.key] = { wrap: wrap, grids: grids, attr: attr };
-    return built[view.key];
+    built[view.key] = wrap;
+    return wrap;
+  }
+
+  function hideAllViews(except) {
+    Object.keys(built).forEach(function (k) { built[k].hidden = (k !== except); });
   }
 
   function showLatest() {
@@ -125,18 +142,14 @@ Selected research and industry projects. Publications for each are listed on the
       var ia = +a.getAttribute('data-index'), ib = +b.getAttribute('data-index');
       return (sortYear[ib] - sortYear[ia]) || (ia - ib);
     }).forEach(function (c) { grid.appendChild(c); });
+    hideAllViews(null);
     grid.hidden = false;
     grouped.hidden = true;
   }
 
   function showGrouped(view) {
-    var v = built[view.key] || buildView(view);
-    Object.keys(built).forEach(function (k) { built[k].wrap.hidden = (k !== view.key); });
-    fileOrder.forEach(function (c) {
-      var val = c.getAttribute(v.attr) || '';
-      var g = v.grids[val] || v.grids['__other__'];
-      if (g) g.appendChild(c);
-    });
+    if (!built[view.key]) buildView(view);
+    hideAllViews(view.key);
     grid.hidden = true;
     grouped.hidden = false;
   }
