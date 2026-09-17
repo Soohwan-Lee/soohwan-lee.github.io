@@ -147,26 +147,24 @@
 
 /* ---- Filter view ------------------------------------------------------ */
 
+/* One row per facet. The label column sizes itself to the longest label,
+   so a long one like "Contribution" cannot run into the chips. */
 .proj-filter__bar {
-  margin: 0 0 0.8em;
-}
-
-/* One row per facet: a fixed-width label, then the chips */
-.proj-filter__row {
-  display: flex;
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: 0.6em 1em;
   align-items: baseline;
-  gap: 0.6em;
-  margin-bottom: 0.45em;
+  margin: 0 0 0.9em;
 }
 
 .proj-filter__label {
-  flex: none;
-  width: 6.2em;
   font-family: $sans-serif;
   font-size: 0.68em;
   font-weight: 700;
   letter-spacing: 0.08em;
+  line-height: 1.9;
   text-transform: uppercase;
+  white-space: nowrap;
   color: $gray;
 }
 
@@ -178,14 +176,17 @@
 }
 
 @include breakpoint(max-width $small) {
-  .proj-filter__row {
+  .proj-filter__bar {
     display: block;
   }
 
   .proj-filter__label {
     display: block;
-    width: auto;
-    margin-bottom: 0.3em;
+    margin: 0 0 0.3em;
+  }
+
+  .proj-filter__chips {
+    margin-bottom: 0.7em;
   }
 }
 

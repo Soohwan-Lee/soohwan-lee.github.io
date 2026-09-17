@@ -19,7 +19,11 @@
 {%- if c.badge or c.tags %}
 <div class="proj-card__meta">
 {%- if c.badge %}<span class="pub-badge{% if c.badge.style %} badge-{{ c.badge.style }}{% endif %}">{{ c.badge.label | escape }}</span>{% endif -%}
-{%- for t in c.tags %}<span class="proj-tag">{{ t | escape }}</span>{% endfor -%}
+{%- comment -%}
+  The card face shows the first three tags only; the rest still drive the
+  Filter view through data-tags, so list a card's tags topic-first.
+{%- endcomment -%}
+{%- for t in c.tags limit: 3 %}<span class="proj-tag">{{ t | escape }}</span>{% endfor -%}
 </div>
 {%- endif %}
 <h3 class="proj-card__title">{% if c.link %}<a href="{{ c.link | escape }}">{{ c.title | escape }}</a>{% else %}{{ c.title | escape }}{% endif %}</h3>

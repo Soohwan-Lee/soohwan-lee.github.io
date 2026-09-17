@@ -208,38 +208,28 @@ The same work, listed two ways: by the research question it asks, and by the gra
       return b;
     }
 
-    /* One row per facet, in the order _data/projects.yml lists them. */
+    /* One row per facet, in the order _data/projects.yml lists them. The
+       label and its chips are separate grid cells, so the label column
+       lines up across rows without a hand-set width. */
+    function row(name, tags) {
+      if (!tags.length) return;
+      var label = document.createElement('span');
+      label.className = 'proj-filter__label';
+      label.textContent = name;
+      var chips = document.createElement('span');
+      chips.className = 'proj-filter__chips';
+      tags.forEach(function (t) { chips.appendChild(chip(t)); });
+      filterBar.appendChild(label);
+      filterBar.appendChild(chips);
+    }
+
     var placed = {};
     (FILTERS || []).forEach(function (f) {
       var tags = (f.tags || []).filter(function (t) { return counts[t]; });
-      if (!tags.length) return;
-      var row = document.createElement('div');
-      row.className = 'proj-filter__row';
-      var label = document.createElement('span');
-      label.className = 'proj-filter__label';
-      label.textContent = f.label;
-      row.appendChild(label);
-      var chips = document.createElement('span');
-      chips.className = 'proj-filter__chips';
-      tags.forEach(function (t) { placed[t] = true; chips.appendChild(chip(t)); });
-      row.appendChild(chips);
-      filterBar.appendChild(row);
+      tags.forEach(function (t) { placed[t] = true; });
+      row(f.label, tags);
     });
-
-    var rest = Object.keys(counts).filter(function (t) { return !placed[t]; }).sort();
-    if (rest.length) {
-      var row = document.createElement('div');
-      row.className = 'proj-filter__row';
-      var label = document.createElement('span');
-      label.className = 'proj-filter__label';
-      label.textContent = 'Other';
-      row.appendChild(label);
-      var chips = document.createElement('span');
-      chips.className = 'proj-filter__chips';
-      rest.forEach(function (t) { chips.appendChild(chip(t)); });
-      row.appendChild(chips);
-      filterBar.appendChild(row);
-    }
+    row('Other', Object.keys(counts).filter(function (t) { return !placed[t]; }).sort());
 
     var clear = document.createElement('button');
     clear.type = 'button';
