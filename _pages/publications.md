@@ -178,7 +178,7 @@ Nari Kim, **Soohwan Lee**, Hyejin Oh, Temirlan Dzhoroev, and Young-Woo Park. Int
 </div>
 
 <div class="pub-item" data-cat="other" markdown="1">
-<span class="pub-meta"><span class="pub-badge badge-domestic">HCI Korea</span><span class="pub-type">Domestic · Creative Award Track</span></span>
+<span class="pub-meta"><span class="pub-badge badge-domestic">HCI Korea</span><span class="pub-type">Domestic · submitted to the Creative Award category</span></span>
 **Soohwan Lee**, Kyungho Lee, and Young-Woo Park. Counterfunctional Music Player with Mid-air Hand Gesture. *Proceedings of HCI Korea 2021*.
 <div class="pub-links"><a class="pub-link" href="https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE10530377">Link</a></div>
 </div>
