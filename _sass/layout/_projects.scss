@@ -148,10 +148,45 @@
 /* ---- Filter view ------------------------------------------------------ */
 
 .proj-filter__bar {
+  margin: 0 0 0.8em;
+}
+
+/* One row per facet: a fixed-width label, then the chips */
+.proj-filter__row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6em;
+  margin-bottom: 0.45em;
+}
+
+.proj-filter__label {
+  flex: none;
+  width: 6.2em;
+  font-family: $sans-serif;
+  font-size: 0.68em;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $gray;
+}
+
+.proj-filter__chips {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4em;
-  margin: 0 0 0.7em;
+  gap: 0.35em;
+  min-width: 0;
+}
+
+@include breakpoint(max-width $small) {
+  .proj-filter__row {
+    display: block;
+  }
+
+  .proj-filter__label {
+    display: block;
+    width: auto;
+    margin-bottom: 0.3em;
+  }
 }
 
 .proj-filter__tag {

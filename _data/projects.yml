@@ -87,6 +87,19 @@ views:
         desc: Conceptual work without a specific input modality
 
 # ---------------------------------------------------------------------
+#  FILTER VIEW
+#  The "Filter" tab reads every research card's "tags" and shows them as
+#  chips. These facets only decide which row a chip lands in; a tag that
+#  appears on no card is skipped, and a tag in no facet falls to "Other".
+filters:
+  - label: Topic
+    tags: [Group Decision-Making, Social Influence, Power Imbalance, Minority Support, Reflection, Group Coordination]
+  - label: Technique
+    tags: [LLM Agents, Computer Vision, Mid-air Gesture, Wearable Input]
+  - label: Contribution
+    tags: [Empirical Study, System, Design Artifact, Framework]
+
+# ---------------------------------------------------------------------
 research:
 
   - title: AI Proxy Agents for Negotiation under Power Imbalance
@@ -96,7 +109,7 @@ research:
     theme: gcai
     modality: llm
     badge: { label: Under Review, style: review }
-    tags: [AI-mediated Negotiation, Power Imbalance, Social Influence, LLM Agents]
+    tags: [Power Imbalance, Social Influence, LLM Agents, Empirical Study]
     desc: >-
       Comparing direct negotiation with user-specified and AI-supplemented proxy agents
       that negotiate on behalf of a leader and a member, to see whether AI-mediated
@@ -115,7 +128,7 @@ research:
     theme: gcai
     modality: llm
     badge: { label: "CHI '26", style: chi }
-    tags: [Multi-agent, Social Influence, LLM Agents]
+    tags: [Social Influence, LLM Agents, Empirical Study]
     desc: >-
       How multiple LLM agents establish and exercise social influence in groups, seen
       through Moscovici's Social Conversion Theory: can a consistent minority voice
@@ -141,7 +154,7 @@ research:
     theme: gcai
     modality: llm
     badge: { label: "CSCW '26", style: cscw }
-    tags: [Group Decision-Making, Minority Support, Power Imbalance, LLM Agents]
+    tags: [Group Decision-Making, Minority Support, Power Imbalance, LLM Agents, Empirical Study]
     desc: >-
       LLM agents with AI-mediated communication that represent minority perspectives
       to stimulate critical thinking in power-imbalanced group decision-making.
@@ -172,7 +185,7 @@ research:
     theme: reflection
     modality: llm
     badge: { label: "DIS '26", style: dis }
-    tags: [Reflection, LLM Agents]
+    tags: [Reflection, LLM Agents, Empirical Study]
     desc: >-
       A journaling tool where writers select a passage and receive LLM-generated
       interpretive feedback (dot-connecting to past experiences, perspective-expanding)
@@ -189,7 +202,7 @@ research:
     theme: gcai
     modality: theory
     badge: { label: "DIS '25 Companion", style: dis }
-    tags: [Group Decision-Making, Theory & Framework]
+    tags: [Group Decision-Making, Framework]
     desc: >-
       Defining Group Experience (GX) as a new paradigm for group-centered AI: treating
       user experience as collective and emergent rather than a sum of individual
@@ -208,7 +221,7 @@ research:
     theme: [gcai, embodied]
     modality: body
     badge: { label: "DIS '24", style: dis }
-    tags: [Group Coordination, Embodied Interaction, Computer Vision]
+    tags: [Group Coordination, Computer Vision, Empirical Study]
     desc: >-
       Design space of a real-time feedback system using a single RGB camera to support
       synchronization in group dance practice.
@@ -232,7 +245,7 @@ research:
     theme: [gcai, embodied]
     modality: [body, hand]
     badge: { label: Thesis, style: thesis }
-    tags: [Non-verbal Communication, Embodied Interaction, Computer Vision, Mid-air Gesture]
+    tags: [Group Coordination, Computer Vision, Mid-air Gesture, System]
     desc: >-
       Automatically translating hand gestures into emojis to enrich non-verbal
       communication in remote group video meetings.
@@ -255,7 +268,7 @@ research:
     theme: [critical, embodied]
     modality: hand
     badge: { label: "HCI Korea '21", style: domestic }
-    tags: [Critical Design, Mid-air Gesture]
+    tags: [Mid-air Gesture, Design Artifact]
     desc: >-
       A music player object that randomly plays the songs you listened to most in a
       given month, controlled by mid-air hand gestures.
@@ -277,7 +290,7 @@ research:
     theme: [media, embodied]
     modality: hand
     badge: { label: "KSDS '21", style: domestic }
-    tags: [Media Art, Mid-air Gesture]
+    tags: [Mid-air Gesture, Design Artifact]
     desc: >-
       Play the Korean gayageum with mid-air gestures via Leap Motion; its vibratos
       (nonghyun) become real-time ink-wash visuals.
@@ -295,7 +308,7 @@ research:
     year: 2020
     theme: embodied
     modality: hand
-    tags: [VR, Mid-air Gesture]
+    tags: [Mid-air Gesture, Empirical Study]
     desc: >-
       Evaluating the cognitive and physical workload imposed by different gesture types
       in immersive VR environments.
@@ -310,7 +323,7 @@ research:
     theme: embodied
     modality: hand
     badge: { label: "CHI '20", style: chi }
-    tags: [Wearable Input]
+    tags: [Wearable Input, System, Empirical Study]
     desc: >-
       Touch-sensitive artificial nails that enable subtle, always-available hand input
       for mobile and wearable contexts.

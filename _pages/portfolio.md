@@ -5,7 +5,7 @@ title: "Projects"
 author_profile: true
 ---
 
-Two kinds of work: research I set the question for, and commissioned R&D I contribute to. Where a grant supports either one, it is credited on the card.
+The same work, listed two ways: by the research question it asks, and by the grant or contract that paid for it.
 
 <!-- All project content lives in _data/projects.yml (instructions at the top of
      that file). Each card is rendered by _includes/project-card.html. -->
@@ -24,7 +24,7 @@ Two kinds of work: research I set the question for, and commissioned R&D I contr
 </div>
 </div>
 
-<p class="proj-section-desc">Work I drive myself, from research question to study design to a running system. Group by <strong>Theme</strong> or <strong>Modality</strong> to see how the lines connect; a project can sit in more than one. Papers are listed on the <a href="/publications/">Publications</a> page.</p>
+<p class="proj-section-desc">Grouped by research question, with the papers each one produced. Most of it ran under the grants listed further down, so the two sections overlap. <strong>Theme</strong> and <strong>Modality</strong> sort the cards, and one project can sit in several; <strong>Filter</strong> narrows by topic. Papers are listed on the <a href="/publications/">Publications</a> page.</p>
 
 <div class="proj-grid" id="research-grid">
 {%- for item in site.data.projects.research %}
@@ -42,7 +42,7 @@ Two kinds of work: research I set the question for, and commissioned R&D I contr
 
 <h2 id="funded-projects">Funded Projects</h2>
 
-<p class="proj-section-desc">Industry- and government-commissioned R&amp;D, newest first, with my own role in each.</p>
+<p class="proj-section-desc">The industry and government grants behind the work, newest first, with my own role in each.</p>
 
 <div class="proj-grid">
 {%- for item in site.data.projects.funded %}
@@ -62,6 +62,7 @@ Two kinds of work: research I set the question for, and commissioned R&D I contr
      "Other" section. The cards in #research-grid are never moved, so the
      "Latest" list stays intact. */
   var VIEWS = {{ site.data.projects.views | jsonify }};
+  var FILTERS = {{ site.data.projects.filters | jsonify }};
 
   var grid = document.getElementById('research-grid');
   var grouped = document.getElementById('research-grouped');
@@ -188,26 +189,57 @@ Two kinds of work: research I set the question for, and commissioned R&D I contr
       tagsOf(c).forEach(function (t) { counts[t] = (counts[t] || 0) + 1; });
     });
 
-    Object.keys(counts)
-      .sort(function (a, b) { return (counts[b] - counts[a]) || a.localeCompare(b); })
-      .forEach(function (t) {
-        var b = document.createElement('button');
-        b.type = 'button';
-        b.className = 'proj-filter__tag';
-        b.setAttribute('data-tag', t);
-        b.setAttribute('aria-pressed', 'false');
-        b.appendChild(document.createTextNode(t));
-        var n = document.createElement('span');
-        n.className = 'proj-filter__count';
-        n.textContent = counts[t];
-        b.appendChild(n);
-        b.addEventListener('click', function () {
-          var i = picked.indexOf(t);
-          if (i === -1) picked.push(t); else picked.splice(i, 1);
-          applyFilter();
-        });
-        filterBar.appendChild(b);
+    function chip(t) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'proj-filter__tag';
+      b.setAttribute('data-tag', t);
+      b.setAttribute('aria-pressed', 'false');
+      b.appendChild(document.createTextNode(t));
+      var n = document.createElement('span');
+      n.className = 'proj-filter__count';
+      n.textContent = counts[t];
+      b.appendChild(n);
+      b.addEventListener('click', function () {
+        var i = picked.indexOf(t);
+        if (i === -1) picked.push(t); else picked.splice(i, 1);
+        applyFilter();
       });
+      return b;
+    }
+
+    /* One row per facet, in the order _data/projects.yml lists them. */
+    var placed = {};
+    (FILTERS || []).forEach(function (f) {
+      var tags = (f.tags || []).filter(function (t) { return counts[t]; });
+      if (!tags.length) return;
+      var row = document.createElement('div');
+      row.className = 'proj-filter__row';
+      var label = document.createElement('span');
+      label.className = 'proj-filter__label';
+      label.textContent = f.label;
+      row.appendChild(label);
+      var chips = document.createElement('span');
+      chips.className = 'proj-filter__chips';
+      tags.forEach(function (t) { placed[t] = true; chips.appendChild(chip(t)); });
+      row.appendChild(chips);
+      filterBar.appendChild(row);
+    });
+
+    var rest = Object.keys(counts).filter(function (t) { return !placed[t]; }).sort();
+    if (rest.length) {
+      var row = document.createElement('div');
+      row.className = 'proj-filter__row';
+      var label = document.createElement('span');
+      label.className = 'proj-filter__label';
+      label.textContent = 'Other';
+      row.appendChild(label);
+      var chips = document.createElement('span');
+      chips.className = 'proj-filter__chips';
+      rest.forEach(function (t) { chips.appendChild(chip(t)); });
+      row.appendChild(chips);
+      filterBar.appendChild(row);
+    }
 
     var clear = document.createElement('button');
     clear.type = 'button';
@@ -228,7 +260,7 @@ Two kinds of work: research I set the question for, and commissioned R&D I contr
       if (ok) shown++;
     });
 
-    Array.prototype.forEach.call(filterBar.children, function (b) {
+    Array.prototype.forEach.call(filterBar.querySelectorAll('.proj-filter__tag'), function (b) {
       var t = b.getAttribute('data-tag');
       var on = picked.indexOf(t) !== -1;
       b.classList.toggle('is-on', on);
