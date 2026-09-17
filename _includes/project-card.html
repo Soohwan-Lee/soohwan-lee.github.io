@@ -7,7 +7,7 @@
 {%- assign thumb_class = "proj-card__thumb" -%}
 {%- if c.cover %}{% assign thumb_class = thumb_class | append: " is-cover" %}{% endif -%}
 {%- unless c.image %}{% assign thumb_class = thumb_class | append: " proj-card__thumb--empty" %}{% endunless -%}
-<article class="proj-card"{% if include.grouped %} data-year="{{ c.year }}"{% for v in site.data.projects.views %} data-{{ v.key }}="{{ c[v.key] | join: ' ' }}"{% endfor %}{% endif %}>
+<article class="proj-card"{% if include.grouped %} data-year="{{ c.year }}" data-tags="{{ c.tags | join: '|' | escape }}"{% for v in site.data.projects.views %} data-{{ v.key }}="{{ c[v.key] | join: ' ' }}"{% endfor %}{% endif %}>
 {%- if c.link %}<a class="{{ thumb_class }}" href="{{ c.link | escape }}">{% else %}<div class="{{ thumb_class }}">{% endif -%}
 {%- if c.image -%}
 <img src="{{ c.image }}" alt="{{ c.title | escape }}">

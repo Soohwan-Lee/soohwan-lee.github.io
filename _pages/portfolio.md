@@ -20,6 +20,7 @@ Two kinds of work: research I set the question for, and commissioned R&D I contr
 {%- for v in site.data.projects.views %}
 <button type="button" role="tab" class="pub-toggle__btn" data-view="{{ v.key }}" aria-selected="false">{{ v.label }}</button>
 {%- endfor %}
+<button type="button" role="tab" class="pub-toggle__btn" data-view="filter" aria-selected="false">Filter</button>
 </div>
 </div>
 
@@ -32,6 +33,12 @@ Two kinds of work: research I set the question for, and commissioned R&D I contr
 </div>
 
 <div class="proj-grouped" id="research-grouped" hidden></div>
+
+<div class="proj-filter" id="research-filter" hidden>
+<div class="proj-filter__bar" role="group" aria-label="Filter projects by topic"></div>
+<p class="proj-filter__status"><span></span></p>
+<div class="proj-grid proj-filter__grid"></div>
+</div>
 
 <h2 id="funded-projects">Funded Projects</h2>
 
@@ -58,8 +65,9 @@ Two kinds of work: research I set the question for, and commissioned R&D I contr
 
   var grid = document.getElementById('research-grid');
   var grouped = document.getElementById('research-grouped');
+  var filterWrap = document.getElementById('research-filter');
   var toggle = page.querySelector('.proj-toggle');
-  if (!grid || !grouped || !toggle) return;
+  if (!grid || !grouped || !filterWrap || !toggle) return;
 
   var fileOrder = Array.prototype.slice.call(grid.querySelectorAll('.proj-card'));
 
@@ -76,6 +84,10 @@ Two kinds of work: research I set the question for, and commissioned R&D I contr
 
   function valuesOf(card, attr) {
     return (card.getAttribute(attr) || '').split(/\s+/).filter(Boolean);
+  }
+
+  function tagsOf(card) {
+    return (card.getAttribute('data-tags') || '').split('|').filter(Boolean);
   }
 
   function section(title, desc, count) {
@@ -145,6 +157,7 @@ Two kinds of work: research I set the question for, and commissioned R&D I contr
     hideAllViews(null);
     grid.hidden = false;
     grouped.hidden = true;
+    filterWrap.hidden = true;
   }
 
   function showGrouped(view) {
@@ -152,6 +165,92 @@ Two kinds of work: research I set the question for, and commissioned R&D I contr
     hideAllViews(view.key);
     grid.hidden = true;
     grouped.hidden = false;
+    filterWrap.hidden = true;
+  }
+
+  /* ---- Filter view -----------------------------------------------------
+     A chip per topic tag. Picking several narrows to the cards carrying all
+     of them, and a chip that would leave nothing is dimmed out. */
+  var filterBar = filterWrap.querySelector('.proj-filter__bar');
+  var filterStatus = filterWrap.querySelector('.proj-filter__status');
+  var filterGrid = filterWrap.querySelector('.proj-filter__grid');
+  var picked = [];
+  var filterReady = false;
+
+  function matches(card, tags) {
+    var has = tagsOf(card);
+    return tags.every(function (t) { return has.indexOf(t) !== -1; });
+  }
+
+  function buildFilter() {
+    var counts = {};
+    fileOrder.forEach(function (c) {
+      tagsOf(c).forEach(function (t) { counts[t] = (counts[t] || 0) + 1; });
+    });
+
+    Object.keys(counts)
+      .sort(function (a, b) { return (counts[b] - counts[a]) || a.localeCompare(b); })
+      .forEach(function (t) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'proj-filter__tag';
+        b.setAttribute('data-tag', t);
+        b.setAttribute('aria-pressed', 'false');
+        b.appendChild(document.createTextNode(t));
+        var n = document.createElement('span');
+        n.className = 'proj-filter__count';
+        n.textContent = counts[t];
+        b.appendChild(n);
+        b.addEventListener('click', function () {
+          var i = picked.indexOf(t);
+          if (i === -1) picked.push(t); else picked.splice(i, 1);
+          applyFilter();
+        });
+        filterBar.appendChild(b);
+      });
+
+    var clear = document.createElement('button');
+    clear.type = 'button';
+    clear.className = 'proj-filter__clear';
+    clear.textContent = 'Clear';
+    clear.addEventListener('click', function () { picked = []; applyFilter(); });
+    filterStatus.appendChild(clear);
+
+    fileOrder.forEach(function (c) { filterGrid.appendChild(c.cloneNode(true)); });
+    filterReady = true;
+  }
+
+  function applyFilter() {
+    var shown = 0;
+    Array.prototype.forEach.call(filterGrid.children, function (c) {
+      var ok = matches(c, picked);
+      c.hidden = !ok;
+      if (ok) shown++;
+    });
+
+    Array.prototype.forEach.call(filterBar.children, function (b) {
+      var t = b.getAttribute('data-tag');
+      var on = picked.indexOf(t) !== -1;
+      b.classList.toggle('is-on', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      b.classList.toggle('is-empty', !on && !fileOrder.some(function (c) {
+        return matches(c, picked.concat([t]));
+      }));
+    });
+
+    filterStatus.firstChild.textContent = picked.length
+      ? shown + ' of ' + fileOrder.length + ' projects'
+      : 'Pick one or more topics to narrow ' + fileOrder.length + ' projects.';
+    filterStatus.lastChild.hidden = !picked.length;
+  }
+
+  function showFilter() {
+    if (!filterReady) buildFilter();
+    applyFilter();
+    hideAllViews(null);
+    grid.hidden = true;
+    grouped.hidden = true;
+    filterWrap.hidden = false;
   }
 
   var buttons = toggle.querySelectorAll('.pub-toggle__btn');
@@ -170,9 +269,11 @@ Two kinds of work: research I set the question for, and commissioned R&D I contr
   }
 
   function show(key) {
-    var view = findView(key);
-    if (!view) key = 'latest';
-    if (view) showGrouped(view); else showLatest();
+    var view = key === 'filter' ? null : findView(key);
+    if (key !== 'filter' && !view) key = 'latest';
+    if (key === 'filter') showFilter();
+    else if (view) showGrouped(view);
+    else showLatest();
     Array.prototype.forEach.call(buttons, function (b) {
       var on = b.getAttribute('data-view') === key;
       b.classList.toggle('is-active', on);

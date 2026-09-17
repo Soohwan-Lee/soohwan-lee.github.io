@@ -96,7 +96,7 @@ research:
     theme: gcai
     modality: llm
     badge: { label: Under Review, style: review }
-    tags: [AI-mediated Negotiation]
+    tags: [AI-mediated Negotiation, Power Imbalance, Social Influence, LLM Agents]
     desc: >-
       Comparing direct negotiation with user-specified and AI-supplemented proxy agents
       that negotiate on behalf of a leader and a member, to see whether AI-mediated
@@ -105,9 +105,6 @@ research:
       - type: Under Review
         items:
           - { venue: Conference, style: review, title: "Investigating AI Proxies and the Social Costs of Explaining Requests in Power-Imbalanced Workplace Negotiation" }
-      - type: Workshop
-        items:
-          - { venue: "CSCW '26", style: cscw, title: "Delivered but Not Heard: AI Proxy Speech in Power-Imbalanced Group Decision-Making (CSCW '26 Workshop, Oral Presentation)" }
     links:
       - { label: System, url: "https://github.com/Soohwan-Lee/AI-Mediated-Negotiation-Experiment" }
 
@@ -118,7 +115,7 @@ research:
     theme: gcai
     modality: llm
     badge: { label: "CHI '26", style: chi }
-    tags: [Multi-agent · Social Influence]
+    tags: [Multi-agent, Social Influence, LLM Agents]
     desc: >-
       How multiple LLM agents establish and exercise social influence in groups, seen
       through Moscovici's Social Conversion Theory: can a consistent minority voice
@@ -144,7 +141,7 @@ research:
     theme: gcai
     modality: llm
     badge: { label: "CSCW '26", style: cscw }
-    tags: [Group Decision-Making]
+    tags: [Group Decision-Making, Minority Support, Power Imbalance, LLM Agents]
     desc: >-
       LLM agents with AI-mediated communication that represent minority perspectives
       to stimulate critical thinking in power-imbalanced group decision-making.
@@ -175,7 +172,7 @@ research:
     theme: reflection
     modality: llm
     badge: { label: "DIS '26", style: dis }
-    tags: [Reflective Journaling]
+    tags: [Reflection, LLM Agents]
     desc: >-
       A journaling tool where writers select a passage and receive LLM-generated
       interpretive feedback (dot-connecting to past experiences, perspective-expanding)
@@ -192,7 +189,7 @@ research:
     theme: gcai
     modality: theory
     badge: { label: "DIS '25 Companion", style: dis }
-    tags: [Group-Centered AI]
+    tags: [Group Decision-Making, Theory & Framework]
     desc: >-
       Defining Group Experience (GX) as a new paradigm for group-centered AI: treating
       user experience as collective and emergent rather than a sum of individual
@@ -211,7 +208,7 @@ research:
     theme: [gcai, embodied]
     modality: body
     badge: { label: "DIS '24", style: dis }
-    tags: [Embodied Interaction, Group Coordination]
+    tags: [Group Coordination, Embodied Interaction, Computer Vision]
     desc: >-
       Design space of a real-time feedback system using a single RGB camera to support
       synchronization in group dance practice.
@@ -235,7 +232,7 @@ research:
     theme: [gcai, embodied]
     modality: [body, hand]
     badge: { label: Thesis, style: thesis }
-    tags: [Non-verbal Communication]
+    tags: [Non-verbal Communication, Embodied Interaction, Computer Vision, Mid-air Gesture]
     desc: >-
       Automatically translating hand gestures into emojis to enrich non-verbal
       communication in remote group video meetings.
@@ -258,7 +255,7 @@ research:
     theme: [critical, embodied]
     modality: hand
     badge: { label: "HCI Korea '21", style: domestic }
-    tags: [Critical Design]
+    tags: [Critical Design, Mid-air Gesture]
     desc: >-
       A music player object that randomly plays the songs you listened to most in a
       given month, controlled by mid-air hand gestures.
@@ -267,7 +264,7 @@ research:
         items:
           - { venue: "HCI Korea '21", style: domestic, title: "Counterfunctional Music Player with Mid-air Hand Gesture (HCI Korea 2021)", url: "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE10530377" }
     links:
-      - { label: Creative Award Track }
+      - { label: Creative Award Category }
       - { label: Code, url: "https://github.com/Soohwan-Lee/counterfunctionalMusicPlayer" }
       - { label: Preview, url: "https://www.youtube.com/watch?v=dIzcEw182kQ" }
       - { label: Demo, url: "https://www.youtube.com/watch?v=wwqpLr2ziqo" }
@@ -280,7 +277,7 @@ research:
     theme: [media, embodied]
     modality: hand
     badge: { label: "KSDS '21", style: domestic }
-    tags: [Interactive Media Art]
+    tags: [Media Art, Mid-air Gesture]
     desc: >-
       Play the Korean gayageum with mid-air gestures via Leap Motion; its vibratos
       (nonghyun) become real-time ink-wash visuals.
@@ -298,12 +295,12 @@ research:
     year: 2020
     theme: embodied
     modality: hand
-    tags: [VR Interaction]
+    tags: [VR, Mid-air Gesture]
     desc: >-
       Evaluating the cognitive and physical workload imposed by different gesture types
       in immersive VR environments.
     links:
-      - { label: Paper, url: /files/handPaper.pdf }
+      - { label: Preprint, url: /files/handPaper.pdf }
       - { label: Poster, url: /files/handPoster.pdf }
 
   - title: "Nailz: Nail Input Sensing"
@@ -336,7 +333,7 @@ funded:
       can see where its value conflicts lie and reflect on them.
     funders:
       - { label: "NRF, Korea", logo: /files/NRF.svg }
-    note: Doctoral Research Grant (PI) · 2026–Present
+    note: Doctoral Research Grant (PI) · 09/2026 – Present
     links:
       - { label: System, url: "https://github.com/Soohwan-Lee/valueConstellation" }
 
@@ -351,7 +348,7 @@ funded:
     funders:
       - { label: "MOTIE, Korea", logo: /files/government.png }
       - { label: KIDP, logo: /files/kidp.png }
-    note: Industrial Technology Innovation Program (RS-2025-25457764) · 2025–Present
+    note: Industrial Technology Innovation Program (RS-2025-25457764) · 10/2025 – Present
 
   - title: Commercialization Design and Development of an Intelligent Product-Service System for Personalized Full Silver Life Cycle Care
     image: /files/lemmy.png
@@ -364,7 +361,7 @@ funded:
       LLM agents.
     funders:
       - { label: "MOTIE, Korea", logo: /files/government.png }
-    note: Technology Innovation Program (20015056) · 2022–2025, completed
+    note: Technology Innovation Program (20015056) · 01/2022 – 12/2025, completed
     links:
       - { label: CES 2025 Innovation Award, award: true, url: "https://www.ces.tech/ces-innovation-awards/2025/lemmy/" }
       - { label: News, url: "https://www.unist.ac.kr/unist/center/resualt-en.do?mode=view&articleNo=251250&article.offset=0&articleLimit=9&srSearchVal=lemmy&referer=/unist/center/total-en.do" }
@@ -379,7 +376,7 @@ funded:
       real-time visualization of the sensor stream.
     funders:
       - { label: LG Electronics, logo: /files/LG.png }
-    note: "2024"
+    note: 01/2024 – 09/2024
     links:
       - { label: Code, url: "https://github.com/Soohwan-Lee/angleVis_UNIST" }
       - { label: Demo, url: "https://www.youtube.com/watch?v=MeMjjTlP74M" }
@@ -392,7 +389,7 @@ funded:
       Served as project manager.
     funders:
       - { label: "NRF, Korea", logo: /files/NRF.svg }
-    note: X-Corps Plus · 2023
+    note: X-Corps Plus · 03/2023 – 12/2023
 
   - title: "UNIVERSE: Design of a Social Robot that Supports Emotional Well-Being of the MZ Gen"
     image: /files/universe.png
@@ -403,7 +400,7 @@ funded:
       in Python linked to facial expression control.
     funders:
       - { label: UNIST, logo: /files/unist.png }
-    note: AI Challenger Program · 2021
+    note: AI Challenger Program · 09/2021 – 12/2021
     links:
       - { label: Poster, url: /files/AICP_Poster.pdf }
 
@@ -415,7 +412,7 @@ funded:
       and design workshops.
     funders:
       - { label: LG Electronics, logo: /files/LG.png }
-    note: "2021"
+    note: 03/2021 – 09/2021
 
   - title: Smart Clean BioAir Home Management System
     icon: wind
@@ -425,4 +422,4 @@ funded:
       management.
     funders:
       - { label: "MOTIE, Korea", logo: /files/government.png }
-    note: Technology Innovation Program (20009977) · 2020–2021
+    note: Technology Innovation Program (20009977) · 04/2020 – 12/2021
