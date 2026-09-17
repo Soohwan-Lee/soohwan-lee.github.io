@@ -19,13 +19,13 @@
 #                styles: chi cscw dis iui journal thesis domestic review
 #    tags      : ["short topic", "another"]
 #    desc      : one or two sentences (shown on hover / inline on touch)
-#    funders   : small chips naming who funded the work
-#                - { label: "LG Electronics" }
+#    funders   : small chips naming who funded the work. Used on funded cards
+#                only; research cards keep funding in "note" if at all.
+#                - { label: "LG Electronics", logo: /files/LG.png }
 #                - { label: "MOTIE, Korea", logo: /files/government.png }
-#                "logo" is optional. It is drawn on a white tile about 1.7x
-#                the chip's text height, so a square, text-free mark with a
-#                transparent background works best.
-#    note      : small gray line under the chips - programme and period
+#                "logo" is optional and is drawn at the chip's text height, so
+#                crop the file to the mark itself and leave out any tagline.
+#    note      : small gray line under the chips, programme and period
 #    papers    : rows of related papers, grouped by type
 #                - type: "Full Paper"
 #                  items:
@@ -54,7 +54,7 @@ views:
     groups:
       - key: gcai
         title: Group-Centered AI
-        desc: "Core Ph.D. line: how AI and interactive systems reshape group processes - social influence, minority voices, coordination, and collective experience"
+        desc: "Core Ph.D. line on how AI and interactive systems reshape group processes: social influence, minority voices, coordination, and collective experience"
       - key: reflection
         title: AI-Augmented Reflection
         desc: Visualization and LLM-generated feedback that help people revisit what was said, decided, and left unsaid
@@ -98,7 +98,7 @@ research:
     desc: >-
       Comparing direct negotiation with user-specified and AI-supplemented proxy agents
       that negotiate on behalf of a leader and a member, to see whether AI-mediated
-      reasons rebalance power asymmetry - and what they cost the person who sends them.
+      reasons rebalance power asymmetry, and what they cost the person who sends them.
     papers:
       - type: Under Review
         items:
@@ -165,28 +165,6 @@ research:
       - { label: Poster, url: /files/CHI25-Poster-FInal.pdf }
       - { label: Video, url: "https://www.youtube.com/watch?v=qU4_Bx9sHW0" }
       - { label: System, url: "https://github.com/Soohwan-Lee/voice-for-voiceless-server" }
-
-  - title: "Value Constellation: Mapping Value Conflicts in Group Decisions"
-    image: /files/valueConstellation.png
-    link: https://github.com/Soohwan-Lee/valueConstellation
-    year: 2026
-    theme: [gcai, reflection]
-    modality: llm
-    badge: { label: Ongoing, style: review }
-    tags: [Reflection, Visualization]
-    desc: >-
-      A transcript-to-map tool that places every participant by what they actually said,
-      showing how far apart people stand and on what ground - so a group can see its own
-      value conflicts and revisit the disagreement its decision moved past.
-    funders:
-      - { label: "NRF, Korea", logo: /files/NRF.svg }
-    note: Doctoral Research Grant (PI) · 2026 - Present
-    papers:
-      - type: Workshop
-        items:
-          - { venue: "CSCW '26", style: cscw, title: "Where Does the Disagreement Go? Group Reflexivity and AI Accounts of Team Decision-makings (CSCW '26 Workshop)" }
-    links:
-      - { label: System, url: "https://github.com/Soohwan-Lee/valueConstellation" }
 
   - title: "Augmentiary: LLM Feedback for Reflective Journaling"
     image: /files/augmentairy.png
@@ -346,47 +324,57 @@ research:
 #  Industry- and government-funded R&D. Newest first.
 funded:
 
-  - title: Smart CMF Recommendation from Affective Language
+  - title: An Empirical Study on Supporting Reflection and User Experience in Group Decision-Making through the Visualization of Value Conflicts
+    image: /files/valueConstellation.png
+    cover: true
+    link: https://github.com/Soohwan-Lee/valueConstellation
+    tags: [Group Discussion Visualization, Reflection]
+    desc: >-
+      A transcript-to-map tool that places each participant by what they said, so a group
+      can see where its value conflicts lie and reflect on them.
+    funders:
+      - { label: "NRF, Korea", logo: /files/NRF.svg }
+    note: Doctoral Research Grant (PI) · 2026–Present
+    links:
+      - { label: System, url: "https://github.com/Soohwan-Lee/valueConstellation" }
+
+  - title: Development of a Smart CMF Recommendation and 3D Manufacturing Integration System
     image: /files/cmfHowDataset.png
     cover: true
-    tags: [NLP Analysis, Recommendation, Prototyping]
+    tags: [NLP Analysis, Recommendation]
     desc: >-
-      Mapping the affective vocabulary designers actually use onto KIDP's CMF How
-      dataset, so that a designer can describe a feeling and get back the color,
-      material and finish specimens that carry it. My part: quantifying the collected
-      affective language with NLP (180 specimens, 112 participants, 4,032 free-text
-      responses), turning that analysis into design implications, and prototyping the
-      interactive recommendation system.
+      Mapping designers' affective vocabulary onto KIDP's CMF How dataset, so that a felt
+      description returns the specimens that carry it. I handle the NLP analysis of the
+      collected language and the interactive prototype.
     funders:
       - { label: "MOTIE, Korea", logo: /files/government.png }
       - { label: KIDP, logo: /files/kidp.png }
-    note: Industrial Technology Innovation Program (RS-2025-25457764) · 2025 - Present
+    note: Industrial Technology Innovation Program (RS-2025-25457764) · 2025–Present
 
-  - title: "LEMMY: Intelligent Product-Service System for Silver Life Care"
+  - title: Commercialization Design and Development of an Intelligent Product-Service System for Personalized Full Silver Life Cycle Care
     image: /files/lemmy.png
     cover: true
     link: https://www.ces.tech/ces-innovation-awards/2025/lemmy/
-    tags: [Human-Robot Interaction, LLM Agent]
+    tags: [LEMMY, Human-Robot Interaction, LLM Agent]
     desc: >-
-      Commercialization and design of a companion care robot and its service system for
-      the full lifecycle of elderly care, with Shinsung Delta Tech and JDW. I worked on
-      voice-based human-robot interaction and extended the agent with tool-calling and
-      memory-augmented LLMs.
+      A companion care robot and service system for elderly care, with Shinsung Delta Tech
+      and JDW. I worked on voice-based interaction and on tool-calling, memory-augmented
+      LLM agents.
     funders:
       - { label: "MOTIE, Korea", logo: /files/government.png }
-    note: Technology Innovation Program (20015056) · 2022 - 2025, completed
+    note: Technology Innovation Program (20015056) · 2022–2025, completed
     links:
       - { label: CES 2025 Innovation Award, award: true, url: "https://www.ces.tech/ces-innovation-awards/2025/lemmy/" }
       - { label: News, url: "https://news.unist.ac.kr/care-robot-lemmy-honored-with-ces-2025-innovation-award-for-supporting-healthy-aging/" }
 
-  - title: Sensor Modules for Upper Body Angle & Angular Velocity
+  - title: Sensor Modules and Mountings for Monitoring Upper Body Angles and Angular Velocities
     image: /files/sensorModule.png
     cover: true
     link: https://www.youtube.com/watch?v=MeMjjTlP74M
     tags: [Sensing, Visualization]
     desc: >-
-      Sensor modules and physical mountings for biomechanical monitoring of upper body
-      posture, with real-time visualization for intuitive feedback.
+      Sensor modules and physical mountings for upper-body posture monitoring, with
+      real-time visualization of the sensor stream.
     funders:
       - { label: LG Electronics, logo: /files/LG.png }
     note: "2024"
@@ -394,36 +382,35 @@ funded:
       - { label: Code, url: "https://github.com/Soohwan-Lee/angleVis_UNIST" }
       - { label: Demo, url: "https://www.youtube.com/watch?v=MeMjjTlP74M" }
 
-  - title: End-to-End Speech Recognition for Active Seniors
+  - title: Building an End-to-End Speech Recognition Model for Active Seniors Using KoSpeech
     icon: microphone
     tags: [Speech Recognition, Project Manager]
     desc: >-
-      A Korean speech recognition model optimized for elderly users, built on KoSpeech
-      and deployed on-device. Coordinated timelines, evaluation protocols, and
-      integration planning.
+      A Korean speech recognition model tuned for elderly users and deployed on-device.
+      Served as project manager.
     funders:
       - { label: "NRF, Korea", logo: /files/NRF.svg }
     note: X-Corps Plus · 2023
 
-  - title: "UNIVERSE: Social Robot for Emotional Well-Being"
+  - title: "UNIVERSE: Design of a Social Robot that Supports Emotional Well-Being of the MZ Gen"
     image: /files/universe.png
     link: /files/AICP_Poster.pdf
     tags: [Social Robot, Affective Interaction]
     desc: >-
-      Concept social robot for the emotional well-being of Gen MZ. Built voice-driven
-      interaction modules in Python linked to facial expression control.
+      Concept social robot for emotional well-being, with voice-driven interaction modules
+      in Python linked to facial expression control.
     funders:
-      - { label: UNIST }
+      - { label: UNIST, logo: /files/unist.png }
     note: AI Challenger Program · 2021
     links:
       - { label: Poster, url: /files/AICP_Poster.pdf }
 
-  - title: Washer/Dryer UX Concept for Gen MZ
+  - title: Conceptualize and Design a New UX/UI for a Washer/Dryer Targeting Gen MZ
     image: /files/washtower.png
     tags: [UX/UI Concept, Design Workshop]
     desc: >-
-      Next-generation washer/dryer experience tailored to Gen MZ lifestyles, grounded in
-      contextual inquiries and design workshops.
+      A next-generation washer/dryer experience for Gen MZ, grounded in contextual inquiry
+      and design workshops.
     funders:
       - { label: LG Electronics, logo: /files/LG.png }
     note: "2021"
@@ -432,8 +419,8 @@ funded:
     icon: wind
     tags: [Smart Home, Air Quality]
     desc: >-
-      A smart home platform integrating air quality sensing with bio-environmental
-      management features.
+      A smart home platform combining air quality sensing with bio-environmental
+      management.
     funders:
       - { label: "MOTIE, Korea", logo: /files/government.png }
-    note: Technology Innovation Program (20009977) · 2020 - 2021
+    note: Technology Innovation Program (20009977) · 2020–2021

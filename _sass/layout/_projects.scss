@@ -340,16 +340,21 @@
   padding-left: 0.3em;
 }
 
-/* The white tile makes marks that ship on a white background and marks with
-   a transparent one look the same, in either theme. */
+/* Kept to the height of the chip's own text; the files are cropped to the
+   mark so nothing is wasted on margin. */
 .proj-funder img {
   display: block;
   width: auto;
-  height: 1.7em;
-  max-width: 3.4em;
-  padding: 1px 2px;
-  border-radius: 2px;
+  height: 1.15em;
+  max-width: 3em;
   object-fit: contain;
+}
+
+/* The dark chip would swallow the navy in the taegeuk and in the NRF mark,
+   and the counters of these logos are transparent, so back them with white. */
+html[data-theme="dark"] .proj-funder img {
+  padding: 1px;
+  border-radius: 2px;
   background-color: #fff;
 }
 

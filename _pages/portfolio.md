@@ -23,7 +23,7 @@ Two kinds of work: research I set the question for, and commissioned R&D I contr
 </div>
 </div>
 
-<p class="proj-section-desc">Work I drive myself, from research question to study design to a running system. Group by <strong>Theme</strong> or <strong>Modality</strong> to see how the lines connect &mdash; a project can sit in more than one. Papers are listed on the <a href="/publications/">Publications</a> page.</p>
+<p class="proj-section-desc">Work I drive myself, from research question to study design to a running system. Group by <strong>Theme</strong> or <strong>Modality</strong> to see how the lines connect; a project can sit in more than one. Papers are listed on the <a href="/publications/">Publications</a> page.</p>
 
 <div class="proj-grid" id="research-grid">
 {%- for item in site.data.projects.research %}
