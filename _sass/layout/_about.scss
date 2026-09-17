@@ -103,30 +103,3 @@ a .ul {
     white-space: nowrap;
   }
 }
-
-/* ---- Compact "Recent" list -------------------------------------------- */
-
-.page__content .about-recent {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  font-size: 0.9em;
-
-  li {
-    position: relative;
-    margin: 0 0 0.45em;
-    padding-left: 1em;
-    line-height: 1.6;
-  }
-
-  li::before {
-    content: "";
-    position: absolute;
-    top: 0.62em;
-    left: 0;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background-color: var(--rule-color);
-  }
-}

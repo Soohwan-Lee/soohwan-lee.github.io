@@ -17,7 +17,7 @@ redirect_from:
 
 I am a **Ph.D. candidate** in the [Expressive Computing Lab](https://expc.unist.ac.kr/) at the [Department of Design](https://design.unist.ac.kr/), [UNIST](https://www.unist.ac.kr/), working in **Human–Computer Interaction** and **Human-centered AI**. *(Ph.D. expected 2027)*
 
-Most AI research studies one person talking to one system. I study <span class="hl">what happens when AI joins a group</span>: how it moves the decision people reach together, whose voice carries, and where power settles.
+Most AI research studies one person talking to one system. I study <span class="hl">what happens when AI joins a group</span>: how it moves the decision people reach together, whose voice carries, and where power settles. Increasingly it is not one agent but several, so I also ask <span class="hl">how a collective of AI agents exerts social influence of its own</span>, and when their agreement persuades people rather than simply pressures them.
 
 Working from social psychological theory, I build AI systems that take part in group processes, test them in controlled studies, and turn the results into design. My through-line is <span class="uw">**Group-Centered AI**</span>. In a group, user experience is <span class="hl">collective and emergent</span>, not a sum of individual interactions, so the aim is not only a better outcome but a group that can see how that outcome came about.
 
@@ -34,16 +34,6 @@ Working from social psychological theory, I build AI systems that take part in g
 {: .about-themes}
 
 [Projects](/portfolio/) &nbsp;·&nbsp; [Publications](/publications/)
-
----
-
-## Recent
-
-- **NRF Doctoral Research Grant** (PI, 2026–2028): visualizing value conflicts to support reflection in group decision-making.
-- **CHI '26**: *Understanding Compliance and Conversion Dynamics in Multi-Agent Collectives.*
-- **CES 2025 Innovation Award**: LEMMY, the elderly-care robot our consortium designed, honored in Smart Home.
-- **Reviewing**: 55+ submissions for CHI, CSCW, DIS, IUI, UIST and others, with six special recognitions for outstanding reviews.
-{: .about-recent}
 
 ---
 
