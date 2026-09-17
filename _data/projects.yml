@@ -31,8 +31,10 @@
 #                  items:
 #                    - { venue: "CHI '26", style: chi, title: "Full title", url: "https://doi.org/..." }
 #                  (omit "url" for papers under review; the pill is then not clickable)
-#    links     : [{ label: Talk, url: "https://..." }, { label: "Creative Award", award: true }]
-#                "award: true" styles the pill as an award; it may carry a url too.
+#    links     : [{ label: Talk, url: "https://..." }, { label: "Best Paper", award: true }]
+#                A url makes the pill a link. "award: true" turns it gold with
+#                a trophy, so use it only for a prize actually won; a label on
+#                its own renders a plain, static pill.
 #
 #  RESEARCH-ONLY FIELDS (drive the Latest / Theme / Modality toggle)
 #    year      : 2026
@@ -265,7 +267,7 @@ research:
         items:
           - { venue: "HCI Korea '21", style: domestic, title: "Counterfunctional Music Player with Mid-air Hand Gesture (HCI Korea 2021)", url: "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE10530377" }
     links:
-      - { label: Creative Award, award: true }
+      - { label: Creative Award Track }
       - { label: Code, url: "https://github.com/Soohwan-Lee/counterfunctionalMusicPlayer" }
       - { label: Preview, url: "https://www.youtube.com/watch?v=dIzcEw182kQ" }
       - { label: Demo, url: "https://www.youtube.com/watch?v=wwqpLr2ziqo" }
@@ -365,7 +367,7 @@ funded:
     note: Technology Innovation Program (20015056) · 2022–2025, completed
     links:
       - { label: CES 2025 Innovation Award, award: true, url: "https://www.ces.tech/ces-innovation-awards/2025/lemmy/" }
-      - { label: News, url: "https://news.unist.ac.kr/care-robot-lemmy-honored-with-ces-2025-innovation-award-for-supporting-healthy-aging/" }
+      - { label: News, url: "https://www.unist.ac.kr/unist/center/resualt-en.do?mode=view&articleNo=251250&article.offset=0&articleLimit=9&srSearchVal=lemmy&referer=/unist/center/total-en.do" }
 
   - title: Sensor Modules and Mountings for Monitoring Upper Body Angles and Angular Velocities
     image: /files/sensorModule.png

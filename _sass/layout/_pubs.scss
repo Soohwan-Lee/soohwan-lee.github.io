@@ -112,8 +112,9 @@
               border-color 0.15s ease-in-out;
 }
 
-.pub-link:hover,
-.pub-link:focus {
+/* Only anchors react; a pill without a url is a static label */
+a.pub-link:hover,
+a.pub-link:focus {
   color: #fff;
   background-color: var(--global-link-color);
   border-color: var(--global-link-color);
