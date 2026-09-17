@@ -60,7 +60,7 @@
 /* The author's own name in a citation.
    Bold + a subtle border-bottom (al-folio's technique). A border is used
    rather than text-decoration so it sits lower and reads as emphasis, not a
-   link — and no co-author name on this page is a link, so there is no
+   link, and no co-author name on this page is a link, so there is no
    clickable-looking ambiguity. */
 .pub-item p strong,
 .pub-bytype p strong {
@@ -120,16 +120,39 @@
   text-decoration: none;
 }
 
-/* Award / honorable-mention variant */
+/* Award / honorable-mention variant: deep gold, with a trophy in front */
 .pub-link--award,
 .pub-link--award:visited {
-  border-color: #b71c1c;
-  color: #b71c1c;
+  border-color: #c8960c;
+  color: #8a6508;
+  background-color: rgba(200, 150, 12, 0.08);
 }
-.pub-link--award:hover {
-  background-color: #b71c1c;
-  border-color: #b71c1c;
+
+.pub-link--award::before {
+  content: "\01F3C6";
+  margin-right: 0.35em;
+  font-size: 0.95em;
+  line-height: 1;
+}
+
+/* Only the clickable ones react; a bare <span> award is not a link */
+a.pub-link--award:hover {
+  background-color: #8a6508;
+  border-color: #8a6508;
   color: #fff;
+}
+
+html[data-theme="dark"] .pub-link--award,
+html[data-theme="dark"] .pub-link--award:visited {
+  border-color: #c8960c;
+  color: #e3bb55;
+  background-color: rgba(200, 150, 12, 0.14);
+}
+
+html[data-theme="dark"] a.pub-link--award:hover {
+  background-color: #c8960c;
+  border-color: #c8960c;
+  color: #2b2000;
 }
 
 /* ==========================================================================
