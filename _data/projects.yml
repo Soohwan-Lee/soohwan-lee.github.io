@@ -179,7 +179,8 @@ research:
         items:
           - { venue: Book Chapter, style: review, title: "Reframing Supporting Minority Influence in the Age of AI: Bridging Theory, Design, and Simulation for Inclusive Group Decision-Making" }
     links:
-      - { label: Poster, url: /files/CHI25-Poster-FInal.pdf }
+      - { label: "CHI '25 Poster", url: /files/CHI25-Poster-FInal.pdf }
+      - { label: "IUI '25 Poster", url: /files/IUI25-Poster-Final_A1.pdf }
       - { label: Video, url: "https://www.youtube.com/watch?v=qU4_Bx9sHW0" }
       - { label: System, url: "https://github.com/Soohwan-Lee/voice-for-voiceless-server" }
 
@@ -240,6 +241,7 @@ research:
     links:
       - { label: Talk, url: "https://www.youtube.com/watch?v=QkQS_QiRz9o&t=5s" }
       - { label: Podcast, url: "https://www.youtube.com/watch?v=zVwT_CGxQII&t=71s" }
+      - { label: "IUI '23 Poster", url: /files/cheerUp-poster.pdf }
       - { label: CheerUp Code, url: "https://github.com/Soohwan-Lee/CxD_CheerUp" }
       - { label: CheerUp Demo, url: "https://www.youtube.com/watch?v=BAXvDJvt5vA" }
 
