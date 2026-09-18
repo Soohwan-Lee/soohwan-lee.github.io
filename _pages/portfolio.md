@@ -24,7 +24,7 @@ The same work, listed two ways: by the research question it asks, and by the gra
 </div>
 </div>
 
-<p class="proj-section-desc">Grouped by research question, with the papers each one produced. Most of it ran under the grants listed further down, so the two sections overlap. <strong>Theme</strong> and <strong>Modality</strong> sort the cards, and one project can sit in several; <strong>Filter</strong> narrows by topic. Papers are listed on the <a href="/publications/">Publications</a> page.</p>
+<p class="proj-section-desc">Explore projects and their related papers. <strong>Theme</strong> and <strong>Modality</strong> organize each project under its primary focus, once per view. Use <strong>Filter</strong> to explore shared keywords across projects. Funding is listed below; all papers are on the <a href="/publications/">Publications</a> page.</p>
 
 <div class="proj-grid" id="research-grid">
 {%- for item in site.data.projects.research %}
@@ -35,8 +35,9 @@ The same work, listed two ways: by the research question it asks, and by the gra
 <div class="proj-grouped" id="research-grouped" hidden></div>
 
 <div class="proj-filter" id="research-filter" hidden>
-<div class="proj-filter__bar" role="group" aria-label="Filter projects by topic"></div>
-<p class="proj-filter__status"><span></span></p>
+<p class="proj-filter__hint">Explore by keyword. Select alternatives within a row; combine rows to narrow your results.</p>
+<div class="proj-filter__bar" role="group" aria-label="Filter projects by keyword"></div>
+<p class="proj-filter__status"><span role="status" aria-live="polite" aria-atomic="true"></span></p>
 <div class="proj-grid proj-filter__grid"></div>
 </div>
 
@@ -55,12 +56,8 @@ The same work, listed two ways: by the research question it asks, and by the gra
   var page = document.querySelector('.proj-page');
   if (!page) return;
 
-  /* Grouped views come from _data/projects.yml -> views.
-     Each view reads the card attribute data-<key>, which holds one or more
-     space-separated group keys, and shows its groups in order. A card listed
-     in several groups is cloned into each; a card matching none goes to an
-     "Other" section. The cards in #research-grid are never moved, so the
-     "Latest" list stays intact. */
+  /* Move the same cards between views: one DOM node per research project.
+     The first valid group key is primary; tags preserve cross-cutting topics. */
   var VIEWS = {{ site.data.projects.views | jsonify }};
   var FILTERS = {{ site.data.projects.filters | jsonify }};
 
@@ -117,8 +114,6 @@ The same work, listed two ways: by the research question it asks, and by the gra
     return { el: s, grid: g };
   }
 
-  /* Build each view's sections once (lazily), from clones of the cards. */
-  var built = {};
   function buildView(view) {
     var attr = 'data-' + view.key;
     var wrap = document.createElement('div');
@@ -128,59 +123,66 @@ The same work, listed two ways: by the research question it asks, and by the gra
     groups.forEach(function (g) { known[g.key] = true; });
     groups.push({ key: '__other__', title: 'Other' });
 
+    function primaryGroup(c) {
+      var valid = valuesOf(c, attr).filter(function (v) { return known[v]; });
+      return valid[0] || '__other__';
+    }
+
     groups.forEach(function (g) {
       var members = fileOrder.filter(function (c) {
-        var vals = valuesOf(c, attr);
-        if (g.key === '__other__') {
-          return !vals.some(function (v) { return known[v]; });
-        }
-        return vals.indexOf(g.key) !== -1;
+        return primaryGroup(c) === g.key;
       });
       if (!members.length) return;
       var s = section(g.title, g.desc, members.length);
-      members.forEach(function (c) { s.grid.appendChild(c.cloneNode(true)); });
+      members.forEach(function (c) { c.hidden = false; s.grid.appendChild(c); });
       wrap.appendChild(s.el);
     });
+    grouped.textContent = '';
     grouped.appendChild(wrap);
-    built[view.key] = wrap;
-    return wrap;
-  }
-
-  function hideAllViews(except) {
-    Object.keys(built).forEach(function (k) { built[k].hidden = (k !== except); });
   }
 
   function showLatest() {
     fileOrder.slice().sort(function (a, b) {
       var ia = +a.getAttribute('data-index'), ib = +b.getAttribute('data-index');
       return (sortYear[ib] - sortYear[ia]) || (ia - ib);
-    }).forEach(function (c) { grid.appendChild(c); });
-    hideAllViews(null);
+    }).forEach(function (c) { c.hidden = false; grid.appendChild(c); });
     grid.hidden = false;
     grouped.hidden = true;
     filterWrap.hidden = true;
   }
 
   function showGrouped(view) {
-    if (!built[view.key]) buildView(view);
-    hideAllViews(view.key);
+    buildView(view);
     grid.hidden = true;
     grouped.hidden = false;
     filterWrap.hidden = true;
   }
 
   /* ---- Filter view -----------------------------------------------------
-     A chip per topic tag. Picking several narrows to the cards carrying all
-     of them, and a chip that would leave nothing is dimmed out. */
+     OR within each facet, AND across facets. Counts preview the number of
+     results after toggling a keyword, including alternatives in one row. */
   var filterBar = filterWrap.querySelector('.proj-filter__bar');
   var filterStatus = filterWrap.querySelector('.proj-filter__status');
   var filterGrid = filterWrap.querySelector('.proj-filter__grid');
   var picked = [];
   var filterReady = false;
+  var facetOf = {};
+
+  FILTERS.forEach(function (f, i) {
+    f.tags.forEach(function (t) { facetOf[t] = 'facet-' + i; });
+  });
 
   function matches(card, tags) {
     var has = tagsOf(card);
-    return tags.every(function (t) { return has.indexOf(t) !== -1; });
+    var facets = {};
+    tags.forEach(function (t) {
+      var facet = facetOf[t] || 'other';
+      if (!facets[facet]) facets[facet] = [];
+      facets[facet].push(t);
+    });
+    return Object.keys(facets).every(function (facet) {
+      return facets[facet].some(function (t) { return has.indexOf(t) !== -1; });
+    });
   }
 
   function buildFilter() {
@@ -195,6 +197,11 @@ The same work, listed two ways: by the research question it asks, and by the gra
       b.className = 'proj-filter__tag';
       b.setAttribute('data-tag', t);
       b.setAttribute('aria-pressed', 'false');
+      var hash = document.createElement('span');
+      hash.className = 'proj-filter__hash';
+      hash.textContent = '#';
+      hash.setAttribute('aria-hidden', 'true');
+      b.appendChild(hash);
       b.appendChild(document.createTextNode(t));
       var n = document.createElement('span');
       n.className = 'proj-filter__count';
@@ -215,9 +222,12 @@ The same work, listed two ways: by the research question it asks, and by the gra
       if (!tags.length) return;
       var label = document.createElement('span');
       label.className = 'proj-filter__label';
+      label.id = 'proj-facet-' + filterBar.childElementCount;
       label.textContent = name;
       var chips = document.createElement('span');
       chips.className = 'proj-filter__chips';
+      chips.setAttribute('role', 'group');
+      chips.setAttribute('aria-labelledby', label.id);
       tags.forEach(function (t) { chips.appendChild(chip(t)); });
       filterBar.appendChild(label);
       filterBar.appendChild(chips);
@@ -225,7 +235,7 @@ The same work, listed two ways: by the research question it asks, and by the gra
 
     var placed = {};
     (FILTERS || []).forEach(function (f) {
-      var tags = (f.tags || []).filter(function (t) { return counts[t]; });
+      var tags = (f.tags || []).filter(function (t) { return counts[t] && !placed[t]; });
       tags.forEach(function (t) { placed[t] = true; });
       row(f.label, tags);
     });
@@ -234,11 +244,10 @@ The same work, listed two ways: by the research question it asks, and by the gra
     var clear = document.createElement('button');
     clear.type = 'button';
     clear.className = 'proj-filter__clear';
-    clear.textContent = 'Clear';
+    clear.textContent = 'Clear filters';
     clear.addEventListener('click', function () { picked = []; applyFilter(); });
     filterStatus.appendChild(clear);
 
-    fileOrder.forEach(function (c) { filterGrid.appendChild(c.cloneNode(true)); });
     filterReady = true;
   }
 
@@ -255,21 +264,27 @@ The same work, listed two ways: by the research question it asks, and by the gra
       var on = picked.indexOf(t) !== -1;
       b.classList.toggle('is-on', on);
       b.setAttribute('aria-pressed', on ? 'true' : 'false');
-      b.classList.toggle('is-empty', !on && !fileOrder.some(function (c) {
-        return matches(c, picked.concat([t]));
-      }));
+      var next = on ? picked.filter(function (tag) { return tag !== t; }) : picked.concat([t]);
+      var count = fileOrder.filter(function (c) { return matches(c, next); }).length;
+      b.querySelector('.proj-filter__count').textContent = count;
+      b.querySelector('.proj-filter__count').setAttribute('aria-hidden', 'true');
+      var action = (on ? 'Remove ' : 'Add ') + t + ': ' + count + (count === 1 ? ' project' : ' projects');
+      b.setAttribute('aria-label', action);
+      b.title = action;
+      b.disabled = !on && count === 0;
+      b.classList.toggle('is-empty', b.disabled);
     });
 
     filterStatus.firstChild.textContent = picked.length
       ? shown + ' of ' + fileOrder.length + ' projects'
-      : 'Pick one or more topics to narrow ' + fileOrder.length + ' projects.';
+      : 'All ' + fileOrder.length + ' projects · Choose keywords to explore';
     filterStatus.lastChild.hidden = !picked.length;
   }
 
   function showFilter() {
     if (!filterReady) buildFilter();
+    fileOrder.forEach(function (c) { filterGrid.appendChild(c); });
     applyFilter();
-    hideAllViews(null);
     grid.hidden = true;
     grouped.hidden = true;
     filterWrap.hidden = false;

@@ -147,6 +147,18 @@
 
 /* ---- Filter view ------------------------------------------------------ */
 
+.proj-page .proj-filter__hint {
+  margin: 1.2em 0 0.9em;
+  font-size: 0.82em;
+  line-height: 1.6;
+  color: $gray;
+}
+
+.proj-filter__hash {
+  margin-right: -0.3em;
+  opacity: 0.55;
+}
+
 /* One row per facet. The label column sizes itself to the longest label,
    so a long one like "Contribution" cannot run into the chips. */
 .proj-filter__bar {
@@ -245,6 +257,7 @@
 
 .proj-page .proj-filter__status {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 0.8em;
   margin: 0 0 1.1em;
@@ -469,9 +482,19 @@
    mark so nothing is wasted on margin. */
 .proj-funder img {
   display: block;
+  flex: none;
   width: auto;
   height: 1.15em;
   max-width: 3em;
+  object-fit: contain;
+}
+
+/* Compact emblems need more height than horizontal wordmarks. Preserve the
+   source proportions inside a square slot, including when the row wraps. */
+.proj-funder--square img {
+  width: 1.8em;
+  height: 1.8em;
+  max-width: none;
   object-fit: contain;
 }
 

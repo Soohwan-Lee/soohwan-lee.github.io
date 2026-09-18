@@ -25,6 +25,8 @@
 #                - { label: "MOTIE, Korea", logo: /files/government.png }
 #                "logo" is optional and is drawn at the chip's text height, so
 #                crop the file to the mark itself and leave out any tagline.
+#                Use "square: true" for compact emblems needing a taller slot;
+#                the original image proportions are preserved within it.
 #    note      : small gray line under the chips, programme and period
 #    papers    : rows of related papers, grouped by type
 #                - type: "Full Paper"
@@ -38,11 +40,10 @@
 #
 #  RESEARCH-ONLY FIELDS (drive the Latest / Theme / Modality toggle)
 #    year      : 2026
-#    theme     : one or more "key"s from views -> theme
-#    modality  : one or more "key"s from views -> modality
-#    Both take a single key (theme: gcai) or a list (theme: [gcai, embodied]).
-#    A card listed in several groups appears under each of them. A card whose
-#    value matches no group is shown under "Other", never hidden.
+#    theme     : one primary "key" from views -> theme
+#    modality  : one primary "key" from views -> modality
+#    Each project appears once per view. For legacy lists, the first valid
+#    key wins; unmatched values go under "Other". Use tags for overlaps.
 #
 #  VIEWS
 #    Each entry below becomes a toggle button. "key" is also the card field
@@ -63,19 +64,16 @@ views:
       - key: embodied
         title: Embodied & Gestural Interaction
         desc: Vision-based feedback, mid-air gestures, and wearable sensing for expressive and coordinated interaction
-      - key: critical
-        title: Critical & Speculative Design
-        desc: Artifacts built to question everyday interaction rather than optimize it
-      - key: media
-        title: Interactive Media Art
-        desc: Performative installations that turn embodied expression into real-time visuals
+      - key: creative
+        title: Critical Design & Media Art
+        desc: Experimental artifacts and installations that explore everyday interaction and creative expression
 
   - key: modality
     label: Modality
     groups:
       - key: llm
-        title: LLM Agents & Conversational AI
-        desc: Multi-agent systems, AI proxies, and LLM-generated feedback in group settings
+        title: Language & Conversation
+        desc: Text-based dialogue with AI agents, AI-mediated communication, and reflective writing
       - key: body
         title: Body Movement
         desc: Camera-based pose and gesture estimation for group synchrony, performance feedback, and non-verbal expression
@@ -83,23 +81,26 @@ views:
         title: Hand Gesture & Touch
         desc: Mid-air gestures, hand tracking, and on-body touch input
       - key: theory
-        title: Theory & Frameworks
-        desc: Conceptual work without a specific input modality
+        title: Modality-independent
+        desc: Conceptual frameworks that apply across interaction modalities
 
 # ---------------------------------------------------------------------
 #  FILTER VIEW
 #  The "Filter" tab reads every research card's "tags" and shows them as
 #  chips. These facets only decide which row a chip lands in; a tag that
 #  appears on no card is skipped, and a tag in no facet falls to "Other".
-#  Interaction names what the person does, not the sensor behind it, so
-#  gesture work is not split between "mid-air gesture" and "vision".
+#  Each tag belongs to one facet. Tags within a facet are alternatives (OR);
+#  selections across facets are combined (AND). Technology names the system,
+#  while Interaction names what the person does.
 filters:
-  - label: Topic
+  - label: Research Focus
     tags: [Group Decision-Making, Social Influence, Power Imbalance, Minority Support, Group Coordination, Non-verbal Expression, Reflection, Interaction Technique, Critical Design, Media Art]
+  - label: Technology
+    tags: [LLM Agents, Generative Feedback, Computer Vision, Touch Sensing]
   - label: Interaction
-    tags: [Conversational AI, Hand Gesture, Body Movement, On-body Touch]
+    tags: [Conversation, Reflective Writing, Hand Gesture, Body Movement, On-body Touch]
   - label: Contribution
-    tags: [Empirical Study, System, Design Artifact, Framework]
+    tags: [Empirical Study, Interactive System, Design Artifact, Conceptual Framework]
 
 # ---------------------------------------------------------------------
 research:
@@ -111,7 +112,7 @@ research:
     theme: gcai
     modality: llm
     badge: { label: Under Review, style: review }
-    tags: [Group Decision-Making, Social Influence, Power Imbalance, Conversational AI, Empirical Study]
+    tags: [Group Decision-Making, Power Imbalance, Social Influence, LLM Agents, Conversation, Empirical Study, Interactive System]
     desc: >-
       Comparing direct negotiation with user-specified and AI-supplemented proxy agents
       that negotiate on behalf of a leader and a member, to see whether AI-mediated
@@ -130,7 +131,7 @@ research:
     theme: gcai
     modality: llm
     badge: { label: "CHI '26", style: chi }
-    tags: [Social Influence, Minority Support, Group Decision-Making, Conversational AI, Empirical Study]
+    tags: [Social Influence, Minority Support, Group Decision-Making, LLM Agents, Conversation, Empirical Study, Interactive System]
     desc: >-
       How multiple LLM agents establish and exercise social influence in groups, seen
       through Moscovici's Social Conversion Theory: can a consistent minority voice
@@ -156,7 +157,7 @@ research:
     theme: gcai
     modality: llm
     badge: { label: "CSCW '26", style: cscw }
-    tags: [Minority Support, Power Imbalance, Group Decision-Making, Social Influence, Conversational AI, Empirical Study]
+    tags: [Minority Support, Power Imbalance, Group Decision-Making, Social Influence, LLM Agents, Conversation, Empirical Study, Interactive System]
     desc: >-
       LLM agents with AI-mediated communication that represent minority perspectives
       to stimulate critical thinking in power-imbalanced group decision-making.
@@ -172,6 +173,7 @@ research:
         items:
           - { venue: "DIS '24", style: dis, title: "Conversational Agents as Catalysts for Critical Thinking: Challenging Design Fixation in Group Design (DIS '24 Workshop)", url: "https://arxiv.org/abs/2406.11125" }
           - { venue: "CHI '26", style: chi, title: "Rethinking AI-Mediated Minority Support in Power-Imbalanced Group Decision-Making: From Anonymity To Authenticity (CHI '26 AI-MC Workshop)", url: "https://arxiv.org/abs/2604.22319" }
+          - { venue: "CSCW '26", style: cscw, title: "Delivered but Not Heard: AI Proxy Speech in Power-Imbalanced Group Decision-Making (CSCW '26 Workshop on Broader Impacts of GenAI in Communication · Oral; workshop website)", url: "https://broader-impacts-workshop.github.io/cscw2026-website/" }
       - type: Under Review
         items:
           - { venue: Book Chapter, style: review, title: "Reframing Supporting Minority Influence in the Age of AI: Bridging Theory, Design, and Simulation for Inclusive Group Decision-Making" }
@@ -187,7 +189,7 @@ research:
     theme: reflection
     modality: llm
     badge: { label: "DIS '26", style: dis }
-    tags: [Reflection, Conversational AI, Empirical Study]
+    tags: [Reflection, Generative Feedback, Reflective Writing, Empirical Study, Interactive System]
     desc: >-
       A journaling tool where writers select a passage and receive LLM-generated
       interpretive feedback (dot-connecting to past experiences, perspective-expanding)
@@ -204,7 +206,7 @@ research:
     theme: gcai
     modality: theory
     badge: { label: "DIS '25 Companion", style: dis }
-    tags: [Group Decision-Making, Framework]
+    tags: [Group Decision-Making, Conceptual Framework]
     desc: >-
       Defining Group Experience (GX) as a new paradigm for group-centered AI: treating
       user experience as collective and emergent rather than a sum of individual
@@ -220,10 +222,10 @@ research:
     image: /files/groupDance.png
     link: https://doi.org/10.1145/3643834.3661568
     year: 2024
-    theme: [gcai, embodied]
+    theme: embodied
     modality: body
     badge: { label: "DIS '24", style: dis }
-    tags: [Group Coordination, Body Movement, Empirical Study]
+    tags: [Group Coordination, Body Movement, Computer Vision, Empirical Study, Interactive System]
     desc: >-
       Design space of a real-time feedback system using a single RGB camera to support
       synchronization in group dance practice.
@@ -244,10 +246,10 @@ research:
     image: /files/neas.png
     link: https://unist.dcollection.net/srch/srchDetail/200000604178
     year: 2022
-    theme: [gcai, embodied]
-    modality: [body, hand]
+    theme: gcai
+    modality: hand
     badge: { label: Thesis, style: thesis }
-    tags: [Non-verbal Expression, Group Coordination, Hand Gesture, System]
+    tags: [Non-verbal Expression, Group Coordination, Hand Gesture, Computer Vision, Interactive System]
     desc: >-
       Automatically translating hand gestures into emojis to enrich non-verbal
       communication in remote group video meetings.
@@ -267,10 +269,10 @@ research:
     cover: true
     link: https://www.youtube.com/watch?v=wwqpLr2ziqo
     year: 2021
-    theme: [critical, embodied]
+    theme: creative
     modality: hand
     badge: { label: "HCI Korea '21", style: domestic }
-    tags: [Critical Design, Hand Gesture, Design Artifact]
+    tags: [Critical Design, Hand Gesture, Computer Vision, Design Artifact]
     desc: >-
       A music player object that randomly plays the songs you listened to most in a
       given month, controlled by mid-air hand gestures.
@@ -289,10 +291,10 @@ research:
     cover: true
     link: https://youtu.be/mEOxsTnaVDY
     year: 2021
-    theme: [media, embodied]
+    theme: creative
     modality: hand
     badge: { label: "KSDS '21", style: domestic }
-    tags: [Media Art, Non-verbal Expression, Hand Gesture, Design Artifact]
+    tags: [Media Art, Non-verbal Expression, Hand Gesture, Computer Vision, Design Artifact]
     desc: >-
       Play the Korean gayageum with mid-air gestures via Leap Motion; its vibratos
       (nonghyun) become real-time ink-wash visuals.
@@ -325,7 +327,7 @@ research:
     theme: embodied
     modality: hand
     badge: { label: "CHI '20", style: chi }
-    tags: [Interaction Technique, On-body Touch, System, Empirical Study]
+    tags: [Interaction Technique, On-body Touch, Touch Sensing, Interactive System, Empirical Study]
     desc: >-
       Touch-sensitive artificial nails that enable subtle, always-available hand input
       for mobile and wearable contexts.
@@ -404,7 +406,8 @@ funded:
       Served as project manager.
     funders:
       - { label: "NRF, Korea", logo: /files/NRF.svg }
-    note: X-Corps Plus · 03/2023 – 12/2023
+      - { label: UNIST, logo: /files/unist.png, square: true }
+    note: X-Corps Plus · Brain to Society Program · 03/2023 – 12/2023
 
   - title: "UNIVERSE: Design of a Social Robot that Supports Emotional Well-Being of the MZ Gen"
     image: /files/universe.png
@@ -414,7 +417,7 @@ funded:
       Concept social robot for emotional well-being, with voice-driven interaction modules
       in Python linked to facial expression control.
     funders:
-      - { label: UNIST, logo: /files/unist.png }
+      - { label: UNIST, logo: /files/unist.png, square: true }
     note: AI Challenger Program · 09/2021 – 12/2021
     links:
       - { label: Poster, url: /files/AICP_Poster.pdf }
