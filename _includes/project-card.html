@@ -33,7 +33,7 @@
 {%- if c.funders %}
 <div class="proj-card__funders">
 {%- for f in c.funders -%}
-<span class="proj-funder{% if f.logo %} proj-funder--logo{% endif %}{% if f.square %} proj-funder--square{% endif %}">{% if f.logo %}<img src="{{ f.logo }}" alt="" aria-hidden="true">{% endif %}{{ f.label | escape }}</span>
+<span class="proj-funder{% if f.logo %} proj-funder--logo{% endif %}{% if f.wordmark and f.logo %} proj-funder--wordmark{% endif %}">{% if f.wordmark and f.logo %}<img src="{{ f.logo }}" alt="{{ f.label | escape }}">{% else %}{% if f.logo %}<img src="{{ f.logo }}" alt="" aria-hidden="true">{% endif %}{{ f.label | escape }}{% endif %}</span>
 {%- endfor -%}
 </div>
 {%- endif %}

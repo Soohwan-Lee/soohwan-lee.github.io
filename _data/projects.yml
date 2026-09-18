@@ -25,8 +25,9 @@
 #                - { label: "MOTIE, Korea", logo: /files/government.png }
 #                "logo" is optional and is drawn at the chip's text height, so
 #                crop the file to the mark itself and leave out any tagline.
-#                Use "square: true" for compact emblems needing a taller slot;
-#                the original image proportions are preserved within it.
+#                Use "wordmark: true" when the logo itself names the funder;
+#                its label becomes alt text instead of repeating beside it.
+#                UNIST wordmark source: https://www.unist.ac.kr/unist/introduction/download.do
 #    note      : small gray line under the chips, programme and period
 #    papers    : rows of related papers, grouped by type
 #                - type: "Full Paper"
@@ -246,7 +247,7 @@ research:
     image: /files/neas.png
     link: https://unist.dcollection.net/srch/srchDetail/200000604178
     year: 2022
-    theme: gcai
+    theme: embodied
     modality: hand
     badge: { label: Thesis, style: thesis }
     tags: [Non-verbal Expression, Group Coordination, Hand Gesture, Computer Vision, Interactive System]
@@ -406,7 +407,7 @@ funded:
       Served as project manager.
     funders:
       - { label: "NRF, Korea", logo: /files/NRF.svg }
-      - { label: UNIST, logo: /files/unist.png, square: true }
+      - { label: UNIST, logo: /files/unist-wordmark.png, wordmark: true }
     note: X-Corps Plus · Brain to Society Program · 03/2023 – 12/2023
 
   - title: "UNIVERSE: Design of a Social Robot that Supports Emotional Well-Being of the MZ Gen"
@@ -417,7 +418,7 @@ funded:
       Concept social robot for emotional well-being, with voice-driven interaction modules
       in Python linked to facial expression control.
     funders:
-      - { label: UNIST, logo: /files/unist.png, square: true }
+      - { label: UNIST, logo: /files/unist-wordmark.png, wordmark: true }
     note: AI Challenger Program · 09/2021 – 12/2021
     links:
       - { label: Poster, url: /files/AICP_Poster.pdf }

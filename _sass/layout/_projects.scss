@@ -489,13 +489,16 @@
   object-fit: contain;
 }
 
-/* Compact emblems need more height than horizontal wordmarks. Preserve the
-   source proportions inside a square slot, including when the row wraps. */
-.proj-funder--square img {
-  width: 1.8em;
-  height: 1.8em;
+/* A wordmark replaces the visible label. Let its natural proportions set
+   the height, with enough width to stay legible at badge size. */
+.proj-funder--wordmark {
+  padding-inline: 0.55em;
+}
+
+.proj-funder--wordmark img {
+  width: 4.8em;
+  height: auto;
   max-width: none;
-  object-fit: contain;
 }
 
 /* The dark chip would swallow the navy in the taegeuk and in the NRF mark,
