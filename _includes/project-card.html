@@ -16,9 +16,13 @@
 {%- endif -%}
 {%- if c.link %}</a>{% else %}</div>{% endif %}
 <div class="proj-card__body">
-{%- if c.badge or c.tags %}
+{%- comment -%}
+  The venue badge that used to sit here was removed; the venue is already
+  shown by the pills in the "papers" rows below. A card's "badge:" field in
+  _data/projects.yml is therefore ignored.
+{%- endcomment -%}
+{%- if c.tags %}
 <div class="proj-card__meta">
-{%- if c.badge %}<span class="pub-badge{% if c.badge.style %} badge-{{ c.badge.style }}{% endif %}">{{ c.badge.label | escape }}</span>{% endif -%}
 {%- for t in c.tags %}<span class="proj-tag">{{ t | escape }}</span>{% endfor -%}
 </div>
 {%- endif %}

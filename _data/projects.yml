@@ -15,9 +15,9 @@
 #    icon      : font-awesome name for the placeholder, e.g. "microphone"
 #    cover     : true = crop photo to fill the box (default: show whole image)
 #    link      : URL for the image and title (DOI, arXiv, video, pdf ...)
-#    badge     : { label: "CHI '26", style: chi }
-#                styles: chi cscw dis iui journal thesis domestic review
 #    tags      : ["short topic", "another"]
+#                Small gray pills under the image. The venue is NOT repeated
+#                here; it is shown by the pills in "papers" below.
 #    desc      : one or two sentences (shown on hover / inline on touch)
 #    note      : small gray line, e.g. funding & period (industry cards)
 #    papers    : rows of related papers, grouped by type
@@ -77,7 +77,6 @@ research:
     year: 2026
     theme: gcai
     modality: llm
-    badge: { label: Under Review, style: review }
     tags: [AI-mediated Negotiation]
     desc: >-
       Comparing direct negotiation with user-specified and AI-supplemented proxy agents
@@ -94,7 +93,6 @@ research:
     year: 2026
     theme: gcai
     modality: llm
-    badge: { label: "CHI '26", style: chi }
     tags: [Multi-agent · Social Influence]
     desc: >-
       How multiple LLM agents establish and exercise social influence in groups, seen
@@ -116,7 +114,6 @@ research:
     year: 2026
     theme: gcai
     modality: llm
-    badge: { label: "CSCW '26", style: cscw }
     tags: [Group Decision-Making]
     desc: >-
       LLM agents with AI-mediated communication that represent minority perspectives
@@ -147,7 +144,6 @@ research:
     year: 2026
     theme: reflection
     modality: llm
-    badge: { label: "DIS '26", style: dis }
     tags: [Reflective Journaling]
     desc: >-
       A journaling tool where writers select a passage and receive LLM-generated
@@ -164,7 +160,6 @@ research:
     year: 2025
     theme: gcai
     modality: theory
-    badge: { label: "DIS '25 Companion", style: dis }
     tags: [Group-Centered AI]
     desc: >-
       Defining Group Experience (GX) as a new paradigm for group-centered AI: treating
@@ -184,7 +179,6 @@ research:
     year: 2024
     theme: embodied
     modality: body
-    badge: { label: "DIS '24", style: dis }
     tags: [Embodied Interaction]
     desc: >-
       Design space of a real-time feedback system using a single RGB camera to support
@@ -208,7 +202,6 @@ research:
     year: 2022
     theme: embodied
     modality: hand
-    badge: { label: Thesis, style: thesis }
     tags: [Non-verbal Communication]
     desc: >-
       Automatically translating hand gestures into emojis to enrich non-verbal
@@ -231,7 +224,6 @@ research:
     year: 2021
     theme: embodied
     modality: hand
-    badge: { label: "HCI Korea '21", style: domestic }
     tags: [Critical Design]
     desc: >-
       A music player object that randomly plays the songs you listened to most in a
@@ -253,7 +245,6 @@ research:
     year: 2021
     theme: embodied
     modality: hand
-    badge: { label: "KSDS '21", style: domestic }
     tags: [Interactive Media Art]
     desc: >-
       Play the Korean gayageum with mid-air gestures via Leap Motion; its vibratos
@@ -286,7 +277,6 @@ research:
     year: 2020
     theme: embodied
     modality: hand
-    badge: { label: "CHI '20", style: chi }
     tags: [Wearable Input]
     desc: >-
       Touch-sensitive artificial nails that enable subtle, always-available hand input
