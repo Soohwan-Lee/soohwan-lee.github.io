@@ -7,8 +7,8 @@
 {%- assign thumb_class = "proj-card__thumb" -%}
 {%- if c.cover %}{% assign thumb_class = thumb_class | append: " is-cover" %}{% endif -%}
 {%- unless c.image %}{% assign thumb_class = thumb_class | append: " proj-card__thumb--empty" %}{% endunless -%}
-<article class="proj-card"{% if include.grouped %} data-year="{{ c.year }}"{% for v in site.data.projects.views %} data-{{ v.key }}="{{ c[v.key] }}"{% endfor %}{% endif %}>
-{%- if c.link %}<a class="{{ thumb_class }}" href="{{ c.link }}">{% else %}<div class="{{ thumb_class }}">{% endif -%}
+<article class="proj-card"{% if include.grouped %} data-year="{{ c.year }}" data-tags="{{ c.tags | join: '|' | escape }}"{% for v in site.data.projects.views %} data-{{ v.key }}="{{ c[v.key] | join: ' ' }}"{% endfor %}{% endif %}>
+{%- if c.link %}<a class="{{ thumb_class }}" href="{{ c.link | escape }}">{% else %}<div class="{{ thumb_class }}">{% endif -%}
 {%- if c.image -%}
 <img src="{{ c.image }}" alt="{{ c.title | escape }}">
 {%- else -%}
@@ -17,18 +17,29 @@
 {%- if c.link %}</a>{% else %}</div>{% endif %}
 <div class="proj-card__body">
 {%- comment -%}
-  The venue badge that used to sit here was removed; the venue is already
-  shown by the pills in the "papers" rows below. A card's "badge:" field in
-  _data/projects.yml is therefore ignored.
+  The solid venue badge that used to sit here was removed; the venue is
+  already shown by the outlined pills in the "papers" rows below, so a
+  card's "badge:" field in _data/projects.yml is ignored.
 {%- endcomment -%}
 {%- if c.tags %}
 <div class="proj-card__meta">
-{%- for t in c.tags %}<span class="proj-tag">{{ t | escape }}</span>{% endfor -%}
+{%- comment -%}
+  The card face shows the first three tags only; the rest still drive the
+  Filter view through data-tags, so list a card's tags topic-first.
+{%- endcomment -%}
+{%- for t in c.tags limit: 3 %}<span class="proj-tag">{{ t | escape }}</span>{% endfor -%}
 </div>
 {%- endif %}
-<h3 class="proj-card__title">{% if c.link %}<a href="{{ c.link }}">{{ c.title | escape }}</a>{% else %}{{ c.title | escape }}{% endif %}</h3>
+<h3 class="proj-card__title">{% if c.link %}<a href="{{ c.link | escape }}">{{ c.title | escape }}</a>{% else %}{{ c.title | escape }}{% endif %}</h3>
 {%- if c.desc %}
 <p class="proj-card__desc">{{ c.desc | strip | escape }}</p>
+{%- endif %}
+{%- if c.funders %}
+<div class="proj-card__funders">
+{%- for f in c.funders -%}
+<span class="proj-funder{% if f.logo %} proj-funder--logo{% endif %}{% if f.wordmark and f.logo %} proj-funder--wordmark{% endif %}">{% if f.wordmark and f.logo %}<img src="{{ f.logo }}" alt="{{ f.label | escape }}">{% else %}{% if f.logo %}<img src="{{ f.logo }}" alt="" aria-hidden="true">{% endif %}{{ f.label | escape }}{% endif %}</span>
+{%- endfor -%}
+</div>
 {%- endif %}
 {%- if c.note %}
 <p class="proj-card__note">{{ c.note | escape }}</p>
@@ -39,7 +50,7 @@
 <dt>{{ row.type | escape }}</dt><dd>
 {%- for p in row.items -%}
 {%- if p.url -%}
-<a class="proj-paper{% if p.style %} proj-paper--{{ p.style }}{% endif %}" href="{{ p.url }}"{% if p.title %} title="{{ p.title | escape }}"{% endif %}>{{ p.venue | escape }}</a>
+<a class="proj-paper{% if p.style %} proj-paper--{{ p.style }}{% endif %}" href="{{ p.url | escape }}"{% if p.title %} title="{{ p.title | escape }}"{% endif %}>{{ p.venue | escape }}</a>
 {%- else -%}
 <span class="proj-paper{% if p.style %} proj-paper--{{ p.style }}{% endif %}"{% if p.title %} title="{{ p.title | escape }}"{% endif %}>{{ p.venue | escape }}</span>
 {%- endif -%}
@@ -51,10 +62,14 @@
 {%- if c.links %}
 <div class="proj-card__links">
 {%- for l in c.links -%}
-{%- if l.award -%}
+{%- if l.award and l.url -%}
+<a class="pub-link pub-link--award" href="{{ l.url | escape }}">{{ l.label | escape }}</a>
+{%- elsif l.award -%}
 <span class="pub-link pub-link--award">{{ l.label | escape }}</span>
 {%- elsif l.url -%}
-<a class="pub-link" href="{{ l.url }}">{{ l.label | escape }}</a>
+<a class="pub-link" href="{{ l.url | escape }}">{{ l.label | escape }}</a>
+{%- else -%}
+<span class="pub-link">{{ l.label | escape }}</span>
 {%- endif -%}
 {%- endfor -%}
 </div>

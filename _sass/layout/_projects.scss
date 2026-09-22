@@ -66,6 +66,19 @@
   margin: 0 0 0.1em;
 }
 
+/* One-line explainer under a section heading */
+.proj-page .proj-section-desc {
+  margin: 0.55em 0 0;
+  font-size: 0.85em;
+  line-height: 1.6;
+  color: $gray;
+}
+
+.proj-page .proj-section-desc + .proj-grid,
+.proj-page .proj-section-desc + .proj-grouped {
+  margin-top: 1.1em;
+}
+
 /* Theme sections in the "By Theme" view */
 .proj-theme {
   margin-top: 1.6em;
@@ -126,8 +139,146 @@
 /* display:grid/flex would otherwise override the hidden attribute */
 .proj-grid[hidden],
 .proj-grouped[hidden],
-.proj-view[hidden] {
+.proj-view[hidden],
+.proj-filter[hidden],
+.proj-card[hidden] {
   display: none;
+}
+
+/* ---- Filter view ------------------------------------------------------ */
+
+.proj-page .proj-filter__hint {
+  margin: 1.2em 0 0.9em;
+  font-size: 0.82em;
+  line-height: 1.6;
+  color: $gray;
+}
+
+.proj-filter__hash {
+  margin-right: -0.3em;
+  opacity: 0.55;
+}
+
+/* One row per facet. The label column sizes itself to the longest label,
+   so a long one like "Contribution" cannot run into the chips. */
+.proj-filter__bar {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: 0.6em 1em;
+  align-items: baseline;
+  margin: 0 0 0.9em;
+}
+
+.proj-filter__label {
+  font-family: $sans-serif;
+  font-size: 0.68em;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.9;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: $gray;
+}
+
+.proj-filter__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35em;
+  min-width: 0;
+}
+
+@include breakpoint(max-width $small) {
+  .proj-filter__bar {
+    display: block;
+  }
+
+  .proj-filter__label {
+    display: block;
+    margin: 0 0 0.3em;
+  }
+
+  .proj-filter__chips {
+    margin-bottom: 0.7em;
+  }
+}
+
+.proj-filter__tag {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.45em;
+  padding: 0.3em 0.8em;
+  border: 1px solid var(--global-border-color, #{$light-gray});
+  border-radius: 1.2em;
+  font-family: $sans-serif;
+  font-size: 0.74em;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  line-height: 1.5;
+  white-space: nowrap;
+  color: mix(#000, $gray, 25%);
+  background-color: transparent;
+  cursor: pointer;
+  transition: color 0.15s ease-in-out,
+              background-color 0.15s ease-in-out,
+              border-color 0.15s ease-in-out,
+              opacity 0.15s ease-in-out;
+
+  &:hover {
+    border-color: var(--global-link-color);
+    color: var(--global-link-color);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    box-shadow: 0 0 0 2px var(--global-link-color);
+  }
+
+  &.is-on {
+    color: #fff;
+    border-color: var(--global-link-color);
+    background-color: var(--global-link-color);
+  }
+
+  /* Adding this one to the current pick would leave nothing to show */
+  &.is-empty {
+    opacity: 0.32;
+    pointer-events: none;
+  }
+}
+
+.proj-filter__count {
+  font-size: 0.85em;
+  font-weight: 700;
+  opacity: 0.55;
+}
+
+.proj-page .proj-filter__status {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.8em;
+  margin: 0 0 1.1em;
+  font-size: 0.82em;
+  color: $gray;
+}
+
+.proj-filter__clear {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  font-family: $sans-serif;
+  font-size: inherit;
+  font-weight: 600;
+  color: var(--global-link-color);
+  background: none;
+  cursor: pointer;
+
+  &[hidden] {
+    display: none;
+  }
 }
 
 .proj-grid {
@@ -296,12 +447,83 @@
   }
 }
 
-/* Small muted line for funding / partner / period */
+/* Funder chips: who paid for the work. An optional logo is capped at the
+   height of the chip's own text, so the row stays one line tall. */
+.proj-card__funders {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3em;
+  margin-top: 0.7em;
+}
+
+.proj-funder {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  padding: 0.15em 0.55em;
+  border: 1px solid var(--global-border-color, #{$light-gray});
+  border-radius: 3px;
+  font-family: $sans-serif;
+  font-size: 0.68em;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.6;
+  white-space: nowrap;
+  color: $gray;
+  background-color: mix(#fff, $light-gray, 82%);
+}
+
+/* A logo sits tight to the chip's left edge */
+.proj-funder--logo {
+  padding-left: 0.3em;
+}
+
+/* Kept to the height of the chip's own text; the files are cropped to the
+   mark so nothing is wasted on margin. */
+.proj-funder img {
+  display: block;
+  flex: none;
+  width: auto;
+  height: 1.15em;
+  max-width: 3em;
+  object-fit: contain;
+}
+
+/* A wordmark replaces the visible label. Let its natural proportions set
+   the height, with enough width to stay legible at badge size. */
+.proj-funder--wordmark {
+  padding-inline: 0.55em;
+}
+
+.proj-funder--wordmark img {
+  width: 4.8em;
+  height: auto;
+  max-width: none;
+}
+
+/* The dark chip would swallow the navy in the taegeuk and in the NRF mark,
+   and the counters of these logos are transparent, so back them with white. */
+html[data-theme="dark"] .proj-funder img {
+  padding: 1px;
+  border-radius: 2px;
+  background-color: #fff;
+}
+
+html[data-theme="dark"] .proj-funder {
+  background-color: rgba(255, 255, 255, 0.06);
+  color: $light-gray;
+}
+
+/* Small muted line for period / role */
 .proj-card__note {
   margin: 0.4em 0 0;
   font-size: 0.76em;
   line-height: 1.5;
   color: $gray;
+}
+
+.proj-card__funders + .proj-card__note {
+  margin-top: 0.35em;
 }
 
 .proj-card__links {

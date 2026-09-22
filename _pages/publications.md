@@ -34,7 +34,12 @@ Grouped by year. See my [Google Scholar](https://scholar.google.com/citations?us
 
 <div class="pub-item" data-cat="review" markdown="1">
 <span class="pub-meta"><span class="pub-badge badge-review">Under Review</span><span class="pub-type">Conference Paper</span></span>
-**Soohwan Lee**, Kyungho Lee. Reinforce, Align, or Oscillate? How People Experience and Interpret Multi-Agent Social Influence Over Time.
+**Soohwan Lee** et al. Investigating AI Proxies and the Social Costs of Explaining Requests in Power-Imbalanced Workplace Negotiation.
+</div>
+
+<div class="pub-item" data-cat="review" markdown="1">
+<span class="pub-meta"><span class="pub-badge badge-review">Under Review</span><span class="pub-type">Conference Paper</span></span>
+**Soohwan Lee** et al. Reinforce, Align, or Oscillate? How People Experience and Interpret Multi-Agent Social Influence Over Time.
 </div>
 
 <div class="pub-item" data-cat="review" markdown="1">
@@ -44,7 +49,7 @@ Grouped by year. See my [Google Scholar](https://scholar.google.com/citations?us
 
 <div class="pub-item" data-cat="review" markdown="1">
 <span class="pub-meta"><span class="pub-badge badge-review">Under Review</span><span class="pub-type">Conference Paper</span></span>
-**Soohwan Lee**, Soobin Lee, and Kyungho Lee. Expression2Emoji: Designing Non-verbal Communication Support Tool for Group Video Meetings.
+**Soohwan Lee** et al. Expression2Emoji: Designing Non-verbal Communication Support Tool for Group Video Meetings.
 </div>
 
 
@@ -173,9 +178,9 @@ Nari Kim, **Soohwan Lee**, Hyejin Oh, Temirlan Dzhoroev, and Young-Woo Park. Int
 </div>
 
 <div class="pub-item" data-cat="other" markdown="1">
-<span class="pub-meta"><span class="pub-badge badge-domestic">HCI Korea</span><span class="pub-type">Domestic</span></span>
+<span class="pub-meta"><span class="pub-badge badge-domestic">HCI Korea</span><span class="pub-type">Domestic · submitted to the Creative Award category</span></span>
 **Soohwan Lee**, Kyungho Lee, and Young-Woo Park. Counterfunctional Music Player with Mid-air Hand Gesture. *Proceedings of HCI Korea 2021*.
-<div class="pub-links"><a class="pub-link" href="https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE10530377">Link</a><span class="pub-link pub-link--award">Creative Award</span></div>
+<div class="pub-links"><a class="pub-link" href="https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE10530377">Link</a></div>
 </div>
 
 ## 2020

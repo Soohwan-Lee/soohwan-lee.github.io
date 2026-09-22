@@ -5,7 +5,7 @@ title: "Projects"
 author_profile: true
 ---
 
-Selected research and industry projects. Publications for each are listed on the [Publications](/publications/) page.
+The same work, listed two ways: by the research question it asks, and by the grant or contract that paid for it.
 
 <!-- All project content lives in _data/projects.yml (instructions at the top of
      that file). Each card is rendered by _includes/project-card.html. -->
@@ -20,8 +20,11 @@ Selected research and industry projects. Publications for each are listed on the
 {%- for v in site.data.projects.views %}
 <button type="button" role="tab" class="pub-toggle__btn" data-view="{{ v.key }}" aria-selected="false">{{ v.label }}</button>
 {%- endfor %}
+<button type="button" role="tab" class="pub-toggle__btn" data-view="filter" aria-selected="false">Filter</button>
 </div>
 </div>
+
+<p class="proj-section-desc">Explore projects and their related papers. <strong>Theme</strong> and <strong>Modality</strong> organize each project under its primary focus, once per view. Use <strong>Filter</strong> to explore shared keywords across projects. Funding is listed below; all papers are on the <a href="/publications/">Publications</a> page.</p>
 
 <div class="proj-grid" id="research-grid">
 {%- for item in site.data.projects.research %}
@@ -31,10 +34,19 @@ Selected research and industry projects. Publications for each are listed on the
 
 <div class="proj-grouped" id="research-grouped" hidden></div>
 
-<h2 id="industry-projects">Industry Projects</h2>
+<div class="proj-filter" id="research-filter" hidden>
+<p class="proj-filter__hint">Explore by keyword. Select alternatives within a row; combine rows to narrow your results.</p>
+<div class="proj-filter__bar" role="group" aria-label="Filter projects by keyword"></div>
+<p class="proj-filter__status"><span role="status" aria-live="polite" aria-atomic="true"></span></p>
+<div class="proj-grid proj-filter__grid"></div>
+</div>
+
+<h2 id="funded-projects">Funded Projects</h2>
+
+<p class="proj-section-desc">The industry and government grants behind the work, newest first, with my own role in each.</p>
 
 <div class="proj-grid">
-{%- for item in site.data.projects.industry %}
+{%- for item in site.data.projects.funded %}
 {% include project-card.html card=item %}
 {%- endfor %}
 </div>
@@ -44,15 +56,16 @@ Selected research and industry projects. Publications for each are listed on the
   var page = document.querySelector('.proj-page');
   if (!page) return;
 
-  /* Grouped views come from _data/projects.yml -> views.
-     Each view reads the card attribute data-<key> and shows its groups in
-     order. Cards whose value matches no group go to an "Other" section. */
+  /* Move the same cards between views: one DOM node per research project.
+     The first valid group key is primary; tags preserve cross-cutting topics. */
   var VIEWS = {{ site.data.projects.views | jsonify }};
+  var FILTERS = {{ site.data.projects.filters | jsonify }};
 
   var grid = document.getElementById('research-grid');
   var grouped = document.getElementById('research-grouped');
+  var filterWrap = document.getElementById('research-filter');
   var toggle = page.querySelector('.proj-toggle');
-  if (!grid || !grouped || !toggle) return;
+  if (!grid || !grouped || !filterWrap || !toggle) return;
 
   var fileOrder = Array.prototype.slice.call(grid.querySelectorAll('.proj-card'));
 
@@ -66,6 +79,14 @@ Selected research and industry projects. Publications for each are listed on the
     sortYear[i] = carry;
     c.setAttribute('data-index', i);
   });
+
+  function valuesOf(card, attr) {
+    return (card.getAttribute(attr) || '').split(/\s+/).filter(Boolean);
+  }
+
+  function tagsOf(card) {
+    return (card.getAttribute('data-tags') || '').split('|').filter(Boolean);
+  }
 
   function section(title, desc, count) {
     var s = document.createElement('section');
@@ -93,52 +114,180 @@ Selected research and industry projects. Publications for each are listed on the
     return { el: s, grid: g };
   }
 
-  /* Build each view's sections once (lazily); cards are moved, not cloned. */
-  var built = {};
   function buildView(view) {
     var attr = 'data-' + view.key;
     var wrap = document.createElement('div');
     wrap.className = 'proj-view';
-    var grids = {};
     var groups = (view.groups || []).slice();
-    groups.push({ key: '__other__', title: 'Other' });
     var known = {};
     groups.forEach(function (g) { known[g.key] = true; });
+    groups.push({ key: '__other__', title: 'Other' });
+
+    function primaryGroup(c) {
+      var valid = valuesOf(c, attr).filter(function (v) { return known[v]; });
+      return valid[0] || '__other__';
+    }
 
     groups.forEach(function (g) {
       var members = fileOrder.filter(function (c) {
-        var val = c.getAttribute(attr) || '';
-        return g.key === '__other__' ? !known[val] : val === g.key;
+        return primaryGroup(c) === g.key;
       });
       if (!members.length) return;
       var s = section(g.title, g.desc, members.length);
+      members.forEach(function (c) { c.hidden = false; s.grid.appendChild(c); });
       wrap.appendChild(s.el);
-      grids[g.key] = s.grid;
     });
+    grouped.textContent = '';
     grouped.appendChild(wrap);
-    built[view.key] = { wrap: wrap, grids: grids, attr: attr };
-    return built[view.key];
   }
 
   function showLatest() {
     fileOrder.slice().sort(function (a, b) {
       var ia = +a.getAttribute('data-index'), ib = +b.getAttribute('data-index');
       return (sortYear[ib] - sortYear[ia]) || (ia - ib);
-    }).forEach(function (c) { grid.appendChild(c); });
+    }).forEach(function (c) { c.hidden = false; grid.appendChild(c); });
     grid.hidden = false;
     grouped.hidden = true;
+    filterWrap.hidden = true;
   }
 
   function showGrouped(view) {
-    var v = built[view.key] || buildView(view);
-    Object.keys(built).forEach(function (k) { built[k].wrap.hidden = (k !== view.key); });
-    fileOrder.forEach(function (c) {
-      var val = c.getAttribute(v.attr) || '';
-      var g = v.grids[val] || v.grids['__other__'];
-      if (g) g.appendChild(c);
-    });
+    buildView(view);
     grid.hidden = true;
     grouped.hidden = false;
+    filterWrap.hidden = true;
+  }
+
+  /* ---- Filter view -----------------------------------------------------
+     OR within each facet, AND across facets. Counts preview the number of
+     results after toggling a keyword, including alternatives in one row. */
+  var filterBar = filterWrap.querySelector('.proj-filter__bar');
+  var filterStatus = filterWrap.querySelector('.proj-filter__status');
+  var filterGrid = filterWrap.querySelector('.proj-filter__grid');
+  var picked = [];
+  var filterReady = false;
+  var facetOf = {};
+
+  FILTERS.forEach(function (f, i) {
+    f.tags.forEach(function (t) { facetOf[t] = 'facet-' + i; });
+  });
+
+  function matches(card, tags) {
+    var has = tagsOf(card);
+    var facets = {};
+    tags.forEach(function (t) {
+      var facet = facetOf[t] || 'other';
+      if (!facets[facet]) facets[facet] = [];
+      facets[facet].push(t);
+    });
+    return Object.keys(facets).every(function (facet) {
+      return facets[facet].some(function (t) { return has.indexOf(t) !== -1; });
+    });
+  }
+
+  function buildFilter() {
+    var counts = {};
+    fileOrder.forEach(function (c) {
+      tagsOf(c).forEach(function (t) { counts[t] = (counts[t] || 0) + 1; });
+    });
+
+    function chip(t) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'proj-filter__tag';
+      b.setAttribute('data-tag', t);
+      b.setAttribute('aria-pressed', 'false');
+      var hash = document.createElement('span');
+      hash.className = 'proj-filter__hash';
+      hash.textContent = '#';
+      hash.setAttribute('aria-hidden', 'true');
+      b.appendChild(hash);
+      b.appendChild(document.createTextNode(t));
+      var n = document.createElement('span');
+      n.className = 'proj-filter__count';
+      n.textContent = counts[t];
+      b.appendChild(n);
+      b.addEventListener('click', function () {
+        var i = picked.indexOf(t);
+        if (i === -1) picked.push(t); else picked.splice(i, 1);
+        applyFilter();
+      });
+      return b;
+    }
+
+    /* One row per facet, in the order _data/projects.yml lists them. The
+       label and its chips are separate grid cells, so the label column
+       lines up across rows without a hand-set width. */
+    function row(name, tags) {
+      if (!tags.length) return;
+      var label = document.createElement('span');
+      label.className = 'proj-filter__label';
+      label.id = 'proj-facet-' + filterBar.childElementCount;
+      label.textContent = name;
+      var chips = document.createElement('span');
+      chips.className = 'proj-filter__chips';
+      chips.setAttribute('role', 'group');
+      chips.setAttribute('aria-labelledby', label.id);
+      tags.forEach(function (t) { chips.appendChild(chip(t)); });
+      filterBar.appendChild(label);
+      filterBar.appendChild(chips);
+    }
+
+    var placed = {};
+    (FILTERS || []).forEach(function (f) {
+      var tags = (f.tags || []).filter(function (t) { return counts[t] && !placed[t]; });
+      tags.forEach(function (t) { placed[t] = true; });
+      row(f.label, tags);
+    });
+    row('Other', Object.keys(counts).filter(function (t) { return !placed[t]; }).sort());
+
+    var clear = document.createElement('button');
+    clear.type = 'button';
+    clear.className = 'proj-filter__clear';
+    clear.textContent = 'Clear filters';
+    clear.addEventListener('click', function () { picked = []; applyFilter(); });
+    filterStatus.appendChild(clear);
+
+    filterReady = true;
+  }
+
+  function applyFilter() {
+    var shown = 0;
+    Array.prototype.forEach.call(filterGrid.children, function (c) {
+      var ok = matches(c, picked);
+      c.hidden = !ok;
+      if (ok) shown++;
+    });
+
+    Array.prototype.forEach.call(filterBar.querySelectorAll('.proj-filter__tag'), function (b) {
+      var t = b.getAttribute('data-tag');
+      var on = picked.indexOf(t) !== -1;
+      b.classList.toggle('is-on', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      var next = on ? picked.filter(function (tag) { return tag !== t; }) : picked.concat([t]);
+      var count = fileOrder.filter(function (c) { return matches(c, next); }).length;
+      b.querySelector('.proj-filter__count').textContent = count;
+      b.querySelector('.proj-filter__count').setAttribute('aria-hidden', 'true');
+      var action = (on ? 'Remove ' : 'Add ') + t + ': ' + count + (count === 1 ? ' project' : ' projects');
+      b.setAttribute('aria-label', action);
+      b.title = action;
+      b.disabled = !on && count === 0;
+      b.classList.toggle('is-empty', b.disabled);
+    });
+
+    filterStatus.firstChild.textContent = picked.length
+      ? shown + ' of ' + fileOrder.length + ' projects'
+      : 'All ' + fileOrder.length + ' projects · Choose keywords to explore';
+    filterStatus.lastChild.hidden = !picked.length;
+  }
+
+  function showFilter() {
+    if (!filterReady) buildFilter();
+    fileOrder.forEach(function (c) { filterGrid.appendChild(c); });
+    applyFilter();
+    grid.hidden = true;
+    grouped.hidden = true;
+    filterWrap.hidden = false;
   }
 
   var buttons = toggle.querySelectorAll('.pub-toggle__btn');
@@ -157,9 +306,11 @@ Selected research and industry projects. Publications for each are listed on the
   }
 
   function show(key) {
-    var view = findView(key);
-    if (!view) key = 'latest';
-    if (view) showGrouped(view); else showLatest();
+    var view = key === 'filter' ? null : findView(key);
+    if (key !== 'filter' && !view) key = 'latest';
+    if (key === 'filter') showFilter();
+    else if (view) showGrouped(view);
+    else showLatest();
     Array.prototype.forEach.call(buttons, function (b) {
       var on = b.getAttribute('data-view') === key;
       b.classList.toggle('is-active', on);

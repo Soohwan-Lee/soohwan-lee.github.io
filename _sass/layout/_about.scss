@@ -1,0 +1,105 @@
+/* ==========================================================================
+   ABOUT / HOME PAGE
+   Text emphasis helpers and the small notice box at the top of the page.
+
+   Usage in markdown:
+     <span class="hl">highlighted phrase</span>       highlighter sweep
+     <span class="uw">wavy-underlined phrase</span>   wavy underline
+     <span class="ul">underlined phrase</span>        flat underline, offset
+
+   Use them sparingly - one or two per paragraph. They are tuned to stay
+   legible in both the light and the dark theme.
+   ========================================================================== */
+
+:root {
+  --hl-color: #{rgba(#ffd166, 0.5)};
+  --rule-color: #{rgba(#2f7f93, 0.85)};
+}
+
+html[data-theme="dark"] {
+  --hl-color: #{rgba(#0ea1c5, 0.32)};
+  --rule-color: #{rgba(#7fd7ea, 0.9)};
+}
+
+/* Highlighter: a band behind the lower part of the line, so descenders
+   stay readable and the text colour is untouched. */
+.hl {
+  background-image: linear-gradient(
+    to bottom,
+    transparent 52%,
+    var(--hl-color) 52%,
+    var(--hl-color) 94%,
+    transparent 94%
+  );
+  background-repeat: no-repeat;
+  padding: 0 0.1em;
+  border-radius: 2px;
+}
+
+/* Drawn as a background SVG rather than `text-decoration-style: wavy`, whose
+   ripple is far too tight at body size. One wave per 18px, and the file is
+   inlined twice because the stroke colour has to be baked into it. */
+.uw {
+  padding-bottom: 0.2em;
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+  background-size: 18px 5px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 5' preserveAspectRatio='none'%3E%3Cpath d='M0 3.4 Q 4.5 1.2 9 3.4 T 18 3.4' fill='none' stroke='%232f7f93' stroke-width='1.1' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+
+html[data-theme="dark"] .uw {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 5' preserveAspectRatio='none'%3E%3Cpath d='M0 3.4 Q 4.5 1.2 9 3.4 T 18 3.4' fill='none' stroke='%237fd7ea' stroke-width='1.1' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+
+/* Flat underline drawn as a background so it clears descenders. */
+.ul {
+  background-image: linear-gradient(var(--rule-color), var(--rule-color));
+  background-repeat: no-repeat;
+  background-size: 100% 2px;
+  background-position: 0 100%;
+  padding-bottom: 0.1em;
+}
+
+/* Underlines inside links would collide with the link's own underline */
+a .hl,
+a .uw,
+a .ul {
+  background-image: none;
+  text-decoration: none;
+}
+
+/* ---- Notice box ------------------------------------------------------- */
+
+.about-note {
+  margin: 0 0 2em;
+  padding: 1em 1.2em;
+  border: 1px dashed #d94f4f;
+  border-radius: 8px;
+  background-color: rgba(217, 79, 79, 0.07);
+  font-size: 0.85em;
+  line-height: 1.65;
+
+  > p {
+    margin: 0;
+    font-size: inherit;
+  }
+
+  > p + p {
+    margin-top: 0.5em;
+  }
+}
+
+/* ---- Research theme table --------------------------------------------- */
+
+.page__content .about-themes {
+  font-size: 0.86em;
+
+  td,
+  th {
+    padding: 0.5em 0.8em;
+  }
+
+  td:first-child {
+    white-space: nowrap;
+  }
+}
