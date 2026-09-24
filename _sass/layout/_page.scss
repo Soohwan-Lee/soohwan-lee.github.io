@@ -11,6 +11,12 @@
   animation: intro 0.3s both;
   animation-delay: 0.35s;
 
+  @media screen and (min-width: $sidebar-screen-min-width) {
+    // Keep the fixed sidebar above the footer, even on short pages.
+    position: relative;
+    z-index: 1;
+  }
+
   @include breakpoint($x-large) {
     max-width: $x-large;
   }
