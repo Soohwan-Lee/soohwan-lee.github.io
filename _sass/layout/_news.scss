@@ -40,7 +40,7 @@
 
 .news-year {
   h2 {
-    margin: 1.8rem 0 0.5rem;
+    margin: 1.25rem 0 0.35rem;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid var(--global-border-color);
   }
@@ -59,7 +59,9 @@
 .news-item {
   display: flex;
   gap: 1rem;
-  padding: 0.8rem 0;
+  margin: 0;
+  padding: 0.25rem 0;
+  line-height: 1.4;
 
   time {
     flex: 0 0 4rem;
