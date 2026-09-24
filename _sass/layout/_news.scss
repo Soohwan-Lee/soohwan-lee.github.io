@@ -25,6 +25,10 @@
       margin: 0;
       font-size: 0.625rem;
       line-height: 1.12;
+
+      + li {
+        margin-top: 3px;
+      }
     }
   }
 
