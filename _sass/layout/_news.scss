@@ -14,8 +14,14 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    overflow-x: auto;
+    padding-bottom: 0.25rem;
 
     li {
+      display: flex;
+      align-items: baseline;
+      gap: 0.25em;
+      white-space: nowrap;
       margin: 0;
       font-size: 0.625rem;
       line-height: 1.12;
@@ -23,6 +29,7 @@
   }
 
   time {
+    flex: 0 0 auto;
     display: inline;
     margin: 0;
     font-size: 0.575rem;
@@ -30,6 +37,7 @@
   }
 
   &__text {
+    flex: 0 0 auto;
     display: inline;
   }
 
