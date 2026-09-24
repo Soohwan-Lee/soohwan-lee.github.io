@@ -1,0 +1,28 @@
+---
+layout: archive
+permalink: /news/
+title: "News"
+author_profile: true
+---
+
+{% assign news_items = site.news | where_exp: "item", "item.published != false" | sort: "date" | reverse %}
+<div class="news-archive">
+  {% assign current_year = '' %}
+  {% for item in news_items %}
+    {% assign item_year = item.date | date: '%Y' %}
+    {% if item_year != current_year %}
+      {% unless forloop.first %}</ul></section>{% endunless %}
+      <section class="news-year" aria-labelledby="news-year-{{ item_year }}">
+        <h2 id="news-year-{{ item_year }}">{{ item_year }}</h2>
+        <ul class="news-list">
+      {% assign current_year = item_year %}
+    {% endif %}
+          <li class="news-item">
+            <time datetime="{{ item.date | date: '%Y-%m-%d' }}">{% if item.date_precision == 'month' %}{{ item.date | date: '%b' }}{% else %}{{ item.date | date: '%d %b' }}{% endif %}</time>
+            <div class="news-item__text">{{ item.content | markdownify }}</div>
+          </li>
+    {% if forloop.last %}</ul></section>{% endif %}
+  {% else %}
+    <p>Updates coming soon.</p>
+  {% endfor %}
+</div>

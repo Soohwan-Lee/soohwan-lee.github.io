@@ -1,4 +1,33 @@
 # Academic Pages
+
+## Adding news
+
+News is written in Markdown in `_news/`, one file per update. Both `/news/`
+and the sidebar read these files: the archive groups entries by year, newest
+first, and the sidebar shows the latest five. Changes appear after the site
+is rebuilt and deployed.
+
+Create a file such as `_news/2026-07-01-workshop.md`:
+
+```markdown
+---
+date: 2026-07-01
+date_precision: month
+---
+
+I was invited to give a lightning talk at the **CIVIC-AI Workshop**!
+```
+
+This is a formatting example, not an actual announcement. Replace the date
+and text with your own news. Markdown links, emphasis, and emoji are supported.
+Use `date_precision: month` to display only the month, or omit it to display
+the day and month (e.g. `14 May`). Always supply a full `YYYY-MM-DD` date for
+sorting; for month-only updates, use the first day of the month.
+
+The supplied `_news/example.md` has `published: false` and stays hidden.
+You can copy it and remove that line when your entry is ready to publish.
+Until there are published entries, both views show “Updates coming soon.”
+
 **Academic Pages is a GitHub Pages template for personal and professional portfolio-oriented websites.**
 
 ![Academic Pages template example](images/homepage.png "Academic Pages template example")
