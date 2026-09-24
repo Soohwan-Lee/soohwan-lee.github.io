@@ -23,13 +23,18 @@
   }
 
   time {
-    display: block;
+    display: inline;
     margin: 0;
     font-size: 0.575rem;
     color: var(--global-text-color);
   }
 
+  &__text {
+    display: inline;
+  }
+
   &__text p {
+    display: inline;
     margin: 0;
     font-size: inherit;
     line-height: inherit;
