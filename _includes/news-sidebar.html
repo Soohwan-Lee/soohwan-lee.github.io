@@ -2,7 +2,7 @@
 <section class="sidebar-news" aria-labelledby="sidebar-news-title">
   <h2 id="sidebar-news-title">Recent news</h2>
   {% if recent_news.size > 0 %}
-    <ul class="sidebar-news__list" tabindex="0" aria-label="Recent news, scroll horizontally to read full updates">
+    <ul class="sidebar-news__list">
       {% for item in recent_news limit:5 %}
         <li>
           <time datetime="{{ item.date | date: '%Y-%m-%d' }}">{% if item.date_precision == 'month' %}{{ item.date | date: '%b %Y' }}{% else %}{{ item.date | date: '%d %b %Y' }}{% endif %}:</time>
