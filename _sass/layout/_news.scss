@@ -7,7 +7,7 @@
 
   h2 {
     margin: 0 0 0.45rem;
-    font-size: 0.72rem;
+    font-size: 0.85rem;
   }
 
   &__list {
@@ -19,8 +19,8 @@
     li {
       white-space: normal;
       margin: 0;
-      font-size: 0.625rem;
-      line-height: 1.12;
+      font-size: 0.75rem;
+      line-height: 1.25;
 
       + li {
         margin-top: 3px;
@@ -32,7 +32,7 @@
     display: inline;
     white-space: nowrap;
     margin: 0;
-    font-size: 0.575rem;
+    font-size: 0.7rem;
     color: var(--global-text-color);
   }
 
@@ -48,7 +48,7 @@
   }
 
   &__empty, &__more {
-    font-size: 0.625rem;
+    font-size: 0.75rem;
   }
 }
 
@@ -78,6 +78,10 @@
   padding: 0;
   font-size: 0.85rem;
   line-height: 1.12;
+
+  + .news-item {
+    margin-top: 2px;
+  }
 
   time {
     flex: 0 0 2.5rem;

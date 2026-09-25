@@ -3,7 +3,7 @@
   <h2 id="sidebar-news-title">Recent news</h2>
   {% if recent_news.size > 0 %}
     <ul class="sidebar-news__list">
-      {% for item in recent_news limit:5 %}
+      {% for item in recent_news limit:3 %}
         <li>
           {% if item.date_precision == 'year' %}
             <time datetime="{{ item.date | date: '%Y' }}">{{ item.date | date: '%Y' }}:</time>

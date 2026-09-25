@@ -4,7 +4,7 @@
 
 News is written in Markdown in `_news/`, one file per update. Both `/news/`
 and the sidebar read these files: the archive groups entries by year, newest
-first, and the sidebar shows the latest five. Changes appear after the site
+first, and the sidebar shows the latest three. Changes appear after the site
 is rebuilt and deployed.
 
 Create a file such as `_news/2026-07-01-workshop.md`:
