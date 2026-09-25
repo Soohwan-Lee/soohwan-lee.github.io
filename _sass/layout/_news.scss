@@ -12,8 +12,8 @@
 
   &__list {
     margin: 0;
-    padding: 0;
-    list-style: none;
+    padding: 0 0 0 1em;
+    list-style: disc outside;
     padding-bottom: 0.25rem;
 
     li {
