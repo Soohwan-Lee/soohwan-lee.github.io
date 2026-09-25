@@ -7,4 +7,4 @@ cv_entries: ["W.3"]
 notification_date: 2026-03-21
 ---
 
-🧩 Our position paper on multi-agent consensus and cognitive bias was accepted to the Bias4Trust workshop at CHI 2026!
+📝 Our position paper on multi-agent consensus and cognitive bias was accepted to the Bias4Trust workshop at CHI 2026!

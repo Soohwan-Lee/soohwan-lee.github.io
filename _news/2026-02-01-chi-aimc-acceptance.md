@@ -7,4 +7,4 @@ cv_entries: ["W.4"]
 notification_date: 2026-02-27
 ---
 
-🧩 Our position paper on authenticity in AI-mediated minority support was accepted to the AI-MC workshop at CHI 2026!
+📝 Our position paper on authenticity in AI-mediated minority support was accepted to the AI-MC workshop at CHI 2026!

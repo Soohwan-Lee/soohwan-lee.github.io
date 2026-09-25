@@ -7,4 +7,4 @@ cv_entries: ["W.5"]
 notification_date: 2024-06-21
 ---
 
-🧩 Our position paper on conversational agents and design fixation was accepted for an oral presentation at the Death of the Design Researcher? workshop at DIS 2024!
+📝 Our position paper on conversational agents and design fixation was accepted for an oral presentation at the Death of the Design Researcher? workshop at DIS 2024!
