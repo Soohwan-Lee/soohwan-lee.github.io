@@ -5,7 +5,11 @@
     <ul class="sidebar-news__list">
       {% for item in recent_news limit:5 %}
         <li>
-          <time datetime="{{ item.date | date: '%Y-%m-%d' }}">{% if item.date_precision == 'month' %}{{ item.date | date: '%b %Y' }}{% else %}{{ item.date | date: '%d %b %Y' }}{% endif %}:</time>
+          {% if item.date_precision == 'year' %}
+            <time datetime="{{ item.date | date: '%Y' }}">{{ item.date | date: '%Y' }}:</time>
+          {% else %}
+            <time datetime="{{ item.date | date: '%Y-%m-%d' }}">{% if item.date_precision == 'month' %}{{ item.date | date: '%b %Y' }}{% else %}{{ item.date | date: '%d %b %Y' }}{% endif %}:</time>
+          {% endif %}
           <div class="sidebar-news__text">{{ item.content | markdownify }}</div>
         </li>
       {% endfor %}

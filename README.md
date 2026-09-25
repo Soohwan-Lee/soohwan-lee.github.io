@@ -24,6 +24,10 @@ Use `date_precision: month` to display only the month, or omit it to display
 the day and month (e.g. `14 May`). Always supply a full `YYYY-MM-DD` date for
 sorting; for month-only updates, use the first day of the month.
 
+When only the year is known, use `date_precision: year` and `date: YYYY-01-01`.
+The January date is only a sorting placeholder; both views display the year
+without implying a month or day. Replace it with the actual date when known.
+
 The supplied `_news/example.md` has `published: false` and stays hidden.
 You can copy it and remove that line when your entry is ready to publish.
 Until there are published entries, both views show “Updates coming soon.”

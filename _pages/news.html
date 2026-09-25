@@ -18,7 +18,11 @@ author_profile: true
       {% assign current_year = item_year %}
     {% endif %}
           <li class="news-item">
-            <time datetime="{{ item.date | date: '%Y-%m-%d' }}">{% if item.date_precision == 'month' %}{{ item.date | date: '%b' }}{% else %}{{ item.date | date: '%d %b' }}{% endif %}</time>
+            {% if item.date_precision == 'year' %}
+              <time datetime="{{ item.date | date: '%Y' }}">{{ item.date | date: '%Y' }}</time>
+            {% else %}
+              <time datetime="{{ item.date | date: '%Y-%m-%d' }}">{% if item.date_precision == 'month' %}{{ item.date | date: '%b' }}{% else %}{{ item.date | date: '%d %b' }}{% endif %}</time>
+            {% endif %}
             <div class="news-item__text">{{ item.content | markdownify }}</div>
           </li>
     {% if forloop.last %}</ul></section>{% endif %}
