@@ -4,4 +4,4 @@ date_precision: month
 date_basis: "Participation month provided by the author."
 ---
 
-🤝 I attended the UTIDE Workshop hosted by UNIST’s HCI group.
+🔬 I attended the UTIDE Workshop hosted by UNIST’s HCI group.
