@@ -82,11 +82,13 @@ Seoyeong Hwang, Soohyun Hwang, **Soohwan Lee**, Dajung Kim, and Kyungho Lee. Aug
 <div class="pub-item" data-cat="workshop" markdown="1">
 <span class="pub-meta"><span class="pub-badge badge-cscw">CSCW '26 Workshop</span><span class="pub-type">Workshop · Oral</span></span>
 **Soohwan Lee**, Kyungho Lee. Delivered but Not Heard: AI Proxy Speech in Power-Imbalanced Group Decision-Making. *Workshop on Broader Impacts of GenAI in Communication*.
+<div class="pub-links"><a class="pub-link" href="/files/2026_CSCW_Workshop___AIMC.pdf">PDF</a></div>
 </div>
 
 <div class="pub-item" data-cat="workshop" markdown="1">
 <span class="pub-meta"><span class="pub-badge badge-cscw">CSCW '26 Workshop</span><span class="pub-type">Workshop</span></span>
-**Soohwan Lee**, Kyungho Lee. Where Does the Disagreement Go? Group Reflexivity and AI Accounts of Team Decision-makings. *Workshop on “Nobody Did This”: Contribution, Originality, and Accountability in Agent-Mediated Collaboration*.
+**Soohwan Lee**, Kyungho Lee. Where Does the Disagreement Go? Group Reflexivity and AI Accounts of Team Decision-Making. *Workshop on “Nobody Did This”: Contribution, Originality, and Accountability in Agent-Mediated Collaboration*.
+<div class="pub-links"><a class="pub-link" href="/files/2026_CSCW_Workshop___NoBodyDidThis.pdf">PDF</a></div>
 </div>
 
 <div class="pub-item" data-cat="workshop" markdown="1">

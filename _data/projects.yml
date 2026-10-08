@@ -172,7 +172,7 @@ research:
         items:
           - { venue: "DIS '24", style: dis, title: "Conversational Agents as Catalysts for Critical Thinking: Challenging Design Fixation in Group Design (DIS '24 Workshop)", url: "https://arxiv.org/abs/2406.11125" }
           - { venue: "CHI '26", style: chi, title: "Rethinking AI-Mediated Minority Support in Power-Imbalanced Group Decision-Making: From Anonymity To Authenticity (CHI '26 AI-MC Workshop)", url: "https://arxiv.org/abs/2604.22319" }
-          - { venue: "CSCW '26", style: cscw, title: "Delivered but Not Heard: AI Proxy Speech in Power-Imbalanced Group Decision-Making (CSCW '26 Workshop on Broader Impacts of GenAI in Communication · Oral; workshop website)", url: "https://broader-impacts-workshop.github.io/cscw2026-website/" }
+          - { venue: "CSCW '26", style: cscw, title: "Delivered but Not Heard: AI Proxy Speech in Power-Imbalanced Group Decision-Making (CSCW '26 Workshop on Broader Impacts of GenAI in Communication · Oral)", url: "/files/2026_CSCW_Workshop___AIMC.pdf" }
       - type: Under Review
         items:
           - { venue: Book Chapter, style: review, title: "Reframing Supporting Minority Influence in the Age of AI: Bridging Theory, Design, and Simulation for Inclusive Group Decision-Making" }
