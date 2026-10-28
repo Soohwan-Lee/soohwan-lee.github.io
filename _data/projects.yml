@@ -152,7 +152,7 @@ research:
 
   - title: LLM-powered Devil's Advocate
     image: /files/devil.png
-    link: https://arxiv.org/abs/2606.31762
+    link: https://doi.org/10.1145/3816954
     year: 2026
     theme: gcai
     modality: llm
@@ -163,7 +163,7 @@ research:
     papers:
       - type: Journal
         items:
-          - { venue: "CSCW '26", style: cscw, title: "Investigating LLM-Powered Dissenting Minority Support in Power-Imbalanced Group Decision-Making: Counterargument and Mediation as Intervention Strategies (PACM HCI, CSCW '26)", url: "https://arxiv.org/abs/2606.31762" }
+          - { venue: "CSCW '26", style: cscw, title: "Investigating LLM-Powered Dissenting Minority Support in Power-Imbalanced Group Decision-Making: Counterargument and Mediation as Intervention Strategies (PACM HCI, CSCW '26)", url: "https://doi.org/10.1145/3816954" }
       - type: Poster · LBW
         items:
           - { venue: "CHI '25", style: chi, title: "Conversational Agents as Catalysts for Critical Thinking: Challenging Social Influence in Group Decision-making (CHI '25 Late-Breaking Work)", url: "https://dl.acm.org/doi/10.1145/3706599.3719792" }

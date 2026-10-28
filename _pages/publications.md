@@ -64,7 +64,7 @@ Grouped by year. See my [Google Scholar](https://scholar.google.com/citations?us
 <div class="pub-item" data-cat="journal" markdown="1">
 <span class="pub-meta"><span class="pub-badge badge-cscw">CSCW '26</span><span class="pub-type">Journal</span></span>
 **Soohwan Lee**, Seoyeong Hwang, Mingyu Kim, Dajung Kim, and Kyungho Lee. Investigating LLM-Powered Dissenting Minority Support in Power-Imbalanced Group Decision-Making: Counterargument and Mediation as Intervention Strategies. *Proceedings of the ACM on Human-Computer Interaction (PACM HCI)*, Vol. 10, No. 6, Article CSCW106.
-<div class="pub-links"><a class="pub-link" href="https://arxiv.org/abs/2606.31762">arXiv</a></div>
+<div class="pub-links"><a class="pub-link" href="https://doi.org/10.1145/3816954">DOI</a><a class="pub-link" href="https://www.youtube.com/watch?v=hBnbA-dYh38&t=84s">Talk</a></div>
 </div>
 
 <div class="pub-item" data-cat="conference" markdown="1">
