@@ -10,7 +10,7 @@
 <article class="proj-card"{% if include.grouped %} data-year="{{ c.year }}" data-tags="{{ c.tags | join: '|' | escape }}"{% for v in site.data.projects.views %} data-{{ v.key }}="{{ c[v.key] | join: ' ' }}"{% endfor %}{% endif %}>
 {%- if c.link %}<a class="{{ thumb_class }}" href="{{ c.link | escape }}">{% else %}<div class="{{ thumb_class }}">{% endif -%}
 {%- if c.image -%}
-<img src="{{ c.image }}" alt="{{ c.title | escape }}">
+<img src="{{ c.image }}" alt="{{ c.image_alt | default: c.title | escape }}">
 {%- else -%}
 <i class="fa fa-{{ c.icon | default: 'image' }}" aria-hidden="true"></i>
 {%- endif -%}

@@ -69,6 +69,9 @@ views:
       - key: creative
         title: Critical Design & Media Art
         desc: Experimental artifacts and installations that explore everyday interaction and creative expression
+      - key: contextual
+        title: Context-Aware Design
+        desc: Design research on how everyday settings and perceptions shape the information people need from products and systems
 
   - key: modality
     label: Modality
@@ -96,13 +99,13 @@ views:
 #  while Interaction names what the person does.
 filters:
   - label: Research Focus
-    tags: [Group Decision-Making, Social Influence, Power Imbalance, Minority Support, Group Coordination, Non-verbal Expression, Reflection, Interaction Technique, Critical Design, Media Art]
+    tags: [Group Decision-Making, Social Influence, Power Imbalance, Minority Support, Group Coordination, Non-verbal Expression, Reflection, Interaction Technique, Critical Design, Media Art, Contextual Awareness]
   - label: Technology
     tags: [LLM Agents, Generative Feedback, Computer Vision, Touch Sensing]
   - label: Interaction
     tags: [Conversation, Reflective Writing, Hand Gesture, Body Movement, On-body Touch]
   - label: Contribution
-    tags: [Empirical Study, Interactive System, Design Artifact, Conceptual Framework]
+    tags: [Empirical Study, Interactive System, Design Artifact, Conceptual Framework, Design Guidelines]
 
 # ---------------------------------------------------------------------
 research:
@@ -263,6 +266,25 @@ research:
       - type: Under Review
         items:
           - { venue: Conference, style: review, title: "Expression2Emoji: Designing Non-verbal Communication Support Tool for Group Video Meetings" }
+
+  - title: Context-Aware Design for Everyday Hygiene
+    # Figure 4, p. 110, Jang et al. (2021), ADR 34(3), 101-121.
+    # Extracted unchanged from the article; CC BY-NC 3.0. Source: DOI below.
+    image: /files/contextual-hygiene-card-kit.png
+    image_alt: "Figure 4 from Jang et al. (2021): contextual card kit for exploring people, objects, and places in hygiene-related design scenarios"
+    link: https://doi.org/10.15187/adr.2021.08.34.3.101
+    year: 2021
+    theme: contextual
+    modality: theory
+    tags: [Contextual Awareness, Design Guidelines, Empirical Study]
+    desc: >-
+      Design guidelines for communicating hygiene information in private and public
+      spaces, informed by an analysis of 21 systems, workshops with 12 participants,
+      and interviews with four design practitioners.
+    papers:
+      - type: Journal
+        items:
+          - { venue: "ADR '21", style: journal, title: "Jang, S., Lee, S., Dzhoroev, T., Kim, T., Oh, H., Kim, N., & Park, Y.-W. (2021). Design Guidelines for Contextual Awareness and Management of Hygiene in Daily Life with Infectious Viruses. Archives of Design Research, 34(3), 101–121.", url: "https://doi.org/10.15187/adr.2021.08.34.3.101" }
 
   - title: Counterfunctional Music Player
     image: /files/counterfunctional.jpg
