@@ -1,4 +1,8 @@
-{% if site.analytics.provider and page.analytics != false %}
+{% comment %}
+  Production only (GitHub Pages builds with JEKYLL_ENV=production), so that
+  local `jekyll serve` previews on localhost don't send hits to the real GA4 property.
+{% endcomment %}
+{% if jekyll.environment == "production" and site.analytics.provider and page.analytics != false %}
 
 {% case site.analytics.provider %}
 {% when "google" %}

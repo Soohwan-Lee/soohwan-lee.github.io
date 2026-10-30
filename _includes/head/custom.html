@@ -2,6 +2,9 @@
 
 <!-- start custom head snippets -->
 
+<!-- Google Analytics (GA4): loaded early in <head>; rendered on production builds only -->
+{% include analytics.html %}
+
 <!-- favicon from https://commons.wikimedia.org/wiki/File:OOjs_UI_icon_academic-progressive.svg -->
 <link rel="apple-touch-icon" sizes="180x180" href="{{ base_path }}/images/apple-touch-icon-180x180.png"/>
 <link rel="icon" type="image/svg+xml" href="{{ base_path }}/images/favicon.svg"/>
