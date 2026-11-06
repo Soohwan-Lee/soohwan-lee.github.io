@@ -24,6 +24,21 @@ toys:
       - { label: Live Demo, url: "https://riddle-diary-web.vercel.app" }
       - { label: Code, url: "https://github.com/Soohwan-Lee/riddle-diary-web" }
 
+  - title: "HCI Academic Writing Skills"
+    image: /files/hci-writing-skills.jpg
+    image_alt: "Editorial collage of research notes, sketches, and diagrams converging into one manuscript page."
+    link: https://github.com/Soohwan-Lee/HCI-Academic-Writing-Skills
+    tags: [Academic Writing, Agent Skill, LLM]
+    desc: >-
+      An agent skill for Claude Code, Codex, and Antigravity that helps write HCI papers.
+      It picks a paper's structure from the kind of contribution it makes (a system, a
+      study, a design inquiry, a concept), and it leaves facts the notes do not support as
+      TODOs instead of filling them in. The guidance draws on close readings of 128 HCI
+      papers.
+    note: "2026 · Python, LaTeX · English and Korean"
+    links:
+      - { label: Code, url: "https://github.com/Soohwan-Lee/HCI-Academic-Writing-Skills" }
+
   - title: "StellaBot: Ask My Research Notes"
     image: /files/stellabot.jpg
     image_alt: "Note pages linked like a constellation, connected to a glowing chat bubble."
