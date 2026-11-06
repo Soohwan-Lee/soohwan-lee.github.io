@@ -22,6 +22,9 @@ main:
 
   - title: "News"
     url: /news/
+
+  - title: "Fun"
+    url: /fun/
         
   # - title: "Blog Posts"
   #   url: /year-archive/

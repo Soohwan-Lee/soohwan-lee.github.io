@@ -1,0 +1,47 @@
+# =====================================================================
+#  FUN PAGE DATA
+#  Rendered by _pages/fun.md with the same card as the Projects page
+#  (_includes/project-card.html), so every field documented at the top of
+#  _data/projects.yml works here too: title, image, link, tags, desc, note,
+#  links. Toggle-only fields (year, theme, modality) are not used.
+#  Cards appear in this file's order, newest first.
+# =====================================================================
+
+toys:
+
+  - title: "Inkling: A Diary That Writes Back, Then Forgets"
+    image: /files/inkling-writing.gif
+    image_alt: "Riddle writes a reply by hand, one character at a time, and draws a small knot mid-sentence."
+    link: https://riddle-diary-web.vercel.app
+    tags: [Critical Design, Handwriting, LLM]
+    desc: >-
+      A handwriting diary inspired by the enchanted diary in Harry Potter: you write
+      with a stylus or finger, and the page answers in handwriting, slowly, then lets
+      both of you fade. No database, no logs, no history. A small design provocation
+      about AI that does not remember.
+    note: "2026 · Next.js, perfect-freehand, OpenAI Responses API"
+    links:
+      - { label: Live Demo, url: "https://riddle-diary-web.vercel.app" }
+
+  - title: "Stella: Ask My Research Notes"
+    image: /files/stella-bot.svg
+    image_alt: "Research notes drawn as a constellation beside a question and an answer bubble."
+    tags: [LLM Chatbot, Obsidian, Streamlit]
+    desc: >-
+      A password-protected chatbot I built so my advisor and collaborators could ask
+      about an ongoing project on their own schedule. It answers from my Obsidian notes,
+      read live from a private vault repository, and calls a tool to summarize recent
+      commits for questions like "what changed in the last two weeks?"
+    note: "2026 · Streamlit, OpenAI tool calling, GitHub API · private deployment"
+
+  - title: "What Do Industrial Designers Talk About on Reddit?"
+    image: /files/reddit-cmf.png
+    link: https://github.com/Soohwan-Lee/reddit_CMF
+    tags: [Text Analysis, Online Community, Embeddings]
+    desc: >-
+      A discourse analysis of 431 top posts from r/IndustrialDesign (2023–2025): sentence
+      embeddings, UMAP and k-means clustering, and LLM-written cluster summaries that
+      map the community's themes, from CAD and rendering to sketching and careers.
+    note: "2025 · Python, Qwen3 embeddings, UMAP, scikit-learn"
+    links:
+      - { label: Code, url: "https://github.com/Soohwan-Lee/reddit_CMF" }
