@@ -24,9 +24,9 @@ toys:
       - { label: Live Demo, url: "https://riddle-diary-web.vercel.app" }
       - { label: Code, url: "https://github.com/Soohwan-Lee/riddle-diary-web" }
 
-  - title: "Stella: Ask My Research Notes"
-    image: /files/stella-bot.svg
-    image_alt: "Research notes drawn as a constellation beside a question and an answer bubble."
+  - title: "StellaBot: Ask My Research Notes"
+    image: /files/stellabot.jpg
+    image_alt: "Note pages linked like a constellation, connected to a glowing chat bubble."
     tags: [LLM Chatbot, Obsidian, Streamlit]
     desc: >-
       A password-protected chatbot I built so my advisor and collaborators could ask
