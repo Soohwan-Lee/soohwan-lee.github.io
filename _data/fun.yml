@@ -50,7 +50,7 @@ toys:
       commits for questions like "what changed in the last two weeks?"
     note: "2026 · Streamlit, OpenAI tool calling, GitHub API · private deployment"
 
-  - title: "What Do Industrial Designers Talk About on Reddit?"
+  - title: "What Do People Talk About on r/IndustrialDesign?"
     image: /files/reddit-cmf.png
     link: https://github.com/Soohwan-Lee/reddit_CMF
     tags: [Text Analysis, Online Community, Embeddings]
