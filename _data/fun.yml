@@ -22,6 +22,7 @@ toys:
     note: "2026 · Next.js, perfect-freehand, OpenAI Responses API"
     links:
       - { label: Live Demo, url: "https://riddle-diary-web.vercel.app" }
+      - { label: Code, url: "https://github.com/Soohwan-Lee/riddle-diary-web" }
 
   - title: "Stella: Ask My Research Notes"
     image: /files/stella-bot.svg
