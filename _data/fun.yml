@@ -9,7 +9,7 @@
 
 toys:
 
-  - title: "Inkling: A Diary That Writes Back, Then Forgets"
+  - title: "Inkling: A Tom Riddle's Diary That Forgets"
     image: /files/inkling-writing.gif
     image_alt: "Riddle writes a reply by hand, one character at a time, and draws a small knot mid-sentence."
     link: https://riddle-diary-web.vercel.app
