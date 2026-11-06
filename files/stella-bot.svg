@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-label="Stella: research notes drawn as a constellation, with a question and an answer bubble">
+  <defs>
+    <radialGradient id="sky" cx="30%" cy="25%" r="90%">
+      <stop offset="0" stop-color="#1f2a4d"/>
+      <stop offset="1" stop-color="#0b1022"/>
+    </radialGradient>
+    <radialGradient id="glow" r="50%">
+      <stop offset="0" stop-color="#ffe9a8" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#ffe9a8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#sky)"/>
+
+  <!-- faint background stars -->
+  <g fill="#c9d3f2" opacity="0.35">
+    <circle cx="120" cy="90" r="2"/><circle cx="260" cy="210" r="1.5"/><circle cx="410" cy="70" r="2"/>
+    <circle cx="560" cy="160" r="1.5"/><circle cx="720" cy="60" r="2"/><circle cx="1480" cy="120" r="2"/>
+    <circle cx="1350" cy="260" r="1.5"/><circle cx="1520" cy="420" r="2"/><circle cx="90" cy="520" r="1.5"/>
+    <circle cx="200" cy="880" r="2"/><circle cx="470" cy="940" r="1.5"/><circle cx="1500" cy="900" r="2"/>
+    <circle cx="1180" cy="80" r="1.5"/><circle cx="60" cy="300" r="2"/><circle cx="640" cy="900" r="1.5"/>
+  </g>
+
+  <!-- constellation: each star is a note, each line a link -->
+  <g stroke="#8ea2d8" stroke-width="2.5" stroke-opacity="0.55" fill="none">
+    <polyline points="170,640 330,470 520,560 640,360 830,420"/>
+    <line x1="330" y1="470" x2="300" y2="300"/>
+    <line x1="520" y1="560" x2="560" y2="760"/>
+    <line x1="640" y1="360" x2="760" y2="230"/>
+    <line x1="560" y1="760" x2="380" y2="820"/>
+  </g>
+  <g>
+    <circle cx="640" cy="360" r="70" fill="url(#glow)"/>
+    <g fill="#f3f6ff">
+      <circle cx="170" cy="640" r="9"/><circle cx="330" cy="470" r="11"/><circle cx="300" cy="300" r="7"/>
+      <circle cx="520" cy="560" r="10"/><circle cx="560" cy="760" r="8"/><circle cx="380" cy="820" r="6"/>
+      <circle cx="760" cy="230" r="7"/><circle cx="830" cy="420" r="9"/>
+    </g>
+    <circle cx="640" cy="360" r="14" fill="#ffe9a8"/>
+  </g>
+  <!-- note labels -->
+  <g font-family="Helvetica, Arial, sans-serif" font-size="26" fill="#aab6dc">
+    <text x="190" y="690">study design.md</text>
+    <text x="352" y="455">related work.md</text>
+    <text x="664" y="336">research gap.md</text>
+    <text x="582" y="800">meeting notes.md</text>
+  </g>
+
+  <!-- chat -->
+  <g font-family="Helvetica, Arial, sans-serif">
+    <rect x="960" y="300" width="520" height="104" rx="30" fill="#2c3a66"/>
+    <text x="996" y="364" font-size="32" fill="#e4e9fb">What changed in the last two weeks?</text>
+    <rect x="1010" y="440" width="470" height="236" rx="30" fill="#f3f6ff"/>
+    <g fill="#1f2a4d" opacity="0.8">
+      <rect x="1050" y="482" width="360" height="18" rx="9"/>
+      <rect x="1050" y="522" width="390" height="18" rx="9"/>
+      <rect x="1050" y="562" width="300" height="18" rx="9"/>
+      <rect x="1050" y="602" width="340" height="18" rx="9" opacity="0.5"/>
+    </g>
+    <text x="960" y="250" font-size="56" font-weight="700" fill="#f3f6ff">Stella</text>
+    <text x="960" y="760" font-size="28" fill="#aab6dc">answers grounded in Obsidian notes</text>
+  </g>
+</svg>
