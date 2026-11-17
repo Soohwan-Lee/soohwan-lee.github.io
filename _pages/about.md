@@ -9,7 +9,7 @@ redirect_from:
 
 <div class="about-note" markdown="1">
 
-**Seeking a research internship for Summer 2027** (open to anywhere in the world) **and postdoctoral or research scientist positions from Fall 2027** (Korea-based only, as I will be fulfilling my mandatory military service as *Expert Research Personnel* (전문연구요원), Korea's alternative service program for researchers), in human–computer interaction (HCI), human-centered AI, and human–AI interaction, particularly on AI-mediated group dynamics, social influence, and multi-agent systems.
+**Seeking a research internship for Summer 2027** (anywhere in the world) **and postdoc or research scientist roles in Korea from Fall 2027** (to complete my military service as *Expert Research Personnel*, 전문연구요원), in HCI and human-centered AI, especially AI-mediated group dynamics, social influence, and multi-agent systems.
 
 [soohwanlee@unist.ac.kr](mailto:soohwanlee@unist.ac.kr) &nbsp;·&nbsp; [CV](/files/soohwan_CV__final.pdf) &nbsp;·&nbsp; [Google Scholar](https://scholar.google.com/citations?user=_iYMyRcAAAAJ&hl=en&oi=ao)
 
