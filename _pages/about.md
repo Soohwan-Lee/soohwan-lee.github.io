@@ -9,13 +9,13 @@ redirect_from:
 
 <div class="about-note" markdown="1">
 
-**Seeking a research internship for Summer 2027** in human-centered AI and human–AI interaction, particularly on AI-mediated group dynamics, social influence, and multi-agent systems.
+**Seeking a research internship for Summer 2027** (open to anywhere in the world) **and postdoctoral or research scientist positions from Fall 2027** (Korea-based only, as I will be fulfilling my mandatory military service as *Expert Research Personnel* (전문연구요원), Korea's alternative service program for researchers), in human–computer interaction (HCI), human-centered AI, and human–AI interaction, particularly on AI-mediated group dynamics, social influence, and multi-agent systems.
 
 [soohwanlee@unist.ac.kr](mailto:soohwanlee@unist.ac.kr) &nbsp;·&nbsp; [CV](/files/soohwan_CV__final.pdf) &nbsp;·&nbsp; [Google Scholar](https://scholar.google.com/citations?user=_iYMyRcAAAAJ&hl=en&oi=ao)
 
 </div>
 
-I am a **Ph.D. candidate** in the [Expressive Computing Lab](https://expc.unist.ac.kr/) at the [Department of Design](https://design.unist.ac.kr/), [UNIST](https://www.unist.ac.kr/), working in **Human–Computer Interaction** and **Human-centered AI**. *(Ph.D. expected 2027)*
+I am a **Ph.D. candidate** in the [Expressive Computing Lab](https://expc.unist.ac.kr/) at the [Department of Human-Centered Design and Technology](https://hcdt.unist.ac.kr/), [UNIST](https://www.unist.ac.kr/), working in **Human–Computer Interaction** and **Human-centered AI**. *(Ph.D. expected August 2027)*
 
 Most AI research studies one person talking to one system. I study <span class="hl">what happens when AI joins a group</span>: how it moves the decision people reach together, whose voice carries, and where power settles. Increasingly it is not one agent but several, so I also ask <span class="hl">how a collective of AI agents exerts social influence of its own</span>, and when their agreement persuades people rather than simply pressures them.
 
